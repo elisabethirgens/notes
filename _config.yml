@@ -16,7 +16,7 @@
 title: Notes
 description: > # this means to ignore newlines until "baseurl:"
   An experiment in writing more purposeful notes for myself.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/notes" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: elisabethirg
 github_username:  elisabethirgens
