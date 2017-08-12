@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Swimming at the Deep End"
+title:  "Swimming at the deep end"
 date:   2017-08-12 17:00:00 +0200
 categories: learning
 ---
 
-**Something has changed.** I remember getting a sense of it when the Jekyll build here failed a couple of weeks ago. Or when I finally set up my Time Capsules properly after two years of workarounds to backup. But when I this week [upgraded Yarn]({{ site.baseurl }}/2017/08/yarn-upgrade-adventures/) — it became impossible to not notice that something has changed.
+**Something has changed.** I got the sense a couple of times earlier this summer. And when I this week [upgraded Yarn]({{ site.baseurl }}/2017/08/yarn-upgrade-adventures/) — it became impossible to not notice that something has changed.
 
 It feels like I am swimming at the deep end, when I didn’t know that I could.
 
