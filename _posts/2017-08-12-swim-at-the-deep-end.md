@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Swimming at the deep end"
+title:  "Swim at the deep end"
 date:   2017-08-12 17:00:00 +0200
 categories: learning
 ---
@@ -28,4 +28,4 @@ But now I do. And it has been a serious boost. I will not limit myself to only a
 * Circumstances meant it felt perfectly fine to set aside what I originally planned to work on that day. No&nbsp;one was waiting for any specific delivery from me.
 * I reflected upfront over how this was probably going to be really uncomfortable, and made a conscious decision to practice being okay with having that feeling. ✌️
 
-Now I know that I can swim a the deep end — and I can’t wait to see what comes next.
+Now I know that I can swim at the deep end — and I can’t wait to see what comes next.
