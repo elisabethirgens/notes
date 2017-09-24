@@ -56,9 +56,13 @@ thead {
 }
 
 .post-content h2 {
-    font-size: 24px;
+    font-size: 32px;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+}
+
+.post-content h3 {
+    font-size: 24px;
 }
 
 .site-title {
@@ -105,5 +109,9 @@ thead {
 }
 
 .site-footer {
+    background-color: #eee;
+}
+
+.highlighter-rouge .highlight {
     background-color: #eee;
 }
