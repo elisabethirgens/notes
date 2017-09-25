@@ -73,7 +73,9 @@ $ xcode-select -p
 
 I now have 114 files (binaries?) in this directory:
 
-`/Library/Developer/CommandLineTools/usr/bin/`
+```
+/Library/Developer/CommandLineTools/usr/bin/
+```
 
 Cool. I can see git in there. But it’s also basically the only thing I recognize, so I wonder if I could/should have installed git some other way…? 🤔
 
