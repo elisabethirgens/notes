@@ -23,7 +23,7 @@ This sounds fun! Can I do that? Have I already done that at some level? How can 
 
 * [Metafont](https://en.wikipedia.org/wiki/Metafont) is a language to define vector fonts.
 * Knuth developed it to accompany his TeX typesetting system.
-* It is a stroke-based, drawing glyphs along a path.
+* It uses a stroke-based font format, drawing glyphs along a path.
 * (Huh, vertices…? Oh, that is the plural of vertex. 🎓 )
 
 This is different from outline font formats like TrueType and OpenType. And this is cool, because I feel like I instinctively understand the potential of stroke-based. It’s probably like refraining from outlining paths in Illustrator, to maintain the actual description of them. The moment you outline paths, you loose information and are stuck with a very precise — but inflexible object.
