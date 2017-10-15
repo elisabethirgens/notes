@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Go back to the beginning"
-date:   2017-10-07 1:00:00 +0200
+date:   2017-10-07 19:00:00 +0200
 categories: learning
 ---
 
@@ -40,7 +40,7 @@ myBeverage = 'ginger daiquiri';
 * Change the value of the variable in the next statement.
 * Variables can have different datatypes; string, number, boolean, array, object.
 
-(I enjoyed a very nice ☕️ with 🥐, and then a 🍸, while going though this tutorial.)
+(I enjoyed a very nice ☕️ with 🥐, and then a 🍸, while going through this tutorial.)
 
 ---
 
