@@ -55,7 +55,7 @@ myBeverage = 'ginger daiquiri';
 
 ---
 
-## Conditionals to run alternative code ♻️
+## Conditionals to run alternative code ⚠️
 
 This is a code structure that will test if an expression is true. Or else… it will run the alternative. I’m actually quite used to reading and understanding conditionals from code bases in various languages, also way back when working with WordPress templates in php.
 
