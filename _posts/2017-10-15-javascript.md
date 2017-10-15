@@ -5,7 +5,7 @@ date:   2017-10-15 20:00:00 +0200
 categories: learning
 ---
 
-Earlier this month, I went [back to the beginning]({{ site.baseurl }}/2017/10/javascript/) in my stagnant stab at learning JavaScript. Today I completed these two excellent guides under MDN web docs, JavaScript first steps:
+Earlier this month, I went [back to the beginning]({{ site.baseurl }}/2017/10/back-to-the-beginning/) in my stagnant stab at learning JavaScript. Today I completed these two excellent guides under MDN web docs, JavaScript first steps:
 
 * [What is JavaScript?](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 * [A first splash into JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash)
