@@ -33,7 +33,7 @@ console.log('testing one two three');
 …or an object! For example would `console.log(randomNumber);` let me cheat at the numbers guessing game in the tutorial. I can also use these other methods for more categories;
 
 
-💁 `console.info()` &emsp; ⚠️ `console.warn()` &emsp; 💔 `console.error()`
+💁&nbsp;`console.info()` &emsp; ⚠️&nbsp;`console.warn()` &emsp; 💔&nbsp;`console.error()`
 
 ---
 
