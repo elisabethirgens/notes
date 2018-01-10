@@ -5,7 +5,7 @@ date:   2018-01-03 20:00:00 +0200
 categories: thinking
 ---
 
-I’ve had to think more about managing external code lately. There’s always been plenty of it in systems I work on, but often just directories I didn’t necessarily do much with. That changed now, and I had some helpful discussions with co-workers along the way. Let’s write up what I learnt!
+I’ve had to think more about managing external code lately. There’s always been plenty of it in systems I work on, but often just directories I didn’t necessarily do much with. That changed now, and I had some helpful discussions with coworkers along the way. Let’s write up what I learnt!
 
 ## What is *our* code…?
 A while back, I asked why we split assets into e.g. `js` and `js-external`. I was discovering examples where this type of separation was well intentioned once upon a time — but now a lie. “In&nbsp;which way is this useful? Isn’t it all ‘our code’ the moment we put it in *our codebase*?”
