@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Get Unstuck"
-date: 2018-03-18 15:00:00 +0200
+title:  "Get Unstuck"
+date:   2018-03-18 15:00:00 +0200
 categories: thinking
 ---
 
