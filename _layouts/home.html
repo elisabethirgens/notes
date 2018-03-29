@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="home">
-  
+
   {{ content }}
 
-  <ul class="post-list">
+  <ol reversed class="post-list">
     {% for post in site.posts %}
       <li>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
@@ -17,6 +17,6 @@ layout: default
         </h2>
       </li>
     {% endfor %}
-  </ul>
+  </ol>
 
 </div>
