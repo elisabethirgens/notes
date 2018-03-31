@@ -44,6 +44,8 @@ pre, code {
   font-size: inherit;
   font-family: Monaco;
   background-color: #eee;
+  border-color: #eee;
+  border-radius: 0;
 }
 
 th, td {
@@ -53,6 +55,10 @@ th, td {
 thead {
     text-align: left;
     background-color: #ddd;
+}
+
+table tr:nth-child(2n) {
+    background-color: inherit;
 }
 
 .post-content a {
