@@ -3,7 +3,10 @@
   <div class="wrapper">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
-    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  
+
+    <div class="top">
+      <h1 class="top__title"><a href="{{ "/" | relative_url }}">✏️ Notes</a></h1>
+      <div class="top__descr">…that I mostly write for myself, but you can read if you want.</div>
+    </div>
   </div>
 </header>
