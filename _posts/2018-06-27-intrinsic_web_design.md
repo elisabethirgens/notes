@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Say Hello to Intristic Web Design"
+title:  "Say Hello to Intrinsic Web Design"
 date:   2018-06-27 16:00:00 +0200
 categories: learning
 ---
