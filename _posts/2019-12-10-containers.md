@@ -54,3 +54,19 @@ Pssst… Useful link to [Download Docker CE without logging in](https://github.c
 ### [OS-level virtualization](https://en.wikipedia.org/wiki/OS-level_virtualization)
 
 > refers to an operating system paradigm in which the kernel allows the existence of multiple isolated user space instances. Such instances, called containers, Zones, virtual private servers, partitions, virtual environments, virtual kernel, or jails, may look like real computers from the point of view of programs running in them.
+
+### [OpenShift Core Concepts](https://docs.openshift.com/container-platform/3.11/architecture/core_concepts/containers_and_images.html)
+
+> **containers** are lightweight mechanisms for isolating running processes so that they are limited to interacting with only their designated resources. (…) provides a single service (often called a "micro-service"), such as a web server or a database
+
+> An **image** is a binary that includes all of the requirements for running a single container, as well as metadata describing its needs and capabilities. (…) Containers only have access to resources defined in the image unless you give the container additional access when creating it.
+
+> **pods** are one or more containers deployed together on one host, and the smallest compute unit that can be defined, deployed, and managed
+
+> **services** serves as an internal load balancer. It identifies a set of replicated pods in order to proxy the connections it receives to them.
+
+> A **build** is the process of transforming input parameters or source code into a runnable image.
+
+Available build strategies: Docker build / Source-to-Image (S2I) / Custom build
+
+> An **image stream** and its associated tags provide an abstraction for referencing container images from within OpenShift Container Platform
