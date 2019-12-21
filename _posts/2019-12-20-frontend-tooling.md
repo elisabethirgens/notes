@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lint and Prettier and pre-commit, oh my!"
-date:   2019-12-21 16:00:00 +0200
+date:   2019-12-20 16:00:00 +0200
 categories: learning
 ---
 
