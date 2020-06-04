@@ -2,9 +2,9 @@
 layout: posting
 ---
 
-# Frontendutvikler ledig i Oslo 🙋🏻‍♀️
+# Frontendutvikler ledig i&nbsp;Oslo 🙋🏻‍♀️
 
-Jeg er på jakt etter min neste jobb! Jeg tror at jeg kommer til å finne den i en fleksibel organisasjon som har erfaring med at ikke alle utviklere lages i samme fabrikk. Kompetanseprofilen min er ikke A4, og stillingsannonser er sjelden noe jeg kjenner meg igjen i. _Mange snakker om sine tverrfaglige team, få beskriver roller for tverrfaglige folk._
+Jeg er på jakt etter min neste jobb! Jeg tror at jeg kommer til å finne den i en fleksibel organisasjon, som har erfaring med at ikke alle utviklere lages i samme fabrikk. Kompetanse&shy;profilen min er ikke A4, og stillingsannonser er sjelden noe jeg kjenner meg igjen i. _Mange snakker om sine tverrfaglige team, få beskriver roller for tverrfaglige folk._
 
 Min spesialisering er UI. Jeg har 15 års erfaring med å få ting ut i nettlesere — hvorav 4 år som systemutvikler med webapplikasjonene i et stort logistikksystem hos Posten/Bring.
 
