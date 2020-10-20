@@ -1,7 +1,6 @@
 title: Notes
 baseurl: "/notes"
 permalink: /:year/:month/:title/
-markdown: kramdown
 theme: minima
 exclude:
   - Gemfile
