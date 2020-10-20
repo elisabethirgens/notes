@@ -2,7 +2,6 @@
 layout: post
 title:  "Horizontal Teams To Strengthen Vertical Structures"
 date:   2019-08-31 18:00:00 +0200
-categories: thinking
 ---
 
 Our frontend team hit the ground running one year ago. What have we learnt about supporting the vertical teams? What do we mean when we say it’s horizontal?

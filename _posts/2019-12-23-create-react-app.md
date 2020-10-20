@@ -2,7 +2,6 @@
 layout: post
 title:  "Create React App"
 date:   2019-12-23 12:00:00 +0200
-categories: learning
 ---
 
 I’m continuing with section 3 of [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)

@@ -2,7 +2,6 @@
 layout: post
 title:  "Knuth, Metafont and meta-design"
 date:   2017-10-01 19:00:00 +0200
-categories: thinking
 ---
 
 I think I cried a bit the first time I read Rune Madsen’s article [On meta-design and algorithmic design systems](https://runemadsen.com/blog/on-meta-design-and-algorithmic-design-systems/). That was 2½ years ago. I was self-employed, and had been working on too many projects that were not quite right for me. That article gave me a fantastic feeling that **this!!!** 😍 omg, this is what I want to do. There may also have been an element of relief — that despite struggling then, despite being late to finding my thing in life and despite having limited formal education… I was on the right track! And that track would take me somewhere really interesting.

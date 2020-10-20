@@ -2,7 +2,6 @@
 layout: post
 title:  "Get Unstuck"
 date:   2018-03-18 15:00:00 +0200
-categories: thinking
 ---
 
 I’ve been feeling stuck the past weeks. The exercises in [Learn Python the Hard Way](https://learncodethehardway.org/python/) are getting harder. And making [“Three in a Row“]({{ site.baseurl }}/2018/02/game/) has seemed out of reach. I _know_ I just need to invest time with it all — but I’ve struggled to find motivation to do that enough.

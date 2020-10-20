@@ -2,7 +2,6 @@
 layout: post
 title: "A Map to Navigate the React Ecosystem"
 date: 2020-10-05 17:00:00 +0200
-categories: reading
 ---
 
 THIS IS ABSOLUTELY AMAZING but [Sara Vieira](https://twitter.com/NikkitaFTW) has accomplished what no developer, myself included, has ever accomplished before: motivated me to use React for fun.

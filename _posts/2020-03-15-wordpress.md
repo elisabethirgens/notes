@@ -2,7 +2,6 @@
 layout: post
 title:  "Think Of WordPress <3"
 date:   2020-03-15 19:00:00 +0200
-categories: thinking
 ---
 
 **2008:** I worked as designer at a small agency. I had learnt to write HTML & CSS, and we had been building static websites for a couple of years, along with other design work. But around this time, our clients were increasingly expecting to update the content on their own sites. We needed a CMS, but there were no obvious choices back then. The alternatives were too expensive or super complicated. WordPress was very much considered a blog platform at the time. But after looking into our options, we still landed on trying WordPress and adapting it to our needs. Years later, I remember feeling like we had bet on the right horse.

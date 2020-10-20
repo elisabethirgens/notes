@@ -2,7 +2,6 @@
 layout: post
 title:  "Tic-Tac-Tooooomg It’s Working!!"
 date:   2018-04-07 16:00:00 +0200
-categories: learning
 ---
 
 The Python game I’ve been coding! But perhaps more importantly; **my studying is working!**

@@ -2,7 +2,6 @@
 layout: post
 title:  "Shift Down the Downshift"
 date:   2020-01-23 20:00:00 +0200
-categories: learning
 ---
 
 I’m diving head first into React at work, and naturally it’s not the simple straight forward components in this app that want my attention. That would be too optimal. Nope, it’s one of the most complex components that is broken and needs work. I started updating dependencies to fix another bug, and those updates were not compatible with the dependencies of _this_ component and hello worse bug.

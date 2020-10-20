@@ -2,7 +2,6 @@
 layout: post
 title:  "Make myself a space to be awesome"
 date:   2017-12-03 14:00:00 +0200
-categories: watching
 ---
 
 I’ve been enjoying resources for managing people lately. Like reading 📘 [The Manager’s Path](http://amzn.to/2nw1QN5) by Camille Fournier! I’ve got absolutely zero zilch nada desire to be a manager of any kind at the moment, but I want to get better at um… managing myself. This post is my notes after watching:

@@ -2,7 +2,6 @@
 layout: post
 title:  "git diff master"
 date:   2017-06-08 20:30:00 +0200
-categories: git
 ---
 
 `git diff` was probably one of the first 10 terminal commands I ever learnt. I use it a lot for quick comparisons of a few lines, but didn’t get a habit of diff-ing more when I need it the most.

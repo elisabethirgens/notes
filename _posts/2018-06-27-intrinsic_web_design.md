@@ -2,7 +2,6 @@
 layout: post
 title:  "Say Hello to Intrinsic Web Design"
 date:   2018-06-27 16:00:00 +0200
-categories: learning
 ---
 
 This was [introduced by Jen Simmons](https://twitter.com/jensimmons/status/980980521848127488) – so I know it’s worth paying attention. But what is it? What does it mean for me, and is the concept relevant for the UIs I’m building at work?

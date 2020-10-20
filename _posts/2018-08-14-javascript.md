@@ -2,7 +2,6 @@
 layout: post
 title:  "Finish The JS First Steps Modules on MDN"
 date:   2018-08-14 17:00:00 +0200
-categories: learning
 ---
 
 After some months of focusing on Python and what not, let’s get back to JavaScript. It’s been a while since I [was doing these modules]({{ site.baseurl }}/2017/11/javascript/) from MDN web docs, but will pick up where I left off.

@@ -2,7 +2,6 @@
 layout: post
 title:  "Complete the First React Course Assignment"
 date:   2019-12-30 18:00:00 +0200
-categories: learning
 ---
 
 I’m taking the Udemy course [React - The Complete Guide](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) and today it was time for the assignment after section 3: “Understanding the Base Features & Syntax”.

@@ -2,7 +2,6 @@
 layout: post
 title:  "Be fearless with old stylesheets"
 date:   2017-06-15 20:00:00 +0200
-categories: thinking
 ---
 
 The community talks a lot about writing CSS, and less about dealing with old stylesheets that no-one knows what do anymore. But I’ve had interesting discussions with friends working elsewhere, that have helped me think more about how to approach old CSS.

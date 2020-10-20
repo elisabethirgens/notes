@@ -2,7 +2,6 @@
 layout: post
 title:  "More adventures in upgrading Yarn"
 date:   2017-09-26 21:00:00 +0200
-categories: learning
 ---
 
 Yarn has been released in a stable version. One of my co-workers upgraded to yarn 1.1.0 on the build server, and encouraged everyone using Yarn locally to also upgrade on their machine.

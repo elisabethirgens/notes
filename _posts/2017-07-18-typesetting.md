@@ -2,7 +2,6 @@
 layout: post
 title:  "Explore UI typesetting"
 date:   2017-07-18 08:00:00 +0200
-categories: learning
 ---
 
 If you can’t find the resource you need — it usually means you should make it yourself.

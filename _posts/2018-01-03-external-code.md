@@ -2,7 +2,6 @@
 layout: post
 title:  "Deal with external code"
 date:   2018-01-03 20:00:00 +0200
-categories: thinking
 ---
 
 I’ve had to think more about managing external code lately. There’s always been plenty of it in systems I work on, but often just directories I didn’t necessarily do much with. That changed now, and I had some helpful discussions with coworkers along the way. Let’s write up what I learnt!

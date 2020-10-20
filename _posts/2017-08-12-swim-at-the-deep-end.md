@@ -2,7 +2,6 @@
 layout: post
 title:  "Swim at the deep end"
 date:   2017-08-12 17:00:00 +0200
-categories: learning
 ---
 
 **Something has changed.** I got the sense a couple of times earlier this summer. And when I this week [upgraded Yarn]({{ site.baseurl }}/2017/08/yarn-upgrade-adventures/) — it became impossible to not notice that something has changed.

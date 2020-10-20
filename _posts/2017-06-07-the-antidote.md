@@ -2,7 +2,6 @@
 layout: post
 title:  "“Become more comfortable with uncertainty!”"
 date:   2017-06-07 19:30:00 +0200
-categories: reading
 ---
 
 ## 📚 The Antidote: Happiness for People Who Can't Stand Positive Thinking, *by Oliver Burkeman*

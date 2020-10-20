@@ -2,7 +2,6 @@
 layout: post
 title:  "Learn About Learning"
 date:   2020-01-20 20:00:00 +0200
-categories: learning
 ---
 
 I want to learn more about learning. These are articles I’ve had on my reading list for a while, or partly half skimmed though in an open tab. Now I’m going to actually read them, and write up some notes for me to revisit later.

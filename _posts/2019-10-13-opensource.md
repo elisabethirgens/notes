@@ -2,7 +2,6 @@
 layout: post
 title:  "Can We Open Source This?"
 date:   2019-10-13 21:00:00 +0200
-categories: writing
 ---
 
 Two years ago, there was a discussion at work if the new design system could be open source in a public repo. I asked around about who could decide that — and the answer I got was that:

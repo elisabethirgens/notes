@@ -2,7 +2,6 @@
 layout: post
 title:  "Off topic travel writing from 5 yrs ago"
 date:   2017-10-15 13:00:00 +0200
-categories: archive
 ---
 
 > These notes don’t have to be useful for anyone but myself.

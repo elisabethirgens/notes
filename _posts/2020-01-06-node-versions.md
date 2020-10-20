@@ -2,7 +2,6 @@
 layout: post
 title:  "Play Twister with Dependencies"
 date:   2020-01-06 20:00:00 +0200
-categories: learning
 ---
 
 Last week I was figuring out more on how to [work with Yarn]({{ site.baseurl }}/2020/01/dependencies/) and dependencies in my new project. Main differences from the apps I knew from previous gig, is that there are a whole lot more dependencies here — and this application runs on [containers in OpenShift]({{ site.baseurl }}/2019/12/containers/).

@@ -2,7 +2,6 @@
 layout: post
 title:  "Go back to the beginning"
 date:   2017-10-07 19:00:00 +0200
-categories: learning
 ---
 
 When you are stuck, it can be a good idea to go start over. I did that today. 🌱

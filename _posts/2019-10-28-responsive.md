@@ -2,7 +2,6 @@
 layout: post
 title:  "Responsify A Logistic System"
 date:   2019-10-28 15:00:00 +0200
-categories: writing
 ---
 
 

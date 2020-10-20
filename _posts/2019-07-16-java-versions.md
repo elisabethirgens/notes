@@ -2,7 +2,6 @@
 layout: post
 title:  "Detour Into Homebrew and Java Versions"
 date:   2019-07-16 20:00:00 +0200
-categories: learning
 ---
 
 The app I’m working on won’t build, but I know it was recently updated to Java 12. Have I got Java 12 installed? Apparently not. I ran this to find which versions I currently have installed:

@@ -2,7 +2,6 @@
 layout: post
 title:  "Celebrate Small Wins"
 date:   2018-07-02 20:00:00 +0200
-categories: thinking
 ---
 
 Over a decade ago, I was struggling through a bumpy year, and noticed how exceptionally easy it was to forget the happy parts and dwell on the sad. There was plenty of good times during my day, week and month – but I needed to write them down to remind myself they were also part of my life.

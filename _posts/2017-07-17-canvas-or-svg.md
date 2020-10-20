@@ -2,7 +2,6 @@
 layout: post
 title:  "Canvas or SVG?"
 date:   2017-07-17 19:00:00 +0200
-categories: learning
 ---
 
 I once attended a workshop on Creative JS, and I remember we made some really cool graphics with Canvas during the day. I’m reasonably knowledgeable about the SVG format itself, but with limited experience in scripting it.

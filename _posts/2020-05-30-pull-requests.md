@@ -2,7 +2,6 @@
 layout: post
 title:  "What I Love About Pull Requests"
 date:   2020-05-30 13:00:00 +0200
-categories: thinking
 ---
 
 

@@ -2,7 +2,6 @@
 layout: post
 title:  "“Code is never the challenge”"
 date:   2017-07-26 21:00:00 +0200
-categories: thinking
 ---
 
 > Code is never the challenge. Well-rested comfortable people who feel emotionally safe have solved every problem I’ve put in front of them.

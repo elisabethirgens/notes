@@ -2,7 +2,6 @@
 layout: post
 title:  "Be Explicit About What Is Okay"
 date:   2019-09-29 21:00:00 +0200
-categories: writing
 ---
 
 A couple of years ago, I wrote a post for [developer.bring.com](https://developer.bring.com/blog/yes-its-okay/) — inspired by the team at Government Digital Service (GDS) and their list on: [It’s ok to say what’s ok](https://gds.blog.gov.uk/2016/05/25/its-ok-to-say-whats-ok/) 🙌

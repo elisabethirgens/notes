@@ -2,7 +2,6 @@
 layout: post
 title:  "Write moar notes from what I’m reading"
 date:   2018-06-27 20:00:00 +0200
-categories: reading
 ---
 
 This is an experiment. Will publishing a post like this help me stop hoarding articles with an intent to “study properly later”…? To write some kind of take away for myself, I need to read – not just skim or haha, save a gazillion URLs to read later.

@@ -2,7 +2,6 @@
 layout: post
 title:  "Troubleshoot my JavaScript"
 date:   2017-11-19 18:00:00 +0200
-categories: learning
 ---
 
 All right, I’m going through the lovely [JavaScript first steps @ MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps) and next up is the guide on [“What went wrong? Troubleshooting JavaScript”](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong). Let’s write up some notes:

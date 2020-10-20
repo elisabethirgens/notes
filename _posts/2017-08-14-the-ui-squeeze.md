@@ -2,7 +2,6 @@
 layout: post
 title:  "omg! it has a name: “The UI Squeeze”"
 date:   2017-08-14 20:00:00 +0200
-categories: thinking
 ---
 
 [“Rethinking the Developer Career Path”](https://www.youtube.com/watch?v=yIPbE7BssOs) is a great talk by Randall Koutnik. He asks what senior means, what it should mean, and suggests a different way of describing the career path of a software engineer:

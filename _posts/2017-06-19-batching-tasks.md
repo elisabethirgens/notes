@@ -2,7 +2,6 @@
 layout: post
 title:  "Batch your tasks"
 date:   2017-06-20 20:30:00 +0200
-categories: thinking
 ---
 
 What if… I get as good at batching work tasks as I am at batching errands? 🤔 Yesterday I completed an errand raid so carefree and efficient, that it led to a minor eureka moment. If I can run this many errands with so little hassle — how much can I improve batching tasks at work? Because when it comes to shopping and errands, I’m quite pro at:

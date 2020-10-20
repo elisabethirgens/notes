@@ -2,7 +2,6 @@
 layout: post
 title:  "7 years of web conferences"
 date:   2017-11-20 20:00:00 +0200
-categories: archive
 ---
 
 Since lanyrd.com has gone 503, let’s make a new archive of the 24 (!) conferences I’ve had the pleasure and privilege to attend the past years. I’ve been involved as an organizer for some, held workshops at a couple — and got to attend a whole bunch in exchange for [sketchnotes](https://elisabethirgens.com/sketchnotes/).

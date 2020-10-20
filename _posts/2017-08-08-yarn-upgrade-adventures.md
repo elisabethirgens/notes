@@ -2,7 +2,6 @@
 layout: post
 title:  "Adventures in upgrading Yarn"
 date:   2017-08-08 20:00:00 +0200
-categories: learning
 ---
 
 Monday morning started off with an intent to upgrade Yarn. **I did something I’ve done many times before;** copy/pasted a command that came whizzing by on Slack. It was a chained command with words I had a sense of familiarity about, but no real understanding of what would actually do. I&nbsp;had to ask where to run it, because I wasn’t sure where I was supposed to upgrade Yarn.

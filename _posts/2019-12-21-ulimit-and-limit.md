@@ -2,7 +2,6 @@
 layout: post
 title:  "Persist ulimit Settings in macOS Catalina"
 date:   2019-12-21 17:00:00 +0200
-categories: learning
 ---
 
 This fancy sounding heading was totally authored _after_ I understood what I wanted to do, which happened from writing up all these notes.

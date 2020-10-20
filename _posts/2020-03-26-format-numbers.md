@@ -2,7 +2,6 @@
 layout: post
 title:  "Format Numbers With Intl.NumberFormat"
 date:   2020-03-26 14:00:00 +0200
-categories: learning
 ---
 
 I’ve been getting to know [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) intimately lately. It is a pretty neat:
