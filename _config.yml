@@ -1,7 +1,6 @@
 title: Notes
 baseurl: "/notes"
 permalink: /:year/:month/:title/
-theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
