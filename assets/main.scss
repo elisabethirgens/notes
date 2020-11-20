@@ -2,26 +2,44 @@
 # front matter!
 ---
 
-@import "theme";
 @import "syntax-highlighting";
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
-    line-height: 1.5;
-    color: #444;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  line-height: 1.5;
+  color: #444;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, dl {
+  margin-bottom: 0.5rem;
+}
+
+ul,
+ol {
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  padding-left: 0;
 }
 
 ul, p, table, pre.highlight {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 a, a:visited {
-    color: #0867BA;
-    text-decoration: none;
+  color: #0867ba;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #444;
+  color: #444;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,126 +47,172 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 hr {
-    border: 0;
-    border-top: 2px solid #ccc;
-    margin: 2rem 0;
+  border: 0;
+  border-top: 2px solid #ccc;
+  margin: 2rem 0;
 }
 
 blockquote {
-    color: #828282;
-    border-left: 10px solid #ddd;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 1rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
+  color: #828282;
+  border-left: 10px solid #ddd;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
 }
 
-pre, code {
+pre {
+  background-color: #eee;
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+
+code {
   font-size: inherit;
   font-family: Monaco;
   background-color: #eee;
+  padding: 1px 5px;
+}
+
+pre > code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+table {
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
 }
 
 th, td {
-    padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
 }
 
 thead {
-    text-align: left;
-    background-color: #ddd;
+  text-align: left;
+  background-color: #ddd;
+}
+
+/* layout */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.page-content {
+  padding: 3rem 1rem;
+  flex: 1;
+}
+
+.wrapper {
+  max-width: 48rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .post-content a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .post-content h2 {
-    font-size: 32px;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
 }
 
 .post-content h3 {
-    font-size: 24px;
+  font-size: 24px;
+}
+
+.post-header {
+  margin-bottom: 2rem;
 }
 
 .site-title {
-    font-size: 20px;
-    font-weight: 300;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .post-list .post-meta {
-    text-transform: uppercase;
-    color: #999;
-    float: right;
-    margin-top: 0.75rem;
-    margin-right: 1rem;
+  text-transform: uppercase;
+  color: #999;
+  float: right;
+  margin-top: 0.75rem;
+  margin-right: 1rem;
 }
 
 .post-title {
-    font-weight: 300;
-    line-height: 1;
+  font-size: 2.625rem;
+  font-weight: 300;
+  line-height: 1;
 }
 
 .post-list {
-    border-top: 2px solid #eee;
+  border-top: 2px solid #eee;
+  margin-left: 0;
+  list-style: none;
 }
 
 .post-list > li {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .post-list h2 {
-    margin-bottom: 0;
-    line-height: 1.2;
-    border-bottom: 2px solid #eee;
+  margin-bottom: 0;
+  line-height: 1.2;
+  border-bottom: 2px solid #eee;
 }
 
 .post-link {
-    padding: 0.5rem 1rem;
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .post-link:hover {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 .site-header {
-    border-top: none;
-    background-color: #ddd;
+  border-top: none;
+  background-color: #ddd;
 }
 
 @media screen and (min-width: 40em) {
   .top {
-      display: flex;
-      align-items: baseline;
+    display: flex;
+    align-items: baseline;
   }
 }
 
 .top__title {
-    margin-bottom: 0;
-    font-size: 2.5rem;
+  margin-bottom: 0;
+  font-size: 2.5rem;
 }
 
 .top__title a {
-    color: #666;
+  color: #666;
 }
 
 .top__descr {
-    text-align: center;
-    margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .site-footer {
-    padding: 2rem 0;
-    background-color: #eee;
+  padding: 2rem 0;
+  background-color: #eee;
 }
 
 .links-list {
   list-style: none;
   margin-left: 0;
-}
-
-.highlighter-rouge .highlight {
-    background-color: #eee;
 }
