@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Write My Own Cheesecake Recipe"
-date:   2018-01-22 12:00:00 +0200
+date: 2018-01-22
 ---
 
 I need a “cheesecake recipe” for a thing. It doesn’t have to be the best recipe in the world, but I want it to be **written by me from scratch using code I actually understand**. It would be easy to find recipes written by other people, or even just parts to be inspired by. But there’s no fun in that. (Yes, this typically called something else, I’m using different words here on purpose.)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello world"
-date:   2017-06-05 16:30:00 +0200
+date: 2017-06-05
 ---
 
 Brand new Jekyll blog! ✨ Because I want to try making more purposeful notes. I want to remind `future-me` about what `current-me` is learning, reading, watching, thinking.

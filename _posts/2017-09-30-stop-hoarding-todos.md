@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Stop hoarding to-do’s as if my life depends on it"
-date:   2017-09-30 15:00:00 +0200
+date: 2017-09-30
 ---
 
 I will frequently GTD too hard. Or perhaps a better assessment, is that I tend to distribute my GTD efforts quite poorly. I will ritually collect _everything_ (always!) — but I don’t review with anywhere near the same level of determination.

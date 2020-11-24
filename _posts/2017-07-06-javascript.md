@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "“I haven’t learnt JS yet” is my broken record"
-date:   2017-07-06 19:00:00 +0200
+date: 2017-07-06
 ---
 
 I don’t *have* to learn JS. I could *start* to learn, then change my mind. Both would be fine. But there’s no point telling myself for years that “I *want* to learn JavaScript — but haven’t yet”.

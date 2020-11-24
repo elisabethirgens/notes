@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Decimal and Thousands Separators"
-date:   2020-03-18 18:00:00 +0200
+date: 2020-03-18
 ---
 
 What was correct number formatting again? I’ve read up on this repeatedly the past years to answer the question and get it right in web applications. But as with all interesting problems; “It depends!” _These notes are for future-me, limited to my specific needs for UI internationalization._

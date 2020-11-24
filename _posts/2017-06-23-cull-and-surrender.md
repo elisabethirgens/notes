@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cull and surrender"
-date:   2017-06-23 20:00:00 +0200
+date: 2017-06-23
 ---
 
 > The Sad, Beautiful Fact That We're All Going To Miss Almost Everything

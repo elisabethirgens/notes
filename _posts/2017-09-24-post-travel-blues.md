@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Post-travel blues"
-date:   2017-09-24 18:00:00 +0200
+date: 2017-09-24
 ---
 
 I love travelling. The past 15 years, I’ve taken trips ranging from 3 days to 3 weeks. I’ve seen a long list of cities in Europe and the US, and been to some parts of Asia. I am extremely fortunate to be able to do this — and don’t want to forget that.

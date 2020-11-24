@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Adventures in Upgrading to Python3"
-date:   2018-07-13 14:00:00 +0200
+date: 2018-07-13
 ---
 
 Wo-hooo. Deploy scripts at work have been upgraded to Python3. I know this will break the deploy of the design system I work on, and I also need to figure out how to get my machine up to speed.

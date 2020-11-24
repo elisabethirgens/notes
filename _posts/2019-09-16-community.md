@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Company, Competence, Community & Conference"
-date:   2019-09-16 21:00:00 +0200
+date: 2019-09-16
 ---
 
 I wrote this to explain to higher-ups why it’s beneficial for a company to have developers  participate in their communities and attend conferences.

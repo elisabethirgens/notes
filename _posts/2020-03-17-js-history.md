@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "From Netscape to ECMAScript"
-date:   2020-03-17 18:00:00 +0200
+date: 2020-03-17
 ---
 
 JavaScript will be 25 years old this year. Netscape and Sun wrote a press release in 1995, announcing “the open, cross-platform object scripting language for enterprise networks and the Internet”:

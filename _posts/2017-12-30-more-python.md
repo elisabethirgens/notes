@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learn Python the Hard Way (cont.)"
-date:   2017-12-30 18:00:00 +0200
+date: 2017-12-30
 ---
 
 More notes from [Learn Python The Hard Way](https://learncodethehardway.org/python/) (continued after [exercises 1–19]({{ site.baseurl }}/2017/12/python/)). And again; *These are my notes. You can read them if you want — but I make no attempt at this being useful for anyone else.*

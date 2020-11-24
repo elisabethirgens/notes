@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "All Roads Lead To React"
-date:   2019-07-04 21:00:00 +0200
+date: 2019-07-04
 ---
 
 There’s a security alert I have been eyeing for a while. Since it was java related and technically another team’s application, I hadn’t picked it up earlier… but today was the day. GitHub found a vulnerability and suggested remediation:

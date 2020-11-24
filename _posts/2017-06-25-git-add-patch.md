@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "git add -p"
-date:   2017-06-25 14:00:00 +0200
+date: 2017-06-25
 ---
 
 Learning more advanced git is hard. Reading tutorials, alone and without a concrete problem to solve, has been slow and confusing for me. But also when I have a situation where changes are more messy than I know how to deal with in git, that is not the best time either to get lost in complex docs. It has often seemed best to just focus on the code for now, and find a workaround within what I already know how to do. This means I get *very good* at creative workarounds, and patiently starting over, instead of actually using git for version control of my code.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dig Into The Dummy Layout Diffs"
-date:   2019-07-05 16:00:00 +0200
+date: 2019-07-05
 ---
 
 A recent minor annoyance has been that making changes in one of the  app causes git diffs in files I haven’t touched. I’ve previously stashed them and moved along, but today I’m digging into why this happens and figuring out how to improve the setup. 🕵️‍♀️

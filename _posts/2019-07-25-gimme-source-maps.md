@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Salvage The Sunken Source Maps"
-date:   2019-07-25 14:00:00 +0200
+date: 2019-07-25
 ---
 
 The annoying bug I’ve been hunting down for 3 days resulted in 2&nbsp;files changed, 3&nbsp;insertions(+), 2&nbsp;deletions(-). It was quite the debugging adventure, and I took plenty of notes along the way to avoid getting lost. Now slightly rewritten into this post, so future-me will remember what I learnt.

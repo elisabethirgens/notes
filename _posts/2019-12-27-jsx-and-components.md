@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Understand React JSX and Components"
-date:   2019-12-27 16:00:00 +0200
+date: 2019-12-27
 ---
 
 More course study notes from moving through [React - The Complete Guide](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) section 3.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "wtf is bash anyway?!"
-date:   2017-08-13 20:00:00 +0200
+date: 2017-08-13
 ---
 
 Bash. This word keeps popping up, without me having more than an extremly shallow understanding of what it means and why I should care. So let’s fix that by writing notes. ✨

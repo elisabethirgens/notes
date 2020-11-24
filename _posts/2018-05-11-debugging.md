@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Debug the Missing CSS Analysis (Hey Jenkins!)"
-date:   2018-05-11 11:00:00 +0200
+date: 2018-05-11
 ---
 
 When I make pull requests to our design system, we have set up automatic comments on GitHub with CSS analysis. They went missing recently, so let’s debug! I dug a bit on my own, asked for help, learnt a boatload — and forced myself to write out these notes afterwards to learn even more.

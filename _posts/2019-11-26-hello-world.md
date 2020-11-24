@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello Strange New World of Finance"
-date:   2019-11-26 21:00:00 +0200
+date: 2019-11-26
 ---
 
 This month I have left logistics behind for a new job in the financial sector. This is a domain that I know absolutely nothing about, so there are plenty of words to learn. I will start with these:

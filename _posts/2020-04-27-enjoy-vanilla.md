@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Enjoy Vanilla JS, Not Chocolate Broccoli"
-date:   2020-04-27 19:00:00 +0200
+date: 2020-04-27
 ---
 
 I’m on a mission to figure out how to **enjoy learning JavaScript**. I have [learnt about learning]({{ site.baseurl}}/2020/01/about-learning/) that I need to get the cognition to motivation loop working _with_ me instead of against me.

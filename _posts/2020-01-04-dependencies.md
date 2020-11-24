@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Work with Yarn in a Containerized App"
-date:   2020-01-04 13:00:00 +0200
+date: 2020-01-04
 ---
 
 Before the holidays, I was fighting with [linters, prettier & pre-commit]({{ site.baseurl }}/2019/12/frontend-tooling/) and declared defeat:

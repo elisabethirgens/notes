@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Set up my new Macbook"
-date:   2017-09-24 21:00:00 +0200
+date: 2017-09-24
 ---
 
 I have a brand new MacBook (wohooo!) and it’s been quite some time since I set up a new laptop. I want to do everything from scratch, and with an understanding of what I’m installing and why. No more blindly copy/pasting commands I don’t know what do. I’ve done that enough the past 3-4 years, and it’s time I learn what’s what. Let’s go!

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jump Into Rabbit Holes! Upgrade Dependencies!"
-date:   2018-07-24 17:00:00 +0200
+date: 2018-07-24
 ---
 
 Summer weeks at work have been great for venturing down rabbit holes, and I have done so with unprecedented determination to be okay with both getting lost – and ending up in completely different places than originally planned.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "To All The Jobs I Had Before"
-date:   2020-09-16 15:00:00 +0200
+date: 2020-09-16
 ---
 
 My career as a developer started 5 years ago. Before that I have 15 years work experience from other roles, and I‘ve been thinking about **what I learnt** from all those jobs I had before.

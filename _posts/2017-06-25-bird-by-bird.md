@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "“You don’t have that kind of time”"
-date:   2017-06-25 17:30:00 +0200
+date: 2017-06-25
 ---
 
 ## 📚 Bird by Bird — Some Instructions on Writing and Life, *by&nbsp;Anne&nbsp;Lamott*

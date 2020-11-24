@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rainy Sunday JavaScript learning notes"
-date:   2017-10-15 20:00:00 +0200
+date: 2017-10-15
 ---
 
 Earlier this month, I went [back to the beginning]({{ site.baseurl }}/2017/10/back-to-the-beginning/) in my stagnant stab at learning JavaScript. Today I completed these two excellent guides under MDN web docs, JavaScript first steps:

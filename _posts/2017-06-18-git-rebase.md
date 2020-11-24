@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Rebase! I totally git it now."
-date:   2017-06-18 13:30:00 +0200
+date: 2017-06-18
 ---
 
 Both merge and rebase are commands I’ve used plenty, and read about a lot, without managing to wrap my head around wtf actually happens. But this week all became clear. 💪 It’s kinda ironic how tutorials with diagrams make sense first *after* you already understand something.

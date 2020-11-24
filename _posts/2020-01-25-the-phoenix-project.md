@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Phoenix Project"
-date:   2020-01-25 11:00:00 +0200
+date: 2020-01-25
 ---
 
 ## 📚 The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win

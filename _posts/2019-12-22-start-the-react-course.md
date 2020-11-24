@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Start That React Course Already"
-date:   2019-12-22 19:00:00 +0200
+date: 2019-12-22
 ---
 
 The very first time I heard about React, was in 2014 when [Arne Martin @ Web Rebels](https://2014.webrebels.org/speakers.html#arne_martin) had a talk about building UI components with this new thing called React. The sketchnotes I made quotes him that: “React is a thing in the world. It’s pretty nice and you should try it.”

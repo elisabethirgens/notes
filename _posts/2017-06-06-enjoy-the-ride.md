@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "“Let go and enjoy the ride”"
-date:   2017-06-05 17:00:00 +0200
+date: 2017-06-06
 ---
 
 ## 📺 [Neil Gaiman Commencement Speech](https://www.youtube.com/watch?v=ikAb-NYkseI)

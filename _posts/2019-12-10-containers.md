@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Get Acquainted With Containerized Stack"
-date:   2019-12-10 18:00:00 +0200
+date: 2019-12-10
 ---
 
 Quotes and notes from reading up the new tech stack I’m working with. I often find Wikipedia useful for starting to build a mental modal of what stuff is.

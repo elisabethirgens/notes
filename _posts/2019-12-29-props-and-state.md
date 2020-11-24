@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Introduce Props and State in React"
-date:   2019-12-29 18:00:00 +0200
+date: 2019-12-29
 ---
 
 Continuing [React - The Complete Guide](https://www.udemy.com/course/react-the-complete-guide-incl-redux/) course today, but also reading the first couple main concepts in [reactjs.org/docs](https://reactjs.org/docs/hello-world.html) and taking some notes from there.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DIY UI Tips for Backend Developers"
-date:   2019-09-24 19:00:00 +0200
+date: 2019-09-24
 ---
 
 Do you ever find yourself having to build user interfaces for web applications without an interaction designer or UI developer in sight? What on earth is a fullstack-ish backender supposed to do?! The UXers are off gathering insights, graphic designers are in a different corporate silo all together, the nearest frontender is busy.

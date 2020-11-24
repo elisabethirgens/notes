@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Something (Not Nothing) About JavaScript"
-date:   2020-03-16 18:00:00 +0200
+date: 2020-03-16
 ---
 
 This is post number 100 🍾 since [I started writing these notes]({{ site.baseurl}}/2017/06/hello-world/) to myself almost 3 years ago. To celebrate, I am writing the motivational notes I really need right now. Because I keep telling myself that [“I&nbsp;haven’t learnt JS yet”]({{ site.baseurl }}//2017/07/javascript/) when that is not quite entirely the whole truth anymore. But if I always convince myself that I don’t know _anything_ — I am continuing to sabotage my future progress. So this post is written to convince myself that I actually do know… _something_. 🌱
