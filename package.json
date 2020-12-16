@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "clean": "rm -rf ./_site",
-    "build": "npm run clean && eleventy",
+    "build": "npm run clean && eleventy --pathprefix=notes",
     "start": "eleventy --serve --watch"
   },
   "repository": {
