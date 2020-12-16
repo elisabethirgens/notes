@@ -1,3 +1,3 @@
 # My notes ✏️👌✨
 
-Jekyll and GitHub Pages to write more purposeful notes.
+Eleventy and GitHub Pages to write notes

@@ -1,6 +1,0 @@
-title: Notes
-baseurl: "/notes"
-permalink: /:year/:month/:title/
-exclude:
-  - Gemfile
-  - Gemfile.lock

@@ -4,10 +4,10 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <h1 class="post-title">{{ title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date }}">
-        {{ page.date | date: "%-d %B %Y" }}
+        {{ page.date | date: "%e %B %Y" }}
       </time>
   </header>
   <div class="post-content">
