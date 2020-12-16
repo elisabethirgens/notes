@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/notes/assets/main.css">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="top">
+          <h1 class="top__title"><a href="/notes/">✏️ Notes</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Detour Into Homebrew and Java Versions</h1>
+    <p class="post-meta">
+      <time datetime="Tue Jul 16 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">
+        16 July 2019
+      </time>
+  </header>
+  <div class="post-content">
+    <p>The app I’m working on won’t build, but I know it was recently updated to Java 12. Have I got Java 12 installed? Apparently not. I ran this to find which versions I currently have installed:</p>
+<pre><code>/usr/libexec/java_home -V
+</code></pre>
+<ul>
+<li>OpenJDK 11.0.2</li>
+<li>Java SE 10.0.1</li>
+<li>Java SE 8</li>
+<li>Java SE 7</li>
+</ul>
+<p>The onboarding guide we’ve got at work suggests (without explaining much):</p>
+<pre><code class="language-bash">brew tap caskroom/homebrew-versions
+</code></pre>
+<p>I remember that I can install different older versions either:</p>
+<ul>
+<li>manually by downloading from oracle.com</li>
+<li>or by running brew commands</li>
+</ul>
+<p>But why choose one over the other? And how can I tell which way I installed the previous versions? Does it matter? (Yes! I learnt a boatload and more about all this below 👇)</p>
+<h2>Wtf is a tap anyway?</h2>
+<p><a href="https://docs.brew.sh/Taps">docs.brew.sh/Taps</a> says they are <strong>third-party repositories</strong> and:</p>
+<blockquote>
+<p>brew tap adds more repositories to the list of formulae that brew tracks, updates, and installs from. (…) You should create your own tap for formulae you or your organisation wish to control the versioning of or those that do not meet the above standards.</p>
+</blockquote>
+<pre><code>brew tap
+</code></pre>
+<p>Will output this on my laptop:</p>
+<pre><code>caskformula/caskformula
+homebrew/cask
+homebrew/cask-versions
+homebrew/core
+homebrew/services
+weikengchen/caskformula
+</code></pre>
+<p>There are two named caskformula that are shortcuts for: <a href="https://github.com/caskformula/homebrew-caskformula">caskformula/homebrew-caskformula</a> and the fork <a href="https://github.com/weikengchen/homebrew-caskformula">weikengchen/homebrew-caskformula</a>. Apparently from installing Inkscape some time back, which I do vaguely remember now that I see <a href="https://github.com/caskformula/homebrew-caskformula/issues/51">this issue on GitHub</a>. All right then.</p>
+<p>The other four taps refer to these projects, all on the Homebrew org:</p>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>and their GitHub descriptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Homebrew/homebrew-cask">homebrew-cask</a></td>
+<td>🍻 A CLI workflow for the administration of macOS applications distributed as binaries</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Homebrew/homebrew-cask-versions">homebrew‑cask‑versions</a></td>
+<td>🔢 Alternate versions of Casks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Homebrew/homebrew-core">homebrew-core</a></td>
+<td>🍻 Default formulae for the missing package manager for macOS</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Homebrew/homebrew-services">homebrew-services</a></td>
+<td>🚀 Manage background services with macOS' launchctl daemon manager</td>
+</tr>
+</tbody>
+</table>
+<p>Ok, so the way I understand it now, is that these are different parts of Homebrew. But I wonder about the description that taps are third-party?! Anyway, the one called cask-versions is what supports the installation of alternate versions (of Java in this case, but could be any others). The “default homebrew behaviour” is to install the current newest version. The readme says:</p>
+<blockquote>
+<p>not intended to be used for all and any old versions you personally require. Casks submitted here should be expected to be used by a reasonable number of people and supported by contributors long-term.</p>
+</blockquote>
+<p>Hm. I’m confused about the content in the <a href="https://github.com/Homebrew/homebrew-cask-versions/tree/master/Casks">homebrew-cask-versions/Casks/</a> directory, because it seems to include just a short list of java versions. (Only 6 and 11 now.)</p>
+<p><a href="https://brew.sh/2017/05/01/homebrew-1.2.0/#post">The announcement of Homebrew 1.2.0</a> says that:</p>
+<blockquote>
+<p>Homebrew/homebrew-versions has been moved into Homebrew/homebrew-core <br> Homebrew provides better, official support for different versions.</p>
+</blockquote>
+<p>Is the suggestion from the onboarding guide still valid — or now outdated? 🤔 Not sure.</p>
+<h2>But what is actually a cask?</h2>
+<p><a href="https://docs.brew.sh/Formula-Cookbook#homebrew-terminology">Homebrew terminology</a></p>
+<blockquote>
+<p>An extension of Homebrew to install macOS native apps</p>
+</blockquote>
+<p>Yeah… that doesn’t help at all. But searching for <code>homebrew cask vs formula</code> and going through some links landed me on <a href="https://github.com/Homebrew/homebrew-cask/issues/7002#issuecomment-60494082">an amazing issue</a> with this description:</p>
+<blockquote>
+<p>The difference isn’t between binary and app, but between downloaded as source code that will be compiled, or as an already compiled package. The distinction is important because the result is different. brew install macvim takes (possibly way) longer to install then brew cask install macvim. The former provides flexibility, while the later provides speed.</p>
+</blockquote>
+<h2>🤯😱🥳</h2>
+<h2>Whoa! That explains why…</h2>
+<p>There’s no java listed when I run <code>brew list</code>. Because those are what I’ve installed as source code to be complied, not packages ready to go. Very enlightening.</p>
+<h2>But back to the java version…</h2>
+<pre><code class="language-bash">brew cask install java12
+Error: Cask 'java12' is unavailable: No Cask with this name exists.
+</code></pre>
+<p>Right, because casks are <em>previous</em> versions.</p>
+<pre><code class="language-bash">brew cask install java
+Warning: Cask 'java' is already installed.
+To re-install java, run:
+  brew cask reinstall java
+</code></pre>
+<p>Worked like a charm, except… doh. This now removed Java10, which I need.</p>
+<pre><code class="language-bash">brew cask install java10
+Error: Cask 'java10' is unavailable: No Cask with this name exists.
+</code></pre>
+<p>Soooo, it seems that if a version has reached end of support, the cask is removed. Makes sense, but that also means our onboarding guide is outdated, so now I ended up trying to fix that. ✏️</p>
+<p>The rabbit hole continues as folks on slack mention openjdk being a thing in the world.</p>
+<h2>OpenJDK</h2>
+<blockquote>
+<p>OpenJDK (Open Java Development Kit) is a free and open-source implementation of the Java Platform, Standard Edition (Java SE).[1] It is the result of an effort Sun Microsystems began in 2006. — <a href="https://en.wikipedia.org/wiki/OpenJDK">wikipedia.org/wiki/OpenJDK</a></p>
+</blockquote>
+<p><a href="https://github.com/AdoptOpenJDK/homebrew-openjdk">AdoptOpenJDK/homebrew-openjdk</a> supports installing different versions of OpenJDK.</p>
+<h2>Reading more in homebrew issues</h2>
+<p>Came across a comment by Homebrew maintainer Claudia Pellegrino, where she wrote up “a few random factoids” that are super interesting to read: <a href="https://github.com/Homebrew/homebrew-cask/issues/57387#issuecomment-482822613">issue about java development casks</a>.</p>
+<hr>
+<h3>Unanswered questions and remaining problems</h3>
+<p>What (if any?) is the relationship between the Java that Mac OS wants to handle in system prefs — and the versions I need for development to run applications?</p>
+<p>What <em>is</em> the command I used to find which Java versions I had? <a href="https://explainshell.com/">explainshell.com</a> comes up with nothing and then I don’t know where to look.</p>
+<pre><code>/usr/libexec/java_home -V
+</code></pre>
+<ul>
+<li>Can I get back Java10 again without creating an Oracle account?</li>
+<li>Or can I use OpenJDK10 to run the not-updated-yet app locally?</li>
+<li>And how do I get rid of Java7?</li>
+</ul>
+<pre><code class="language-bash">brew cask uninstall java7
+Error: Cask 'java7' definition is invalid: Token '{:v1=&gt;&quot;java7&quot;}' in header line does not match the file name.
+</code></pre>
+<p>And I get the same error on <code>brew cask list</code> so I’m guessing I’ve got some general brewery debugging and clean up to do tomorrow…</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+            <ul class="links-list">
+              <li>
+                <a href="https://github.com/elisabethirgens">
+                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+                  </span>
+                  elisabethirgens
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/elisabethirg">
+                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+                  </span>
+                  elisabethirg
+                </a>
+              </li>
+            </ul>
+            <small>with Eleventy and GitHub Actions 🚀</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>

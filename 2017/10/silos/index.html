@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/notes/assets/main.css">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="top">
+          <h1 class="top__title"><a href="/notes/">✏️ Notes</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Break down the silos shitty first draft</h1>
+    <p class="post-meta">
+      <time datetime="Sun Oct 29 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+        29 October 2017
+      </time>
+  </header>
+  <div class="post-content">
+    <p>If I draw a banner shaped box in the browser with CSS, what do you see? Do you see a banner that is exactly 48 pixels tall and 608 pixels wide and wonder wtf is up with those ugly numbers? Or do you see a responsive element built from the content out?</p>
+<pre><code class="language-html">&lt;div class=&quot;banner&quot;&gt;
+    idgaf how tall or wide I am… throw anything at me
+    and I will happily adapt \o/
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.banner {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    max-width: 38rem;
+}
+</code></pre>
+<p>What makes this ☝️ a sturdy, maintainable, flexible banner that browsers, screen readers, developers working on it in the future, content authors — and users — will love?</p>
+<ul>
+<li><strong>Type scale</strong> takes the lead on sizing and spacing. We don’t cram text into a rigid box. Nope, we do something way cooler; we craft a flexible box to always adapt to any content. ✌️</li>
+<li><strong>Height</strong> is not declared. We let the browser do a calculation based on font‑size, line‑height and padding. With our example banner, it’s height would often end up at <code>48px</code> but it depends — and that is exactly how we want it. Users can increase the size of the text in their browser, developers can modify related elements later, or the text can become a whole lot longer, but none of these changes will cause our banner to break. 💪</li>
+<li><strong>Width</strong> is responsive to the viewport. But we set a maximum width to ensure readability, because long lines are hard to read. Our <code>38rem</code> is not a magic number, and it’s not arbitrarily chosen. Together with the horizontal padding, this creates a maximum line length (called measure in typographic terms) of a recommended ~80 characters. 👌</li>
+</ul>
+<h2>Is this design or is it development?</h2>
+<p>For me — and the way my brain works — it’s quite obviously both. Separating this type of work into silos, different processes or skill sets is artificial and makes absolutely no sense to me.</p>
+<h2>Translating from design to code</h2>
+<p>The designers that I collaborate with learn how to code. 💅 But I’m imagining what happens on cross functional teams where frontend developers work with non-coding designers, and how (best case scenario) something like this happens:</p>
+<ul>
+<li>Design work happens, and a static sketch contains a banner at exactly 600 x 50 pixels.</li>
+<li>But the designer and the developer have a good working relationship, they both know how browsers work, and share an understanding that sketches shouldn’t be taken literally.</li>
+<li>They have built a design system together, so even though this piece of user interface is new, there are known patterns of design details to follow.</li>
+<li>…and yay, the developer will translate this sketch into code and the responsive, flexible banner it should be. Content out, with spacing and measure. Like our banner example.</li>
+</ul>
+<p>This is not bad. But is it… the best process? Even if we are translating sketches of excellent UI design to top‑notch frontend code; <em>it is still translation.</em> <strong>The act of translating is not the same activity as an author writing in their native language.</strong></p>
+<h2>Designing with code</h2>
+<p>Thinking past this simplified banner example, the potential for diversion increases a shitload. Design decisions informed by code are different from those made without. Maybe they tend to be more boring?! Sure. And it’s worth stating that there can be plenty of reasons for choosing translation as a process. Sometimes this is exactly what you want, like when Murakami is translated to English so I can read his books. I understand how this can be needed on large teams building complex systems.</p>
+<p>But maybe… boring is what you want, and what your design system needs. I am convinced that design decisions informed by code have the potential for being more web fluent, more pragmatic and will be based on an honest use of the materials we use to build the web.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+            <ul class="links-list">
+              <li>
+                <a href="https://github.com/elisabethirgens">
+                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+                  </span>
+                  elisabethirgens
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/elisabethirg">
+                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+                  </span>
+                  elisabethirg
+                </a>
+              </li>
+            </ul>
+            <small>with Eleventy and GitHub Actions 🚀</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>

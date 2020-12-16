@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/notes/assets/main.css">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="top">
+          <h1 class="top__title"><a href="/notes/">✏️ Notes</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">wtf is bash anyway?!</h1>
+    <p class="post-meta">
+      <time datetime="Sun Aug 13 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+        13 August 2017
+      </time>
+  </header>
+  <div class="post-content">
+    <p>Bash. This word keeps popping up, without me having more than an extremly shallow understanding of what it means and why I should care. So let’s fix that by writing notes. ✨</p>
+<p>I know it’s related to what I do in my terminal, and Wikipedia can tell me that:</p>
+<blockquote>
+<p>Bash is a Unix shell and command language</p>
+</blockquote>
+<p>But… what exactly is a Unix shell…? 🤔</p>
+<blockquote>
+<p>a command-line interpreter or shell that provides a traditional Unix-like command line user interface.</p>
+</blockquote>
+<p>Are you kidding, Wikipedia? How was that a helpful first line to introduce what <a href="https://en.wikipedia.org/wiki/Unix_shell">Unix shell</a> is… 😠 “Traditional?!” Anyway, the next sentence is more comprehensible:</p>
+<blockquote>
+<p>Users direct the operation of the computer by entering commands as text for a command line interpreter to execute, or by creating text scripts…</p>
+</blockquote>
+<p>A-ha. The general article on <a href="https://en.wikipedia.org/wiki/Shell_(computing)">shell</a> is a lot friendlier, and it explains nicely that it’s a user interface for access to the operating system by either:</p>
+<ul>
+<li>a command-line interface (CLI)</li>
+<li>or graphical user interface (GUI)</li>
+</ul>
+<p>Makes sense! 👌 And I’m reading how it’s called a shell because it is a layer around the kernel. Cool. Back to <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">the article on bash</a>. The history is interesting, but the rest quickly becomes more specific than I’m interested in now. I search for <em>bash introduction</em> and find an abundance of sites created by people who seem to be very afraid of CSS. They are also obviously written as introductions for <em>other people</em> than me, because they make me want to <strong>not</strong> learn about bash.</p>
+<p>But oh wait-a-minute… 👉 <a href="http://guide.bash.academy/inception/">The Bash Guide’s inception</a> looks perfect for me:</p>
+<blockquote>
+<p>Bash is a shell program designed to listen to my commands and do what I tell it to.</p>
+</blockquote>
+<blockquote>
+<p>Bash is a simple tool in a vast toolbox of programs that lets me interact with my system using a text-based interface.</p>
+</blockquote>
+<blockquote>
+<p>The bash shell is a binary program that runs either interactively or non-interactively, usually in a text-based interface provided by a terminal emulator program.</p>
+</blockquote>
+<p>This is great. It assumes nothing and explains everything. And I’m already feeling smart because they also repeat stuff I already understand: Input! Output! How I can run programs that start, communicate and end. Cool! But before I dive into reading about <a href="http://guide.bash.academy/commands/">Commands And Arguments</a>, I want to learn about configuration — because I keep having to deal with that at work.</p>
+<p>I know I have some dotfiles for bash, but I have little clue what we’ve put in them or why there are several different files. Let’s see…</p>
+<h2><code>.bashrc </code></h2>
+<p>This file is a script that runs every time I start a a new terminal session. Something something “when ever bash is started interactively” …hm, okay?! Not quite sure what that means, but it sounds like this is the file that’s most relevant for me to use for configuration most of the time.</p>
+<h2><code>.bash_profile</code></h2>
+<p>This runs only at the start of a new login. Apparently it’s mostly historical reasons why there is a difference?! It doesn’t sound like I need to spend too much time on learning about that.</p>
+<h2><code>.bash_aliases</code></h2>
+<p>Hey, this file is easy enough to understand — because I use several of these aliases all the time. I just didn’t realize before now, that this is where they are defined. 😆</p>
+<hr>
+<p>There’s plenty more to figure out! But this will do nicely for now. The sun has set (quite literally, it’s getting cold out here) and my drink is empty, so… 👋</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+            <ul class="links-list">
+              <li>
+                <a href="https://github.com/elisabethirgens">
+                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+                  </span>
+                  elisabethirgens
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/elisabethirg">
+                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+                  </span>
+                  elisabethirg
+                </a>
+              </li>
+            </ul>
+            <small>with Eleventy and GitHub Actions 🚀</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/notes/assets/main.css">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="top">
+          <h1 class="top__title"><a href="/notes/">✏️ Notes</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Learn Python the Hard Way (cont.)</h1>
+    <p class="post-meta">
+      <time datetime="Sat Dec 30 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+        30 December 2017
+      </time>
+  </header>
+  <div class="post-content">
+    <p>More notes from <a href="https://learncodethehardway.org/python/">Learn Python The Hard Way</a> (continued after <a href="/2017/12/python/">exercises 1–19</a>). And again; <em>These are my notes. You can read them if you want — but I make no attempt at this being useful for anyone else.</em></p>
+<hr>
+<h2>20: Functions and Files</h2>
+<p><code>seek()</code> is built-in function that:</p>
+<ul>
+<li>can change the file object’s position</li>
+<li>will complain if it doesn’t get at least one argument</li>
+<li>1st arg is <code>offset</code> (number of characters from a reference point)</li>
+<li>2nd arg is <code>from_what</code> that works like this:
+<ul>
+<li><code>0</code> is the beginning of the file (this is the default if omitted)</li>
+<li><code>1</code> is the current file position</li>
+<li><code>2</code> is the end of the file</li>
+</ul>
+</li>
+</ul>
+<p>Except… hm. It seems that “only seeks relative to the beginning of the file are allowed” for text files. Which explains why I couldn’t get the end of the file reference to work when playing around in the console with this.</p>
+<p>Python doesn’t need to separatly unpack arguments when I write a function. Which is what I did in the last exercise — but apparently it confused me again now, so let’s repeat:</p>
+<pre><code class="language-python">def whatever_function(anything_argument):
+# and the argument is now ready to be used as a variable
+</code></pre>
+<p>✅ “rewrite the script to use the shorthand notation <code>+=</code>” <strong>Yes. Did that. It’s working! \o/</strong></p>
+<hr>
+<h2>21: Functions Can Return Something</h2>
+<pre><code class="language-python">def add(a, b):
+    print(f&quot;ADDING {a} + {b}&quot;) # this is just print
+    return a + b # this is where the math actually happens
+
+# define a variable and run the function with two arguments
+# the variable then gets a value returned from the function
+age = add(30, 10)
+</code></pre>
+<p>Wohooo! Had to sleep on it, but nailed the tricky extra credit puzzle.</p>
+<h4>Math (and Python) operation order repetition 🎓</h4>
+<blockquote>
+<p>(parentheses first, then) do the multiplication and division in one step, from left to right, then do the addition and subtraction in one step from left to right</p>
+</blockquote>
+<hr>
+<h2>22: What Do You Know So Far?</h2>
+<p>This is a memorization exercise. I’ve got a lot of the symbols down fine, so I’m going to focus on the specific Python use descriptions that are less fluent for me yet:</p>
+<h3>Symbols / characters</h3>
+<p><code>#</code> write a comment <br>
+<code>()</code> group some data (this is called a <a href="https://en.wikipedia.org/wiki/Tuple">tuple</a>!) <br>
+<code>,</code> separate multiple arguments <br>
+<code>&quot;</code> make a string <br>
+<code>'</code> also make a string, but maybe a shorter one <br>
+<code>=</code> assign the value on the right to a variable on the left <br>
+<code>%</code> calculate the remainder from the division (modulus operator) <br>
+<code>&gt;=</code> test if a value is more than or equal <br>
+<code>&lt;=</code> test if a value is less than or equal <br>
+<code>{}</code> embed a variable in a string <br>
+<code>):</code> close a function definition</p>
+<p><code>\n</code> add a newline character <br>
+<code>\t</code> add a tab character <br>
+<code>\r</code> add a carriage return (reset to beginning of line)</p>
+<h3>Built-in functions that are always available</h3>
+<p>✏️ <code>print()</code> output stuff <br>
+🔨 <code>format()</code> apply format to a string that is already created <br>
+🚢 <code>float()</code> return a floating point number (with a decimal point, not an integer) <br>
+✂️ <code>round()</code> round off decimal numbers <br>
+❓ <code>input()</code> ask questions in the console <br>
+💯 <code>int()</code> convert a number as a string to an integer <br>
+📂 <code>open()</code> open a file and return a file object</p>
+<h3>Methods of file objects</h3>
+<p>Also built-in, but not always available. I can use them <em>after</em> a file object has been created.</p>
+<p>👀 <code>read()</code> read content from the file <br>
+🧐 <code>readline()</code> read just a single line from the file <br>
+✏️ <code>write()</code> write the content of a string to the file <br>
+🔎 <code>seek()</code> change the file object’s position <br>
+🚫 <code>close()</code> close the file and forget everything about it</p>
+<p>Hmmmmm… It seems that in writing up these lists with proper headings, I also stumbled upon learning the <strong>difference between functions and methods</strong> in Python. Neat! 🎉</p>
+<h3>Statements</h3>
+<p>🙋‍♀️ <code>def</code> define my own function and give it a useful name <br>
+💁‍♀️ <code>return</code> return a value from the function</p>
+<p>(Very pleased with these emoji!)</p>
+<h3>More stuff</h3>
+<pre><code class="language-python">f&quot;here are some words and a {variable}&quot; # this is an f-string
+</code></pre>
+<pre><code class="language-python"># from the sys module, import a function for taking arguments
+from sys import argv
+# add one more argument in addition to the script itself
+script, filename = argv
+</code></pre>
+<pre><code class="language-python">open(filename)      # without the optional string for mode
+open(filename, 'r') # r for read mode (which is default)
+open(filename, 'w') # w for write mode (careful! can delete)
+</code></pre>
+<hr>
+<h3>Some observations…</h3>
+<p>…after this week of working on the <a href="https://learncodethehardway.org/python/">Learn Python The Hard Way</a> exercises. 💪</p>
+<ul>
+<li>I’ve picked up a lot after just some hours each day for seven days.</li>
+<li>Learning thoroughly like this <em>different</em> from how I’ve often learnt before. And I’m really enjoying it! This book is encouraging me to be patient and to <em>practice intentionally</em>.</li>
+<li>I am building a language to describe what I’m learning, and this is different from how I (even now after all these years) can talk about HTML/CSS. This is useful in all sorts of ways!!</li>
+</ul>
+<p>Difference explained, with my current cocktail as an example:</p>
+<ul>
+<li>🙃 “I’m having a red-ish drink with a cool name I spotted in the menu. It’s got ice!”</li>
+<li>🤓 “This is a <strong>negroni</strong>. It’s an apértif, and served in a short tumbler. The ingredients are equal parts Campari, Vermouth (rosso) and gin. The first one had orange peel, but the other bartender forgot that from this second one. (It’s still pretty good.)”</li>
+</ul>
+<h2>🍸</h2>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+            <ul class="links-list">
+              <li>
+                <a href="https://github.com/elisabethirgens">
+                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+                  </span>
+                  elisabethirgens
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/elisabethirg">
+                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+                  </span>
+                  elisabethirg
+                </a>
+              </li>
+            </ul>
+            <small>with Eleventy and GitHub Actions 🚀</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>

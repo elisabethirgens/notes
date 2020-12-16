@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/notes/assets/main.css">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="top">
+          <h1 class="top__title"><a href="/notes/">✏️ Notes</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Salvage The Sunken Source Maps</h1>
+    <p class="post-meta">
+      <time datetime="Thu Jul 25 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">
+        25 July 2019
+      </time>
+  </header>
+  <div class="post-content">
+    <p>The annoying bug I’ve been hunting down for 3 days resulted in 2 files changed, 3 insertions(+), 2 deletions(-). It was quite the debugging adventure, and I took plenty of notes along the way to avoid getting lost. Now slightly rewritten into this post, so future-me will remember what I learnt.</p>
+<p>While reorganizing a handful of CSS and JS files, I was getting console warnings. First it took me <em>forever</em> to realize it was not my changes, the setup didn’t work on master in production either.</p>
+<hr>
+<p>Out of the box (mwahaha) <a href="https://parceljs.org/">Parcel</a> will create source maps by default. But it’s not working in this app. Source maps are helpful for debugging CSS, so I want to get this working.</p>
+<h2>Firefox dev tools</h2>
+<p>The first thing I notice, was a console warning:</p>
+<blockquote>
+<p>Source map error: request failed with status 404</p>
+</blockquote>
+<p>(Later, I got really tripped up by how the warning wasn’t there initially. I thought I’d fixed it! But then I understood that it only appears <em>after</em> you attempt to interact with the CSS bundle. Which explains we’ve not noticed it before, nobody’s been poking at this CSS in a while.)</p>
+<p>The link in the warning to <a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger/Source_map_errors">learn more on MDN</a> was really helpful, but it took a while to understand how to grok this suggestion:</p>
+<blockquote>
+<p>The fix here is to make sure the file is being served and is accessible to the browser</p>
+</blockquote>
+<h2>Chrome dev tools</h2>
+<p>There was no console warning in Chrome, and also the source CSS is completely minified on one line. (Interesting that Firefox will make the stylesheet readable for you, even though the source map is missing.)</p>
+<h2>More about source maps</h2>
+<blockquote>
+<p>A source map provides a way of mapping code within a compressed file back to it’s original position in a source file.</p>
+</blockquote>
+<ul>
+<li><a href="https://blog.teamtreehouse.com/introduction-source-maps">Treehouse: An Introduction to Source Maps</a></li>
+<li><a href="https://css-tricks.com/should-i-use-source-maps-in-production/">CSS-Tricks: Should I Use Source Maps in Production? </a></li>
+</ul>
+<h2>Check the files in a browser</h2>
+<p>✅ I can see the minified and bundled CSS<br>
+<code>https://www.___.com/fabulous-app/assets/awesome-styles.css</code></p>
+<p>✅ and that Parcel has added this line at the end:<br>
+<code>/*# sourceMappingURL=/awesome-styles.css.map */</code></p>
+<p>✅ How does this work? Ok, in a different app with working source maps, I can see how the URL points to a file that the browser asks to download.</p>
+<p>🚫 but here, there is no file, just http error 404 on this URL<br>
+<code>https://www.___.com/fabulous-app/assets/awesome-styles.css.map</code></p>
+<h2>Check the files locally</h2>
+<p>This is a java web application. And ah… I can see that Parcel does indeed generate the source maps inside a <code>/target/classes/WEB-INF/assets/awesome-styles.css.map</code></p>
+<p>Soooo. 🤔 The files exist, but are “not served and accessible to the browser” just like the MDN help page said. I have no clue how the java part of this app works, but grepping words I found in the URL led me to a configuration file. And this code was quite readable. I could see where some assets were excluded from a security something and then added to a resource location. I repeated the lines for the source maps and omg yay it worked 🥳🥳🥳</p>
+<p>✅ Running the app locally will now serve up a <code>awesome-styles.css.map</code> <br>
+✅ I can totally add Java to my resume now, right?!</p>
+<h2>But… not so fast!</h2>
+<p>A gazillion detours and dead ends and debugging the wrong thing at the wrong time is simplified away from this write up. I was debugging the following 👇 for ages, before I understood that ☝️ about how the maps were generated — but not served up by the java configuration.</p>
+<h2>Parcel 📦</h2>
+<p>Ah, Parcel. The “zero configuration web application bundler”. I’m sure that’s great when setting up, but all I’ve wanted the past days is a config file to be able to understand what’s going on.</p>
+<p>But I started to get the hang of how <a href="https://parceljs.org/cli.html">Parcel CLI</a> worked.</p>
+<ul>
+<li><code>build</code> is the main command in <code>package.json</code> for Parcel to do it’s thing in this app</li>
+<li><code>--log-level 5</code> is nice for debugging</li>
+<li><code>--no-source-maps</code> works as expected when I tried adding the option</li>
+</ul>
+<p>But I want the source maps dammit and Parcel is still adding an extra <code>/</code> to the URL, like so:<br>
+<code>/*# sourceMappingURL=/awesome-styles.css.map */</code></p>
+<p>When I remove the extra slash in Chrome dev tools, the map and source files appear instantly. So now I know what the correct URL is, but how do I get Parcel to generate this:<br>
+<code>/*# sourceMappingURL=awesome-styles.css.map */</code></p>
+<h3>Read GitHub issues until my eyes bleed</h3>
+<p>So many. 👀👀👀 But especially these two:</p>
+<ul>
+<li><a href="https://github.com/parcel-bundler/parcel/issues/2209">parcel-bundler/parcel/issues/2209</a></li>
+<li><a href="https://github.com/parcel-bundler/parcel/issues/1753">parcel-bundler/parcel/issues/1753</a></li>
+</ul>
+<p>My huge debugging mistake, was that I was trying this fix before I had fixed the serving and before I had understood how/where/what/when Parcel was doing anything at all. So I <em>thought</em> that nothing worked with using the option to <a href="https://parceljs.org/cli.html#set-the-public-url-to-serve-on">Set the public URL to serve on</a>.</p>
+<p>But in fact… <code>--public-url=./</code> did the trick.</p>
+<p>And tada! We now have functioning source maps that provide developers with easier debugging of CSS and Javacript in this application.</p>
+<hr>
+<h2>What I learnt</h2>
+<ul>
+<li>The basics of how Parcel works and how to actually understand the docs</li>
+<li>More about source maps and dev tools 🔨</li>
+<li>Remember to test some explicit changes first to learn what gets generated and built when, so that I’m not trying a bunch of fixes without actually implementing them</li>
+<li>Before searching the internet for fixes, spend time to understand how different parts are glued together, because it makes it so much easier to know if the fixes I find work or not</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+            <ul class="links-list">
+              <li>
+                <a href="https://github.com/elisabethirgens">
+                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+                  </span>
+                  elisabethirgens
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/elisabethirg">
+                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+                  </span>
+                  elisabethirg
+                </a>
+              </li>
+            </ul>
+            <small>with Eleventy and GitHub Actions 🚀</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/notes/assets/main.css">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="top">
+          <h1 class="top__title"><a href="/notes/">✏️ Notes</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Make Three in a Row, Part 1</h1>
+    <p class="post-meta">
+      <time datetime="Tue Feb 06 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+         6 February 2018
+      </time>
+  </header>
+  <div class="post-content">
+    <p>Yikes. *multiple deep breaths* So building a game of tic-tac-toe is supposed to be a pretty straight forward programming task, but… this is going to be a bit of a challenge for me.</p>
+<p>Current status: I’ve reached exercise 37 of 52 in <a href="https://learnpythonthehardway.org/">Learn Python the Hard Way</a>. I don’t know if I’ve got enough down now to do this. Probably not? But okay — let’s try anyway. Attempting to write that <a href="/2018/01/cheesecake/">“cheese cake recipe“</a> too early was kinda fun, so let’s do the same with this.</p>
+<h2>Humble beginnings 🌱</h2>
+<p>Boiled down to the absolute bare minimum, my script needs to:</p>
+<ul>
+<li>know there are 9 positions</li>
+<li>know there are 2 players
+<ul>
+<li>and which player’s turn it is</li>
+<li>and who holds which position</li>
+</ul>
+</li>
+<li>be able to recognize three-in-a-row
+<ul>
+<li>know about vertical, horizontal or diagonal</li>
+<li>determine a win or a draw</li>
+</ul>
+</li>
+<li>ask the players for input</li>
+<li>print a result</li>
+</ul>
+<p>(And then next the script should know if a position is occupied, so players can’t make impossible moves. But I can actually think of that as an enhancement, it’s not critical.)</p>
+<h2>But where to start? 😱</h2>
+<pre><code class="language-python">print(&quot;Welcome! Let’s play a game of tic-tac-toe.&quot;)
+
+playerA = input(&quot;X: &quot;)
+print(f&quot;Player X: {playerA}&quot;)
+
+playerB = input(&quot;0: &quot;)
+print(f&quot;Player 0: {playerB}&quot;)
+</code></pre>
+<p>I’m already wondering if I got the concept of positions wrong, if that is more complicated than it needs to be, since this is neither chess nor othello. Will it be even simpler if the script at first just needs to know about the players taking 9 turns? 🤔</p>
+<pre><code class="language-python">print(&quot;Welcome! Let’s play a game of tic-tac-toe.&quot;)
+
+playerA1 = input(&quot;X: &quot;)
+print(f&quot;Player X: {playerA1}&quot;)
+
+playerB2 = input(&quot;0: &quot;)
+print(f&quot;Player 0: {playerB2}&quot;)
+
+playerA3 = input(&quot;X: &quot;)
+print(f&quot;Player X: {playerA3}&quot;)
+
+playerB4 = input(&quot;0: &quot;)
+print(f&quot;Player 0: {playerB4}&quot;)
+
+playerA5 = input(&quot;X: &quot;)
+print(f&quot;Player X: {playerA5}&quot;)
+
+playerB6 = input(&quot;0: &quot;)
+print(f&quot;Player 0: {playerB6}&quot;)
+
+playerA7 = input(&quot;X: &quot;)
+print(f&quot;Player X: {playerA7}&quot;)
+
+playerB8 = input(&quot;0: &quot;)
+print(f&quot;Player 0: {playerB8}&quot;)
+
+playerA9 = input(&quot;0: &quot;)
+print(f&quot;Player X: {playerA9}&quot;)
+
+print(&quot;Done! Sry, I have no idea yet if anyone won.&quot;)
+</code></pre>
+<p>That looks like it could benefit from getting a list.</p>
+<pre><code class="language-python">moves = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+moves[0] = input(&quot;X: &quot;)
+print(f&quot;Player X: {moves[0]}&quot;)
+
+moves[1] = input(&quot;0: &quot;)
+print(f&quot;Player 0: {moves[1]}&quot;)
+
+# and so on!
+
+print(&quot;Still no idea if anyone won.&quot;)
+</code></pre>
+<p>…and then a loop next?!</p>
+<pre><code class="language-python">moves = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+for playermove in moves:
+    playermove = input(&quot;&gt;&gt;&gt; &quot;)
+    print(f&quot;Player X or 0 said: {playermove}&quot;)
+
+print(&quot;Yeah sry not getting any smarter here.&quot;)
+</code></pre>
+<p>Omg. It works. Haha! It’s the most basic script ever that hasn’t really got a clue about anything, but it’s some sort of start. Next tiny step…? Maybe storing input from the players?!</p>
+<hr>
+<p>I peaked ahead in <a href="https://learnpythonthehardway.org/">LPTHW</a> and the next exercise 38 is called “Doing Things to Lists”. Yeah, that sounds like it could be somewhat useful to learn before I proceed… 😆</p>
+<p>(Yes. Yes, it was… Very useful.)</p>
+<pre><code class="language-python">moves = [ ]
+
+for playermove in range(0,9):
+    playermove = input(&quot;&gt;&gt;&gt; &quot;)
+    print(f&quot;Player X or 0 said: {playermove}&quot;)
+    moves.append(playermove)
+
+# check that the list contains actual player input
+print(f&quot;{moves}&quot;) # yay! now it does
+</code></pre>
+<p>I’ve now got a tiny super simple script that can… <br>
+…promt for input in the console 9 times and store that in a list.</p>
+<h2>To do next ✏️</h2>
+<ul>
+<li>The script needs to differentiate between the two players.</li>
+<li>And start learning some rules of the game.</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+            <ul class="links-list">
+              <li>
+                <a href="https://github.com/elisabethirgens">
+                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+                  </span>
+                  elisabethirgens
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/elisabethirg">
+                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+                  </span>
+                  elisabethirg
+                </a>
+              </li>
+            </ul>
+            <small>with Eleventy and GitHub Actions 🚀</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>

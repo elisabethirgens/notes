@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/notes/assets/main.css">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+      <div class="wrapper">
+        <div class="top">
+          <h1 class="top__title"><a href="/notes/">✏️ Notes</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Learn CS from Scratch</h1>
+    <p class="post-meta">
+      <time datetime="Sun Dec 06 2020 00:00:00 GMT+0000 (Coordinated Universal Time)">
+         6 December 2020
+      </time>
+  </header>
+  <div class="post-content">
+    <p>Scratch is a programming language that is visual and block-based. Developed by MIT and targeted at kids from 8 to 16, but also used by Harvard in week 0 of intoduction to computer science. I am currently taking <a href="/notes/2020/11/start-cs50/">CS50 with a study group</a> == great reason to play with Scratch this week.</p>
+<p>The requirements for <a href="https://cs50.harvard.edu/x/2020/psets/0/scratch/">Problem Set 0</a> are open-ended to create a game, interactive story, animation or whatever project you want. I went for implementing a classic, but using <a href="/notes/2018/01/cheesecake/">cheesecake</a> because that's my naming tradition. <strong>Write a program that can count to 100. Replace multiples of 3 with cheese, multiples of 5 with cake, and multiples of both 3 and 5 with cheesecake.</strong> 😋</p>
+<p>tl;dr 👉 <a href="https://scratch.mit.edu/projects/459683594/editor/">scratch.mit.edu/projects/459683594</a></p>
+<hr>
+<p>Inspired by <a href="https://www.tomdalling.com/blog/software-design/fizzbuzz-in-too-much-detail/">FizzBuzz In Too Much Detail</a> 💙 — let's dig deeper into doing this in Scratch.</p>
+<h3>The first working one I made:</h3>
+<pre><code>when 🟢 clicked
+set i to 0
+repeat until i = 100
+  change i by 1
+
+  if (i mod 3) = 0 or (i mod 5) = 0 then
+    if (i mod 15) = 0 then
+      say CHEESECAKE! for 2 seconds
+    else
+      if (i mod 3) = 0 then
+        say cheese for 1 seconds
+      if (i mod 5) = 0 then
+        say cake for 1 seconds
+  else
+    say i for 1 seconds
+</code></pre>
+<p>Hm… 🤨 2 <code>if else</code> and 2 <code>if</code> and 5 groups of modulo-in-boolean blocks? Something seems overly complicated and weirdly nested. Surely this can be improved?</p>
+<h3>The second version I ended up with:</h3>
+<pre><code>when 🟢 clicked
+set i to 0
+repeat until i = 100
+  change i by 1
+
+  if (i mod 3) = 0 or (i mod 5) = 0 then
+    if (i mod 3) = 0 and not (i mod 5) = 0 then
+      say cheese for 1 seconds
+    if (i mod 5) = 0 and not (i mod 3) = 0 then
+      say cake for 1 seconds
+    if (i mod 15) = 0
+      say CHEESECAKE! for 2 seconds
+  else
+    say i for 1 seconds
+</code></pre>
+<p>3 <code>if</code> blocks stacked up nicely, wrapped inside a single <code>if else</code>. These controls seem more readable. But those conditions are no fun at all, counting a total of 7 modulo-in-boolean groups.</p>
+<h2>🤔</h2>
+<p>Both those versions seemed to warrant improvements — but exactly how wasn't obvious to me. I kept moving around the blocks to a script I expected to work, only for the output to contain different forms of duplication. Why was this more elaborate than for example a Python implementation?</p>
+<p>A-ha. Scratch 3.0 doesn't have an <code>elseif</code>. I was trying to check for multiple conditions without nesting, when that is just not available in this language. The <a href="https://en.scratch-wiki.info/wiki/If_()_Then,_Else_(block)">If () Then, Else (block)</a> is a control that can check for one condition, there's no way I check for two conditions simultaneously.</p>
+<p>JS doesn't have an <code>elseif</code> keyword either, but <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">examples from MDN</a> show this chaining:</p>
+<pre><code class="language-js">if (condition1)
+  statement1
+else if (condition2)
+  statement2
+else if (condition3)
+  statement3
+else
+  statementN
+</code></pre>
+<p>But when that same nesting is indented properly, it looks like this:</p>
+<pre><code class="language-js">if (condition1)
+  statement1
+else
+  if (condition2)
+    statement2
+  else
+    if (condition3)
+// and so on
+</code></pre>
+<h2>🤯</h2>
+<p>When my brain understood properly that <code>if else</code> was all I had in this language — and that the blocks basically makes it <strong>look different</strong> than it does the way it might in JavaScript — it was easier to stop trying to reach for something not there, and instead figure out how to optimize what I had.</p>
+<h3>Third and improving:</h3>
+<pre><code>when 🟢 clicked
+set i to 0
+repeat until i = 100
+  change i by 1
+
+  if (i mod 3) = 0 then
+    if (i mod 5) = 0 then
+      say CHEESECAKE! for 2 seconds
+    else
+      say cheese for 1 seconds
+  else
+    if (i mod 5) = 0 then
+      say cake for 1 seconds
+    else
+      say i for 1 seconds
+</code></pre>
+<p>We now have 3 <code>if else</code> and 3 modulo-in-boolean. Much better!! But kinda arranged &quot;more clever&quot; than necessary? I think I prefer this next way of using one additional level of nesting, but with the benefit of a nice pattern to how <code>if else if else if else</code> are nested. 👇</p>
+<h3>Fourth and favourite implementation:</h3>
+<pre><code>when 🟢 clicked
+set i to 0
+repeat until i = 100
+  change i by 1
+
+  if (i mod 15) = 0 then
+    say CHEESECAKE! for 2 seconds
+  else
+    if (i mod 3) = 0 then
+      say cheese for 1 seconds
+    else
+      if (i mod 5) = 0 then
+        say cake for 1 seconds
+      else
+        say i for 1 seconds
+</code></pre>
+<p>Check it out on <a href="https://scratch.mit.edu/projects/459683594/editor/">scratch.mit.edu/projects/459683594</a></p>
+<p><em>Are there any other ways this can be improved?</em></p>
+<h2>Variables?</h2>
+<p>When starting out, I misunderstood and thought I had read that variables in Scratch could only store numbers. But I can delare variables for strings too, so let's see what that looks like…</p>
+<h2>String concatenation?</h2>
+<p>Nope, I can declare variables for cheese and cake, but I can't use the + operator to say cheesecake. The sprite will then say 0. I will just leave the words directly in the say blocks.
+(EDIT: ah, there is a <a href="https://en.scratch-wiki.info/wiki/Join_()()_(block)">join</a> but having to declare and then set variables to cheese and cake, not really an improvement of this script.)</p>
+<h2>Lists?</h2>
+<p>I grabbed the <code>() Mod ()</code> block quickly here. But it was different when learning Python a couple of years ago. The modulo operator had been mentioned, but I probably had no clue how to use for anything. When baking a <a href="/notes/2018/01/cheesecake/">cheesecake</a> at the time, I used <code>range()</code> with <code>step</code> to create three different lists containing the multiples. What would that approach look like here? Scratch doesn't show the relevant blocks initially for some reason — you have to create a list first. But there are <a href="https://en.scratch-wiki.info/wiki/List_Blocks">list blocks</a> available!</p>
+<h2>Block hacking?</h2>
+<p>The Scratch forums talk about hacking blocks, that produces some interesting solutions to implementing FizzBuzz. But it is time for me to crawl out of this rabbit hole. Week 1 of CS50 with C awaits!</p>
+<hr>
+<h3>Questions I may or may not come back to</h3>
+<ul>
+<li>Is there a straight foreward way to get version control of a <a href="https://fileinfo.com/extension/sb3">SB3 file</a>?</li>
+<li>How does the custom block with a boolean work?</li>
+<li>What needs to be in place to use different sprites, but <em>not</em> change them between two adjacent multiples? For example that the character's mouth stays open between 5 and 6.</li>
+<li>…and would it be fun to create a project with multiple sprites to emulate the real life group word game, or would that just make me re-evaluate my life choices?!? 😁</li>
+</ul>
+<hr>
+<h2>Scratch is fun!</h2>
+<p>I would have loved for this to have been my introduction to programming concepts. There is something interesting about seeing loops, conditions and statements in blocks like this — and now that I have played around with Scratch, it will influence how I doodle out concepts on paper while coding.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+            <ul class="links-list">
+              <li>
+                <a href="https://github.com/elisabethirgens">
+                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
+                  </span>
+                  elisabethirgens
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/elisabethirg">
+                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
+                  </span>
+                  elisabethirg
+                </a>
+              </li>
+            </ul>
+            <small>with Eleventy and GitHub Actions 🚀</small>
+
+      </div>
+
+    </footer>
+
+  </body>
+
+</html>
