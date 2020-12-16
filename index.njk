@@ -10,7 +10,7 @@ layout: default
       <li>
         <span class="post-meta">{{ post.date | readableDate }}</span>
         <h2>
-          <a class="post-link" href="{{ post.url }}">{{ post.data.title }}</a>
+          <a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a>
         </h2>
       </li>
     {%- endfor -%}
