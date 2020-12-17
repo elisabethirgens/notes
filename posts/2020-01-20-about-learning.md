@@ -17,7 +17,7 @@ Nicky Case has read 4 papers about emotion in learning, so I don’t have to.
 
 This is interesting, because I feel like my whole career as a developer, people have talked about how it’s best to learn by doing. That seems to make so much sense, but maybe that is only true _after_ you have first created a foundation. Like learning your 3rd or 4th programming language might be most effective by building something, because then you are not a beginner anymore.
 
-Perhaps I would benefit from embrace that my programming skills are still at a beginner level, and my learning will be most effective when it’s guided. I can go off on explorations later. That is probably exactly what happened when I was [learning Python]({{ site.baseurl }}/2018/04/tictactooomg/).
+Perhaps I would benefit from embrace that my programming skills are still at a beginner level, and my learning will be most effective when it’s guided. I can go off on explorations later. That is probably exactly what happened when I was [learning Python]({{ '/2018/04/tictactooomg/' | url }}).
 
 ### The loop from cognition to motivation
 

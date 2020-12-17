@@ -57,7 +57,7 @@ Some apps are top notch responsive, others half way there. One of the largest fr
 
 ## Intrinsic Web Design
 
-Jen Simmons has introduced a new era of design for the web, and I’m starting to think it has less to do with CSS Grid specifically than I’ve thought before. Comparing my previous notes [Say Hello to Intrinsic Web Design]({{ site.baseurl }}/2018/06/intrinsic_web_design/) with the strategy I defined for the logistics system, perhaps the most important aspect is:
+Jen Simmons has introduced a new era of design for the web, and I’m starting to think it has less to do with CSS Grid specifically than I’ve thought before. Comparing my previous notes [Say Hello to Intrinsic Web Design]({{ '/2018/06/intrinsic_web_design/' | url }}) with the strategy I defined for the logistics system, perhaps the most important aspect is:
 
 * media queries only if and when needed
 * design a flexibility model for the content

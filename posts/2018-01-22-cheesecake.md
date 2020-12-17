@@ -6,7 +6,7 @@ date: 2018-01-22
 
 I need a “cheesecake recipe” for a thing. It doesn’t have to be the best recipe in the world, but I want it to be **written by me from scratch using code I actually understand**. It would be easy to find recipes written by other people, or even just parts to be inspired by. But there’s no fun in that. (Yes, this typically called something else, I’m using different words here on purpose.)
 
-Since I just started [learning Python]({{ site.baseurl }}/2017/12/python/), this also became an interesting way of tracking my progress. How far into [Learn Python The Hard Way](https://learncodethehardway.org/python/) would I be before having enough to write the recipe using just what I’d directly learnt from the exercies…?! [Jump to conclusion!](#conclusion)
+Since I just started [learning Python]({{ '/2017/12/python/' | url }}), this also became an interesting way of tracking my progress. How far into [Learn Python The Hard Way](https://learncodethehardway.org/python/) would I be before having enough to write the recipe using just what I’d directly learnt from the exercies…?! [Jump to conclusion!](#conclusion)
 
 So just for fun, I kept attempting to start coding the cheesecake recipe. Before I had learnt enough to actually write the script, just to make this lovely collection of:
 

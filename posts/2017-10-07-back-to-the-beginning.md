@@ -24,7 +24,7 @@ Yay, that was fun. So what’s happening here?
 * Set a value to the variable’s `textContent` property.
 * These two features are both part of the DOM API.
 
-✅ Played around in the console. *(And let’s be honest, I haven’t really done that much before now. I guess it’s easier for a website than [a paper book]({{ site.baseurl }}/2017/07/javascript/) to encourage diving in there.)*
+✅ Played around in the console. *(And let’s be honest, I haven’t really done that much before now. I guess it’s easier for a website than [a paper book]({{ '/2017/07/javascript/' | url }}) to encourage diving in there.)*
 
 ---
 

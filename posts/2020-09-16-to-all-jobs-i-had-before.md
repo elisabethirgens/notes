@@ -18,7 +18,7 @@ I learnt that the details could be outdated, misunderstood, or sometimes just no
 
 ### Systems thinking ♻️
 
-**THE FISH FACTORY** processed 300 t pelagic fish daily, with intake from the boat dependent on work done in sequence by 50 people. Most packing 20kg boxes, some driving a [fork lift truck or operating a fillet machine]({{ site.baseurl }}/2017/11/fish/ ). The elevator moved pallets frozen the previous day, and it was such a critical bottle neck that one person was assigned elevator duty to avoid prolonged stops.
+**THE FISH FACTORY** processed 300 t pelagic fish daily, with intake from the boat dependent on work done in sequence by 50 people. Most packing 20kg boxes, some driving a [fork lift truck or operating a fillet machine]({{ '/2017/11/fish/' | url }} ). The elevator moved pallets frozen the previous day, and it was such a critical bottle neck that one person was assigned elevator duty to avoid prolonged stops.
 
 I learnt how constraints affect the system as a whole. If the elevator or any other part of the system was too slow, the entire production would grind to a halt. You truly grasp the concept of **work flow** when it is physical. Boxes clogging the conveyor belts, pallets queueing up with no floor space, lines of people literally just having to wait because their work stations are blocked from progress.
 

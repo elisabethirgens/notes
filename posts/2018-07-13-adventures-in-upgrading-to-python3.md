@@ -31,7 +31,7 @@ python --version
 Python 2.7.13
 ```
 
-(I thought this was the version that comes with Mac OS, but realise later that it’s not.)  Mac OS installs an older Python with the system, which is why [LPTHW]({{ site.baseurl }}/2017/12/python/) got me to install Python3. (But that my not-work machine.) The book recommended installing from python.org directly. I’m always confused when getting different recommentations like this. What are the pros and cons of installing like that vs using Homebrew? One thing I can think of, is that the usage and target groups are very different.
+(I thought this was the version that comes with Mac OS, but realise later that it’s not.)  Mac OS installs an older Python with the system, which is why [LPTHW]({{ '/2017/12/python/' | url }}) got me to install Python3. (But that my not-work machine.) The book recommended installing from python.org directly. I’m always confused when getting different recommentations like this. What are the pros and cons of installing like that vs using Homebrew? One thing I can think of, is that the usage and target groups are very different.
 * The book needs to not complicate the setup for its users.
 * But developers in our dept need to deal with brew anyway.
 

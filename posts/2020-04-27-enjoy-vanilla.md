@@ -4,7 +4,7 @@ title:  "Enjoy Vanilla JS, Not Chocolate Broccoli"
 date: 2020-04-27
 ---
 
-I’m on a mission to figure out how to **enjoy learning JavaScript**. I have [learnt about learning]({{ site.baseurl}}/2020/01/about-learning/) that I need to get the cognition to motivation loop working _with_ me instead of against me.
+I’m on a mission to figure out how to **enjoy learning JavaScript**. I have [learnt about learning]({{ '/2020/01/about-learning/' | url }}) that I need to get the cognition to motivation loop working _with_ me instead of against me.
 
 > You'll learn poorly if you're not motivated, and you'll be demotivated if you're learning poorly. But, from vicious to virtuous cycle: you'll learn well if you're motivated, and you'll be more motivated if you're learning well!<br>
 —  [Curse of the Chocolate-Covered Broccoli (or: Emotion in Learning)](https://blog.ncase.me/curse-of-the-chocolate-covered-broccoli-or-emotion-in-learning/)

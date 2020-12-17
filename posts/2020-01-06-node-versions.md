@@ -4,7 +4,7 @@ title:  "Play Twister with Dependencies"
 date: 2020-01-06
 ---
 
-Last week I was figuring out more on how to [work with Yarn]({{ site.baseurl }}/2020/01/dependencies/) and dependencies in my new project. Main differences from the apps I knew from previous gig, is that there are a whole lot more dependencies here — and this application runs on [containers in OpenShift]({{ site.baseurl }}/2019/12/containers/).
+Last week I was figuring out more on how to [work with Yarn]({{ '/2020/01/dependencies/' | url }}) and dependencies in my new project. Main differences from the apps I knew from previous gig, is that there are a whole lot more dependencies here — and this application runs on [containers in OpenShift]({{ '/2019/12/containers/' | url }}).
 
 * `yarn audit` shows a good handful of vulnerabilities, but apart from the problem with noise, I don’t need to worry too much about the ones related to devDependencies
 * `yarn check` is not happy at all with 66 warnings and 110 errors, and here I’m not sure if I should be worried or not

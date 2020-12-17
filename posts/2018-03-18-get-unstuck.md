@@ -4,9 +4,9 @@ title:  "Get Unstuck"
 date: 2018-03-18
 ---
 
-I’ve been feeling stuck the past weeks. The exercises in [Learn Python the Hard Way](https://learncodethehardway.org/python/) are getting harder. And making [“Three in a Row“]({{ site.baseurl }}/2018/02/game/) has seemed out of reach. I _know_ I just need to invest time with it all — but I’ve struggled to find motivation to do that enough.
+I’ve been feeling stuck the past weeks. The exercises in [Learn Python the Hard Way](https://learncodethehardway.org/python/) are getting harder. And making [“Three in a Row“]({{ '/2018/02/game/' | url }}) has seemed out of reach. I _know_ I just need to invest time with it all — but I’ve struggled to find motivation to do that enough.
 
-It’s been 9 months since I [started the experiment]({{site.baseurl}}/2017/06/hello-world/) of writing these notes. And much like I had a theory about 45 (!!) blog posts ago, there is something that motivates me about _publishing_ them. I&nbsp;don’t generally show them to anyone, but the act of putting words out in the world means:
+It’s been 9 months since I [started the experiment]({{ '/2017/06/hello-world/' | url }}) of writing these notes. And much like I had a theory about 45 (!!) blog posts ago, there is something that motivates me about _publishing_ them. I&nbsp;don’t generally show them to anyone, but the act of putting words out in the world means:
 
 * I have to make sure that what I’m writing is correct. 📖
 * A post is finished the moment it’s published. ✅

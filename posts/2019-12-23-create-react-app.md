@@ -21,7 +21,7 @@ The course suggest to install globally with `npm install -g create-react-app` bu
 npx create-react-app cheeseburger --scripts-version 1.1.5
 ```
 
-Naming! I’ve always had `cheesecake` as my go to `foo` word when testing stuff. When I was learning Python two winters ago, I named my fizz buzz project [cheesecake]({{ site.baseurl }}/2018/01/cheesecake/). Since our course project app will be something burger related — naturally mine should be called a cheeseburger. Let’s go!
+Naming! I’ve always had `cheesecake` as my go to `foo` word when testing stuff. When I was learning Python two winters ago, I named my fizz buzz project [cheesecake]({{ '/2018/01/cheesecake/' | url }}). Since our course project app will be something burger related — naturally mine should be called a cheeseburger. Let’s go!
 
 ```
 added 1312 packages from 734 contributors and audited 14828 packages

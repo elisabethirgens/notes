@@ -8,7 +8,7 @@ Yarn has been released in a stable version. One of my co-workers upgraded to yar
 
 ## 🙋
 
-That’s me. I know I have Yarn locally, because I had [fun times upgrading Yarn]({{ site.baseurl }}/2017/08/yarn-upgrade-adventures/) two months ago. But now that I’m being more patient and critical… what am I actually using it for locally?
+That’s me. I know I have Yarn locally, because I had [fun times upgrading Yarn]({{ '/2017/08/yarn-upgrade-adventures/' | url }}) two months ago. But now that I’m being more patient and critical… what am I actually using it for locally?
 
 ## 🤔 📖 🔍
 

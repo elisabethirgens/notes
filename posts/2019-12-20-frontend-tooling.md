@@ -154,7 +154,7 @@ Since I can’t see `husky` or `lint-staged` in our `package.json` and I don’t
 
 > Use Case: Useful for when you want to use other code quality tools along with Prettier (e.g. ESLint, Stylelint, etc.) or if you need support for partially staged files
 
-I love my [`git add -p`]({{ site.baseurl }}/2017/06/git-add-patch/) so now I’m curious if I _don’t_ have support for that with the way it’s currently set up. What does “support” mean in this context? Something I can work around?
+I love my [`git add -p`]({{ '/2017/06/git-add-patch/' | url }}) so now I’m curious if I _don’t_ have support for that with the way it’s currently set up. What does “support” mean in this context? Something I can work around?
 
 ### Prettier on my laptop 💻
 

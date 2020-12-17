@@ -6,7 +6,7 @@ date: 2017-10-15
 
 > These notes don’t have to be useful for anyone but myself.
 
-This was one of the rules I made when [starting this Jekyll blog]({{ site.baseurl }}/2017/06/hello-world/). I recently came across something I wrote after taking a Greyhound from Seattle to Portland in March 2012. I kinda liked this text, so now I’m archiving it here even though it’s in Norwegian and completely off topic.
+This was one of the rules I made when [starting this Jekyll blog]({{ '/2017/06/hello-world/' | url }}). I recently came across something I wrote after taking a Greyhound from Seattle to Portland in March 2012. I kinda liked this text, so now I’m archiving it here even though it’s in Norwegian and completely off topic.
 
 ---
 

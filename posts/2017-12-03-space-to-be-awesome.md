@@ -35,7 +35,7 @@ For most of those questions, I find it easy to unequivocally say yes. And that i
 
 > Do I have the opportunity to do what I do best every day?
 
-**Yes! But…** still sort of not quite, because I know I can do better. There are obstacles that prevent me from doing what I do best. Maybe scaling or working around some of those are part of my job, because no one else can do that for me. But there’s also stuff like [the UI squeeze]({{ site.baseurl }}/2017/08/the-ui-squeeze/).
+**Yes! But…** still sort of not quite, because I know I can do better. There are obstacles that prevent me from doing what I do best. Maybe scaling or working around some of those are part of my job, because no one else can do that for me. But there’s also stuff like [the UI squeeze]({{ '/2017/08/the-ui-squeeze/' | url }}).
 
 > Have I had opportunities to learn and grow?
 

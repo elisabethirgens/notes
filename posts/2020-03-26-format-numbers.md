@@ -16,7 +16,7 @@ I’ve been getting to know [Intl.NumberFormat](https://developer.mozilla.org/en
 > …is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting.
 <br>&nbsp;– MDN web docs on [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
 
-Nice, I see there’s a similar constructor for date and time formatting: [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat). But for now, I want to format numbers to get control over [decimal and thousands separators]({{ site.baseurl }}/2020/03/decimal-and-thousands-separators/).
+Nice, I see there’s a similar constructor for date and time formatting: [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat). But for now, I want to format numbers to get control over [decimal and thousands separators]({{ '/2020/03/decimal-and-thousands-separators/' | url }}).
 
 
 ## Locales

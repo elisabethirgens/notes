@@ -113,7 +113,7 @@ Okay, that last part of the command is clear enough for now.
 
 > Installation successful! 🎉
 
-And I’m taking note about how the script installs Homebrew to `/usr/local` now. (That was one of the things that tripped me up in my recent [adventures in upgrading Yarn]({{ site.baseurl }}/2017/08/yarn-upgrade-adventures/).)
+And I’m taking note about how the script installs Homebrew to `/usr/local` now. (That was one of the things that tripped me up in my recent [adventures in upgrading Yarn]({{ '/2017/08/yarn-upgrade-adventures/' | url }}).)
 
 ---
 

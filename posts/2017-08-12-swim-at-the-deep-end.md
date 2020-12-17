@@ -4,7 +4,7 @@ title:  "Swim at the deep end"
 date: 2017-08-12
 ---
 
-**Something has changed.** I got the sense a couple of times earlier this summer. And when I this week [upgraded Yarn]({{ site.baseurl }}/2017/08/yarn-upgrade-adventures/) — it became impossible to not notice that something has changed.
+**Something has changed.** I got the sense a couple of times earlier this summer. And when I this week [upgraded Yarn]({{ '/2017/08/yarn-upgrade-adventures/' | url }}) — it became impossible to not notice that something has changed.
 
 It feels like I am swimming at the deep end, when I didn’t know that I could.
 
@@ -20,7 +20,7 @@ But now I do. And it has been a serious boost. I will not limit myself to only a
 
 ## So… why did this change for me? 🤔
 
-* I have been thinking about [how to learn more on purpose]({{ site.baseurl }}/2017/06/learning/
+* I have been thinking about [how to learn more on purpose]({{ '/2017/06/learning/' | url }}
 ).
 * My team has recently had a lot of discussions around when people should ask for help, and when to invest time in figuring out problems on your own.
 * It had been explicitly repeated that it’s okay to use work hours to learn.

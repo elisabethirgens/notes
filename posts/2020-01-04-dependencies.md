@@ -4,7 +4,7 @@ title:  "Work with Yarn in a Containerized App"
 date: 2020-01-04
 ---
 
-Before the holidays, I was fighting with [linters, prettier & pre-commit]({{ site.baseurl }}/2019/12/frontend-tooling/) and declared defeat:
+Before the holidays, I was fighting with [linters, prettier & pre-commit]({{ '/2019/12/frontend-tooling/' | url }}) and declared defeat:
 
 > I basically do not understand how to package.json & node_modules in Docker containers. Thankfully there’s always 2020.
 

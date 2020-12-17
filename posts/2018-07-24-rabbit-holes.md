@@ -25,7 +25,7 @@ Typing this list up, it’s all pretty clear – which is neat to realize, becau
 
 ## What I understood already 👌
 
-* Generally [how packages work]({{ site.baseurl }}/2018/02/npm/) (from just 5 months ago, though!)
+* Generally [how packages work]({{ '/2018/02/npm/' | url }}) (from just 5 months ago, though!)
 * Yup, lock files are intended to be checked in.
 * yarn is an alternative npm client and all that
 
