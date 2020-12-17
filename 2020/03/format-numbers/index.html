@@ -40,7 +40,7 @@
 <p>…is the namespace for the ECMAScript Internationalization API, which provides language sensitive string comparison, number formatting, and date and time formatting.
 <br> – MDN web docs on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></p>
 </blockquote>
-<p>Nice, I see there’s a similar constructor for date and time formatting: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat">Intl.DateTimeFormat</a>. But for now, I want to format numbers to get control over <a href="/2020/03/decimal-and-thousands-separators/">decimal and thousands separators</a>.</p>
+<p>Nice, I see there’s a similar constructor for date and time formatting: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat">Intl.DateTimeFormat</a>. But for now, I want to format numbers to get control over <a href="/notes/2020/03/decimal-and-thousands-separators/">decimal and thousands separators</a>.</p>
 <h2>Locales</h2>
 <p>When I take it for a spin in the console, these two work as expected. It returns US style thousand separator comma and decimal point, while the Norwegian locale uses space and decimal comma.</p>
 <pre><code class="language-js">Intl.NumberFormat('en-US').format(123456.789)

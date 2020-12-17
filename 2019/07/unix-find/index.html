@@ -41,7 +41,7 @@
 <p><code>find</code> is a program that lives in /usr/bin, and you'd usually use it to locate files or folders in your file system that match some filters or requirements.</p>
 </blockquote>
 <h2>Dechiper the cask command 🍺</h2>
-<p>The homebrew cask fix <a href="/2019/07/brew-cask/">command we were dechipering yesterday</a> started like this:</p>
+<p>The homebrew cask fix <a href="/notes/2019/07/brew-cask/">command we were dechipering yesterday</a> started like this:</p>
 <pre><code>/usr/bin/find &quot;$(brew --prefix)/Caskroom/&quot;*'/.metadata'
 </code></pre>
 <p>I get the same output from that search if it starts with only <code>find</code>, but perhaps <code>/usr/bin/find</code> is a more fail-safe suggestion? Anyway, I got tripped up by it, because <a href="https://explainshell.com/">explainshell.com</a> has nothing for <code>/usr/bin/find</code> so I started thinking it was “something else”.</p>
