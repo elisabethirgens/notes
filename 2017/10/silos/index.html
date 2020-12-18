@@ -30,17 +30,8 @@
   </header>
   <div class="post-content">
     <p>If I draw a banner shaped box in the browser with CSS, what do you see? Do you see a banner that is exactly 48 pixels tall and 608 pixels wide and wonder wtf is up with those ugly numbers? Or do you see a responsive element built from the content out?</p>
-<pre><code class="language-html">&lt;div class=&quot;banner&quot;&gt;
-    idgaf how tall or wide I am… throw anything at me
-    and I will happily adapt \o/
-&lt;/div&gt;
-</code></pre>
-<pre><code class="language-css">.banner {
-    font-size: 1rem;
-    padding: 1rem 2rem;
-    max-width: 38rem;
-}
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>banner<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    idgaf how tall or wide I am… throw anything at me<br>    and I will happily adapt \o/<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-css"><code class="language-css"><span class="token selector">.banner</span> <span class="token punctuation">{</span><br>    <span class="token property">font-size</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br>    <span class="token property">padding</span><span class="token punctuation">:</span> 1rem 2rem<span class="token punctuation">;</span><br>    <span class="token property">max-width</span><span class="token punctuation">:</span> 38rem<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>What makes this ☝️ a sturdy, maintainable, flexible banner that browsers, screen readers, developers working on it in the future, content authors — and users — will love?</p>
 <ul>
 <li><strong>Type scale</strong> takes the lead on sizing and spacing. We don’t cram text into a rigid box. Nope, we do something way cooler; we craft a flexible box to always adapt to any content. ✌️</li>

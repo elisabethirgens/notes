@@ -32,53 +32,14 @@
     <p>Current status: I’m working on exercise 41 of 52 in <a href="https://learnpythonthehardway.org/">Learn Python the Hard Way</a>, and continuing from <a href="/notes/2018/02/game/">Make Three in a Row, Part 1</a> (though I’m probably not far enough in the book for this yet…)</p>
 <hr>
 <h3>Replace list cause I’ve now learnt about dictionary 📚</h3>
-<pre><code class="language-python">moves = { }
-
-for i in range(0,9):
-    moves[i] = input(&quot;&gt;&gt;&gt; &quot;)
-    print(&quot;Player X or 0 said:&quot;, moves[i])
-
-print(moves) # let’s look at that dictionary!
-</code></pre>
+<pre class="language-python"><code class="language-python">moves <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><br><br><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">">>> "</span><span class="token punctuation">)</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Player X or 0 said:"</span><span class="token punctuation">,</span> moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span>moves<span class="token punctuation">)</span> <span class="token comment"># let’s look at that dictionary!</span></code></pre>
 <h3>If players didn’t need to take turns… 🤪</h3>
 <p>…then something like this would (sort of but not really) differentiate between two players:</p>
-<pre><code class="language-python">moves = { }
-
-for i in range(0,9,2):
-        moves[i] = input(&quot;X &gt;&gt;&gt; &quot;)
-        print(&quot;Player X:&quot;, moves[i])
-
-for i in range(1,10,2):
-        moves[i] = input(&quot;0 &gt;&gt;&gt; &quot;)
-        print(&quot;Player 0:&quot;, moves[i])
-
-print(moves)
-</code></pre>
+<pre class="language-python"><code class="language-python">moves <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><br><br><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>        moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"X >>> "</span><span class="token punctuation">)</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Player X:"</span><span class="token punctuation">,</span> moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><br><br><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>        moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"0 >>> "</span><span class="token punctuation">)</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Player 0:"</span><span class="token punctuation">,</span> moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span>moves<span class="token punctuation">)</span></code></pre>
 <p>Hmmmmmmmmmmmmm. Does this mean it’s easier to use a <code>while</code> loop? Let’s try.</p>
-<pre><code class="language-python">moves = { }
-i = 1
-
-while i &lt;= 9:
-    moves[i] = input(&quot;&gt;&gt;&gt; &quot;)
-    print(f&quot;Player X or 0 said: {moves[i]}&quot;)
-    i += 1
-
-print(f&quot;{moves}&quot;)
-</code></pre>
+<pre class="language-python"><code class="language-python">moves <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><br>i <span class="token operator">=</span> <span class="token number">1</span><br><br><span class="token keyword">while</span> i <span class="token operator">&lt;=</span> <span class="token number">9</span><span class="token punctuation">:</span><br>    moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">">>> "</span><span class="token punctuation">)</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Player X or 0 said: </span><span class="token interpolation"><span class="token punctuation">{</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><br>    i <span class="token operator">+=</span> <span class="token number">1</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>moves<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span></code></pre>
 <p>And this means I can finally differentiate between the players properly!</p>
-<pre><code class="language-python">moves = { }
-i = 1
-
-while i &lt;= 8:
-    moves[i] = input(&quot;X &gt;&gt;&gt; &quot;)
-    print(f&quot;Player X: {moves[i]}&quot;)
-    i += 1
-    moves[i] = input(&quot;0 &gt;&gt;&gt; &quot;)
-    print(f&quot;Player 0: {moves[i]}&quot;)
-    i += 1
-
-print(f&quot;{moves}&quot;)
-</code></pre>
+<pre class="language-python"><code class="language-python">moves <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><br>i <span class="token operator">=</span> <span class="token number">1</span><br><br><span class="token keyword">while</span> i <span class="token operator">&lt;=</span> <span class="token number">8</span><span class="token punctuation">:</span><br>    moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"X >>> "</span><span class="token punctuation">)</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Player X: </span><span class="token interpolation"><span class="token punctuation">{</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><br>    i <span class="token operator">+=</span> <span class="token number">1</span><br>    moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"0 >>> "</span><span class="token punctuation">)</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Player 0: </span><span class="token interpolation"><span class="token punctuation">{</span>moves<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><br>    i <span class="token operator">+=</span> <span class="token number">1</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>moves<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span></code></pre>
 <p>That will only count 8 moves since the loop increments twice. But I’ll go with that for now since the last one is given anyway… So now I’ve got a script that does this:</p>
 <ul>
 <li>asks for input 8 times (but doesn’t care what you type)</li>
@@ -90,50 +51,9 @@ print(f&quot;{moves}&quot;)
 <h3>Define a function, and also…</h3>
 <p><code>append</code> is a method I can use on the list data type <br>
 <code>len()</code> is a built-in function to return length</p>
-<pre><code class="language-python">def game():
-
-    moves = [ ]
-
-    while len(moves) &lt; 8: # Count number of items in the list 'moves'
-        playermove = input(&quot;X &gt;&gt;&gt; &quot;)
-        print(f&quot;Player X: {playermove}&quot;)
-        moves.append(playermove) # Add item 'playermove' to end of list
-        playermove = input(&quot;0 &gt;&gt;&gt; &quot;)
-        print(f&quot;Player 0: {playermove}&quot;)
-        moves.append(playermove)
-
-    print(f&quot;{moves}&quot;)
-
-game()
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br><br>    moves <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span><br><br>    <span class="token keyword">while</span> <span class="token builtin">len</span><span class="token punctuation">(</span>moves<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">:</span> <span class="token comment"># Count number of items in the list 'moves'</span><br>        playermove <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"X >>> "</span><span class="token punctuation">)</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Player X: </span><span class="token interpolation"><span class="token punctuation">{</span>playermove<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><br>        moves<span class="token punctuation">.</span>append<span class="token punctuation">(</span>playermove<span class="token punctuation">)</span> <span class="token comment"># Add item 'playermove' to end of list</span><br>        playermove <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"0 >>> "</span><span class="token punctuation">)</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Player 0: </span><span class="token interpolation"><span class="token punctuation">{</span>playermove<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><br>        moves<span class="token punctuation">.</span>append<span class="token punctuation">(</span>playermove<span class="token punctuation">)</span><br><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>moves<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><br><br>game<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <h3>And what if I try to use some if statements?!</h3>
-<pre><code class="language-python">def game():
-    print(&quot;Lets play! Only integers between 1-9 plz:&quot;)
-
-    for playermove in range(0,9):
-        playermove = int(input(&quot;&gt;&gt;&gt; &quot;))
-
-        if playermove == 1:
-            print(&quot;Top left corner, all right. ↖️&quot;)
-        if playermove == 2:
-            print(&quot;Top center. ⬆️&quot;)
-        if playermove == 3:
-            print(&quot;Top right corner, nice. ↗️&quot;)
-        if playermove == 4:
-            print(&quot;Left center. ⬅️&quot;)
-        if playermove == 5:
-            print(&quot;Yeah that’s a good one. 🆒&quot;)
-        if playermove == 6:
-            print(&quot;Right center. ➡️&quot;)
-        if playermove == 7:
-            print(&quot;Bottom left corner, good job. ↙️&quot;)
-        if playermove == 8:
-            print(&quot;Bottom center. ⬇️&quot;)
-        if playermove == 9:
-            print(&quot;Bottom right corner, cool. ↘️&quot;)
-
-game()
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">game</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Lets play! Only integers between 1-9 plz:"</span><span class="token punctuation">)</span><br><br>    <span class="token keyword">for</span> playermove <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>        playermove <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">">>> "</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Top left corner, all right. ↖️"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Top center. ⬆️"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Top right corner, nice. ↗️"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Left center. ⬅️"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Yeah that’s a good one. 🆒"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Right center. ➡️"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">7</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Bottom left corner, good job. ↙️"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">8</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Bottom center. ⬇️"</span><span class="token punctuation">)</span><br>        <span class="token keyword">if</span> playermove <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">:</span><br>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Bottom right corner, cool. ↘️"</span><span class="token punctuation">)</span><br><br>game<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <hr>
 <p>Well, that was fun. But back to the book! The current chapter is “Learning to Speak Object-Oriented”, and starting to get a grip on what objects and classes are will hopefully help me next.</p>
 

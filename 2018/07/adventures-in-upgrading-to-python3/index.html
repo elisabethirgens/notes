@@ -32,18 +32,12 @@
     <p>Wo-hooo. Deploy scripts at work have been upgraded to Python3. I know this will break the deploy of the design system I work on, and I also need to figure out how to get my machine up to speed.</p>
 <h2>First attempt at using upgraded deploy scripts</h2>
 <p>When I run a deploy command in a project, the script will check if there have been changes to the it’s own repo and update. This happens often, so I know this drill.</p>
-<pre><code class="language-bash">Updates successfully applied.
-Please re-run script to deploy with newest version
-</code></pre>
+<pre class="language-bash"><code class="language-bash">Updates successfully applied.<br>Please re-run script to deploy with newest version</code></pre>
 <p>This makes sure all developers always use the latest version of the deploy scripts. So far so good.</p>
-<pre><code class="language-bash">This program requires python3, but was unable to
-find a python3 on your system.
-</code></pre>
+<pre class="language-bash"><code class="language-bash">This program requires python3, but was unable to<br><span class="token function">find</span> a python3 on your system.</code></pre>
 <p>A-ha. This work machine doesn’t actually have Python3 installed at all. (And now I realize I should get the upgraded deploy scripts working on one of the projects using our standard setup before the slightly different one on the design system.)</p>
 <h2>Start with understanding current Python installs</h2>
-<pre><code class="language-bash">python --version
-Python 2.7.13
-</code></pre>
+<pre class="language-bash"><code class="language-bash">python --version<br>Python <span class="token number">2.7</span>.13</code></pre>
 <p>(I thought this was the version that comes with Mac OS, but realise later that it’s not.)  Mac OS installs an older Python with the system, which is why <a href="/notes/2017/12/python/">LPTHW</a> got me to install Python3. (But that my not-work machine.) The book recommended installing from python.org directly. I’m always confused when getting different recommentations like this. What are the pros and cons of installing like that vs using Homebrew? One thing I can think of, is that the usage and target groups are very different.</p>
 <ul>
 <li>The book needs to not complicate the setup for its users.</li>
@@ -58,25 +52,14 @@ Python 2.7.13
 Reading more about <a href="https://docs.brew.sh/Homebrew-and-Python">docs.brew.sh/Homebrew-and-Python</a></p>
 <h2>🤔</h2>
 <p>When onboarding a new co-worker recently, I remember that we found there was something weird and outdated about the setup on my machine. “If it’s working, don’t touch it” was the advice then.</p>
-<pre><code class="language-bash">which python
-/usr/local/opt/python/libexec/bin/python
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">which</span> python<br>/usr/local/opt/python/libexec/bin/python</code></pre>
 <p>But now I’m wondering if I should remove this before installing Python3? Does it matter? Will it break something?</p>
-<pre><code class="language-bash"># make bash find the python that brew installed
-export PATH=&quot;/usr/local/opt/python/libexec/bin:$PATH&quot;
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># make bash find the python that brew installed</span><br><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">"/usr/local/opt/python/libexec/bin:<span class="token environment constant">$PATH</span>"</span></code></pre>
 <p>💡 <strong>Pro newbie bash tip:</strong> when people tell you what to put in your dotfiles, insist on also getting a comment to go with it. Otherwise you end up with so many snippets and no idea what they do or why you put them there. This must have been one of the times where I did ask for an explanation. Yay.</p>
 <p>And this comment must mean that if bash now is able to find the python it needs without this hack, then <code>.bashrc</code> doesn’t need this anymore. So I assumed it was a good idea to remove now. And oh, now I got something else. Deleting it will return this instead and <em>this</em> is the system python.</p>
-<pre><code class="language-bash">which python
-/usr/bin/python
-python --version
-Python 2.7.10
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">which</span> python<br>/usr/bin/python<br>python --version<br>Python <span class="token number">2.7</span>.10</code></pre>
 <h2>Install Python3 on my machine</h2>
-<pre><code class="language-bash">brew install python3
-Error: python 2.7.13_1 is already installed
-To upgrade to 3.7.0, run `brew upgrade python`
-</code></pre>
+<pre class="language-bash"><code class="language-bash">brew <span class="token function">install</span> python3<br>Error: python <span class="token number">2.7</span>.13_1 is already installed<br>To upgrade to <span class="token number">3.7</span>.0, run <span class="token variable"><span class="token variable">`</span>brew upgrade python<span class="token variable">`</span></span></code></pre>
 <p>Hm… This was not as advertised. Do I need to be concerned about brew wanting to upgrade…?</p>
 <pre><code>which python
 /usr/bin/python

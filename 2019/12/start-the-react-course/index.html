@@ -77,20 +77,11 @@
 </ul>
 <p>Why was the name <code>let</code> chosen?! <a href="https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri">Stackoverflow explains</a> the maths origin.</p>
 <h3>Classic arrow functions</h3>
-<pre><code class="language-javascript">function callMe(name) {
-    console.log(name);
-}
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">callMe</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>Can also be written as</p>
-<pre><code class="language-javascript">const callMe = function(name) {
-    console.log(name);
-}
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">callMe</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>And apparently this is new and fancy. Yeah… I honestly don’t see how this syntax is so much more amazing. 🤷🏻‍♀️ But fewer issues with scoping <code>this</code> sounds like a useful side effect.</p>
-<pre><code class="language-javascript">const callMe = (name) =&gt; {
-    console.log(name);
-}
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">callMe</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <h3>Exports &amp; Imports</h3>
 <p>I will want to split code across multiple files, but might still need to access functionality from a different module. This is where exporting and importing helps.</p>
 <ul>

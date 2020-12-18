@@ -39,8 +39,7 @@
 <li>Java SE 7</li>
 </ul>
 <p>The onboarding guide we’ve got at work suggests (without explaining much):</p>
-<pre><code class="language-bash">brew tap caskroom/homebrew-versions
-</code></pre>
+<pre class="language-bash"><code class="language-bash">brew tap caskroom/homebrew-versions</code></pre>
 <p>I remember that I can install different older versions either:</p>
 <ul>
 <li>manually by downloading from oracle.com</li>
@@ -113,19 +112,11 @@ weikengchen/caskformula
 <h2>Whoa! That explains why…</h2>
 <p>There’s no java listed when I run <code>brew list</code>. Because those are what I’ve installed as source code to be complied, not packages ready to go. Very enlightening.</p>
 <h2>But back to the java version…</h2>
-<pre><code class="language-bash">brew cask install java12
-Error: Cask 'java12' is unavailable: No Cask with this name exists.
-</code></pre>
+<pre class="language-bash"><code class="language-bash">brew cask <span class="token function">install</span> java12<br>Error: Cask <span class="token string">'java12'</span> is unavailable: No Cask with this name exists.</code></pre>
 <p>Right, because casks are <em>previous</em> versions.</p>
-<pre><code class="language-bash">brew cask install java
-Warning: Cask 'java' is already installed.
-To re-install java, run:
-  brew cask reinstall java
-</code></pre>
+<pre class="language-bash"><code class="language-bash">brew cask <span class="token function">install</span> java<br>Warning: Cask <span class="token string">'java'</span> is already installed.<br>To re-install java, run:<br>  brew cask reinstall java</code></pre>
 <p>Worked like a charm, except… doh. This now removed Java10, which I need.</p>
-<pre><code class="language-bash">brew cask install java10
-Error: Cask 'java10' is unavailable: No Cask with this name exists.
-</code></pre>
+<pre class="language-bash"><code class="language-bash">brew cask <span class="token function">install</span> java10<br>Error: Cask <span class="token string">'java10'</span> is unavailable: No Cask with this name exists.</code></pre>
 <p>Soooo, it seems that if a version has reached end of support, the cask is removed. Makes sense, but that also means our onboarding guide is outdated, so now I ended up trying to fix that. ✏️</p>
 <p>The rabbit hole continues as folks on slack mention openjdk being a thing in the world.</p>
 <h2>OpenJDK</h2>
@@ -146,9 +137,7 @@ Error: Cask 'java10' is unavailable: No Cask with this name exists.
 <li>Or can I use OpenJDK10 to run the not-updated-yet app locally?</li>
 <li>And how do I get rid of Java7?</li>
 </ul>
-<pre><code class="language-bash">brew cask uninstall java7
-Error: Cask 'java7' definition is invalid: Token '{:v1=&gt;&quot;java7&quot;}' in header line does not match the file name.
-</code></pre>
+<pre class="language-bash"><code class="language-bash">brew cask uninstall java7<br>Error: Cask <span class="token string">'java7'</span> definition is invalid: Token <span class="token string">'{:v1=>"java7"}'</span> <span class="token keyword">in</span> header line does not match the <span class="token function">file</span> name.</code></pre>
 <p>And I get the same error on <code>brew cask list</code> so I’m guessing I’ve got some general brewery debugging and clean up to do tomorrow…</p>
 
   </div>

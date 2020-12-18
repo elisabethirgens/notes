@@ -74,8 +74,7 @@
 <li><strong>Event listeners</strong> are constructs that listen for these events.</li>
 <li><strong>Event handlers</strong> are the blocks of code run as a response.</li>
 </ul>
-<pre><code class="language-js">guessSubmit.addEventListener('click', checkGuess);
-</code></pre>
+<pre class="language-js"><code class="language-js">guessSubmit<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> checkGuess<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>This is a method that we’ve given two arguments:</p>
 <ul>
 <li>The event we’re listening for — user clicking the <code>guessSubmit</code> input.</li>
@@ -84,8 +83,7 @@
 <hr>
 <h2>Loops ♻️</h2>
 <p>Repeat a part of code over and over — until a specific condition is met. (I recognise this concept from my WordPress days, and the different types of loops you could have for posts.)</p>
-<pre><code class="language-js">  for (var i = 1 ; i &lt; 21 ; i++) { console.log(i) }
-</code></pre>
+<pre class="language-js"><code class="language-js">  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">21</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">}</span></code></pre>
 <p>This is a <code>for</code> loop with three arguments:</p>
 <p>| <strong>A starting value</strong> | <code>i</code> is 1 |
 | <strong>An exit condition</strong> | when <code>i</code> no longer is less than 21 |
@@ -97,12 +95,9 @@
 <p>In JavaScript, everything is an object. An object is a collection of related functionality stored in a single grouping.</p>
 </blockquote>
 <p>I can create my own! But for now we’re learning about the ones that already exist in the browser.</p>
-<pre><code class="language-js">guessField.focus();
-</code></pre>
+<pre class="language-js"><code class="language-js">guessField<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p><code>guessField</code> is an <code>&lt;input&gt;</code>, so it has access to the <code>focus()</code> method and we can use it to focus the user’s text input.</p>
-<pre><code class="language-js">guesses.style.backgroundColor = 'yellow';
-guesses.style.padding = '10px';
-</code></pre>
+<pre class="language-js"><code class="language-js">guesses<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'yellow'</span><span class="token punctuation">;</span><br>guesses<span class="token punctuation">.</span>style<span class="token punctuation">.</span>padding <span class="token operator">=</span> <span class="token string">'10px'</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>Elements have a style property that contains an object.</li>
 <li>This object contains inline styles applied to that element.</li>
@@ -110,16 +105,11 @@ guesses.style.padding = '10px';
 <hr>
 <h2>What I’ve been confused about before 🙃</h2>
 <p>One of the things that has derailed me when looking at intro JS examples before, is that there are so many words that are readable — <strong>but wtf are they actually in the script!?</strong></p>
-<pre><code class="language-js">  guessSubmit.disabled = true;
-</code></pre>
+<pre class="language-js"><code class="language-js">  guessSubmit<span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
 <p><em>will disable the input like so</em></p>
-<pre><code class="language-html">&lt;input value=&quot;&quot; class=&quot;guessSubmit&quot; disabled=&quot;&quot;&gt;
-</code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>guessSubmit<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
 <p>When you start learning, it’s impossible to understand what is what. When is something a name the coder has come up with? And when are you referencing something that already exists?! Who knows. Another example from this guide:</p>
-<pre><code class="language-js">  resetButton = document.createElement('button');
-  resetButton.textContent = 'Start new game';
-  document.body.appendChild(resetButton);
-</code></pre>
+<pre class="language-js"><code class="language-js">  resetButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  resetButton<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">'Start new game'</span><span class="token punctuation">;</span><br>  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>resetButton<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>These words are readable. 👆 I can understand what happens: create a new button, put text on it, and say where to place it. But still… what is what? Where do the words come from?</p>
 <h2>What I understand better now 🤓</h2>
 <ul>

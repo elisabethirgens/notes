@@ -33,15 +33,7 @@
 <hr>
 <h2>Variables to store values 👜</h2>
 <p>Module: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></p>
-<pre><code class="language-javascript">// declare a variable
-var bestColor;
-
-// initialize the variable
-bestColor = 'darkcyan';
-
-// declare and initialize at the same time
-var prettyColor = 'cadetblue';
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// declare a variable</span><br><span class="token keyword">var</span> bestColor<span class="token punctuation">;</span><br><br><span class="token comment">// initialize the variable</span><br>bestColor <span class="token operator">=</span> <span class="token string">'darkcyan'</span><span class="token punctuation">;</span><br><br><span class="token comment">// declare and initialize at the same time</span><br><span class="token keyword">var</span> prettyColor <span class="token operator">=</span> <span class="token string">'cadetblue'</span><span class="token punctuation">;</span></code></pre>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var hoisting</a> is the behaviour that means I can declare variables up front, because JavaScript handles variable before the script is run.</p>
 <blockquote>
 <p>it is recommended to always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are function scoped (local) and which are resolved on the scope chain.</p>
@@ -65,22 +57,10 @@ var prettyColor = 'cadetblue';
 <p>I noticed at the variables section that I should stop crawling, and <strong>try to speed up!</strong> Same here, after Learn Python The Hard Way, I know what integers, floats and number systems are now.</p>
 <p>Console practice session gave me a syntax error when decaring and initializing a variable with a float, so I need to remember that even though the decimal separator in Norwegian is a comma <code>3,14</code> that will be interpreted as an array missing square brackets. 🤪</p>
 <p>(Unlike Python) JavaScript only has one numeric type:</p>
-<pre><code class="language-javascript">var thisNumber = 666;
-typeof thisNumber;
-// returns &quot;number&quot;
-
-var thatNumber = 3.14;
-typeof thatNumber;
-// returns &quot;number&quot;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> thisNumber <span class="token operator">=</span> <span class="token number">666</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> thisNumber<span class="token punctuation">;</span><br><span class="token comment">// returns "number"</span><br><br><span class="token keyword">var</span> thatNumber <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span><br><span class="token keyword">typeof</span> thatNumber<span class="token punctuation">;</span><br><span class="token comment">// returns "number"</span></code></pre>
 <p>This section also covers basic arithmetic operators and operator precedence, how to use parantheses to calculate parts of an expression first and so on. Yup, all good.</p>
 <h3>Increment and decrement operators</h3>
-<pre><code class="language-javascript">var start = 50;
-start++;
-// returns 50
-start;
-// returns 51
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> start <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span><br>start<span class="token operator">++</span><span class="token punctuation">;</span><br><span class="token comment">// returns 50</span><br>start<span class="token punctuation">;</span><br><span class="token comment">// returns 51</span></code></pre>
 <p>If I use the incrementer after the variable like that, the browser will first return the current value — then increment. If I use the operator first like <code>++myVariable;</code> or <code>--myVariable;</code> the browser will return the incremented/decremented value.</p>
 <p>Ha, I see the internet is full of people asking why Python doesn’t have a <code>++</code> operator. Well, I learnt Python style increment by <code>+=</code> first, so I think that makes way more sense.</p>
 <h2>🤯</h2>
@@ -102,8 +82,7 @@ start;
 <h2>Built-in methods to do stuff to strings 🎶</h2>
 <p>Module: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></p>
 <p>They keep saying that everything in JavaScript is an object. 🤔</p>
-<pre><code class="language-javascript">var chocolateCake = 'That variable will become a string object instance';
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> chocolateCake <span class="token operator">=</span> <span class="token string">'That variable will become a string object instance'</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>How long is that string? Use the <code>length</code> attribute.</li>
 <li>Retrieve a specific character? Use square bracket notation <code>chocolateCake[5]</code></li>
@@ -111,38 +90,19 @@ start;
 <li>Want to extract it? Use the <code>slice()</code> method with character positions.</li>
 <li>Change words? Sure! Use the <code>replace()</code> method 👇</li>
 </ul>
-<pre><code class="language-javascript">chocolateCake = chocolateCake.replace('string object instance', 'cake');
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">chocolateCake <span class="token operator">=</span> chocolateCake<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'string object instance'</span><span class="token punctuation">,</span> <span class="token string">'cake'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>✅ Finished the active learning examples. Had to peak just a tiny bit for hints in the solutions for the first two, but flew through the last one. Yay!</p>
 <hr>
 <h2>Make lists of multiple data items 🌈</h2>
 <p>Module: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></p>
-<pre><code class="language-javascript">var beer = ['stout', 'brown ale', ['ipa', 'neipa', 'black ipa']];
-// modify an item with bracket notation
-beer[1] = 'porter';
-// beer now returns [ &quot;stout&quot;, &quot;porter&quot;, (3) […] ]
-beer[2][0];
-// returns &quot;ipa&quot; within the multidimentional array
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> beer <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'stout'</span><span class="token punctuation">,</span> <span class="token string">'brown ale'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'ipa'</span><span class="token punctuation">,</span> <span class="token string">'neipa'</span><span class="token punctuation">,</span> <span class="token string">'black ipa'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token comment">// modify an item with bracket notation</span><br>beer<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'porter'</span><span class="token punctuation">;</span><br><span class="token comment">// beer now returns [ "stout", "porter", (3) […] ]</span><br>beer<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token comment">// returns "ipa" within the multidimentional array</span></code></pre>
 <h3>Find length of an array</h3>
-<pre><code class="language-javascript">beer[2].length;
-// returns the number of IPAs as 3
-beer[2][beer.length-1];
-// returns the last item of the IPAs: &quot;black ipa&quot;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">beer<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span><br><span class="token comment">// returns the number of IPAs as 3</span><br>beer<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span>beer<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br><span class="token comment">// returns the last item of the IPAs: "black ipa"</span></code></pre>
 <p>…and more commonly, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length"><code>length</code></a> is used to tell a loop to keep going through all items of an array.</p>
 <h3>Split data in a string to an array</h3>
-<pre><code class="language-javascript">var ourRawData = 'Oslo,Bergen,Trondheim,Stavanger,Tromsø';
-var ourAwesomeArray = ourRawData.split(',');
-ourAwesomeArray;
-// returns [ &quot;Oslo&quot;, &quot;Bergen&quot;, &quot;Trondheim&quot;, &quot;Stavanger&quot;, &quot;Tromsø&quot; ]
-var lastCity = ourAwesomeArray[ourAwesomeArray.length-1];
-lastCity; // returns &quot;Tromsø&quot;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> ourRawData <span class="token operator">=</span> <span class="token string">'Oslo,Bergen,Trondheim,Stavanger,Tromsø'</span><span class="token punctuation">;</span><br><span class="token keyword">var</span> ourAwesomeArray <span class="token operator">=</span> ourRawData<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>ourAwesomeArray<span class="token punctuation">;</span><br><span class="token comment">// returns [ "Oslo", "Bergen", "Trondheim", "Stavanger", "Tromsø" ]</span><br><span class="token keyword">var</span> lastCity <span class="token operator">=</span> ourAwesomeArray<span class="token punctuation">[</span>ourAwesomeArray<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>lastCity<span class="token punctuation">;</span> <span class="token comment">// returns "Tromsø"</span></code></pre>
 <h3>Join items in an array to a string</h3>
-<pre><code class="language-javascript">var myNewString = ourAwesomeArray.join('/');
-myNewString; //returns &quot;Oslo/Bergen/Trondheim/Stavanger/Tromsø&quot;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> myNewString <span class="token operator">=</span> ourAwesomeArray<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>myNewString<span class="token punctuation">;</span> <span class="token comment">//returns "Oslo/Bergen/Trondheim/Stavanger/Tromsø"</span></code></pre>
 <h3>Add or remove array items</h3>
 <ul>
 <li><code>push()</code> and <code>pop()</code> at the end of the array</li>
@@ -152,10 +112,7 @@ myNewString; //returns &quot;Oslo/Bergen/Trondheim/Stavanger/Tromsø&quot;
 <p>The new length of the array is returned when the method call completes</p>
 </blockquote>
 <p>…which means if I need it, I can store it in a variable. Same with an item removed from the array, I can use a variable to save it. Here I will remove the first city from the list:</p>
-<pre><code class="language-javascript">var currentCity = ourAwesomeArray.shift();
-// returns [ &quot;Bergen&quot;, &quot;Trondheim&quot;, &quot;Stavanger&quot;, &quot;Tromsø&quot; ]
-currentCity; // returns &quot;Oslo&quot;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> currentCity <span class="token operator">=</span> ourAwesomeArray<span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token comment">// returns [ "Bergen", "Trondheim", "Stavanger", "Tromsø" ]</span><br>currentCity<span class="token punctuation">;</span> <span class="token comment">// returns "Oslo"</span></code></pre>
 <hr>
 <h2>🎉</h2>
 

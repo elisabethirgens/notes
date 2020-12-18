@@ -48,21 +48,7 @@
 </ul>
 <h3>ESLint in this project 🤖</h3>
 <p>ESLint isn’t a dependency in our <code>package.json</code> because it’s bundled inside the <code>react-scripts</code>. The only references I can see are these:</p>
-<pre><code class="language-json">  &quot;eslintConfig&quot;: {
-    &quot;extends&quot;: [
-      &quot;react-app&quot;,
-      &quot;prettier&quot;
-    ],
-    &quot;settings&quot;: {
-      &quot;react&quot;: {
-        &quot;version&quot;: &quot;16.8&quot;
-      }
-    },
-    &quot;rules&quot;: {
-      &quot;no-throw-literal&quot;: 0
-    }
-  },
-</code></pre>
+<pre class="language-json"><code class="language-json">  <span class="token property">"eslintConfig"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>    <span class="token property">"extends"</span><span class="token operator">:</span> <span class="token punctuation">[</span><br>      <span class="token string">"react-app"</span><span class="token punctuation">,</span><br>      <span class="token string">"prettier"</span><br>    <span class="token punctuation">]</span><span class="token punctuation">,</span><br>    <span class="token property">"settings"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>      <span class="token property">"react"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>        <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"16.8"</span><br>      <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span><span class="token punctuation">,</span><br>    <span class="token property">"rules"</span><span class="token operator">:</span> <span class="token punctuation">{</span><br>      <span class="token property">"no-throw-literal"</span><span class="token operator">:</span> <span class="token number">0</span><br>    <span class="token punctuation">}</span><br>  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 <p>Hm. Should the project have an <code>.eslintrc</code> file? Probably not, because apparently an alternative way to set configuration is using a <code>eslintConfig</code> key in a <code>package.json</code>. Read about that in <a href="https://thomlom.dev/setup-eslint-prettier-react/">thomlom.dev/setup-eslint-prettier-react</a></p>
 <p><a href="https://create-react-app.dev/docs/setting-up-your-editor/#experimental-extending-the-eslint-config">Create React App – Experimental: Extending the ESLint config</a> — I <em>think</em> this might be what we’ve got…? 🤔 Compared to the example, our file doesn’t have a <code>shared-config</code>.</p>
 <p>Someone made plugin with React specific rules, but don’t think we’ve used <a href="https://github.com/yannickcr/eslint-plugin-react">ESLint-plugin-React</a>.</p>
@@ -101,13 +87,7 @@
 <li>The project has a <code>frontend/stylelint.config.js</code> file</li>
 <li>…and multiple devDependencies in the <code>package.json</code>:</li>
 </ul>
-<pre><code class="language-json">    &quot;eslint-config-prettier&quot;: &quot;^6.0.0&quot;,
-    &quot;stylelint&quot;: &quot;^7.8.0&quot;,
-    &quot;stylelint-config-css-modules&quot;: &quot;^0.1.0&quot;,
-    &quot;stylelint-config-standard&quot;: &quot;^16.0.0&quot;,
-    &quot;stylelint-order&quot;: &quot;^0.2.2&quot;,
-    &quot;stylelint-processor-styled-components&quot;: &quot;^1.6.0&quot;,
-</code></pre>
+<pre class="language-json"><code class="language-json">    <span class="token property">"eslint-config-prettier"</span><span class="token operator">:</span> <span class="token string">"^6.0.0"</span><span class="token punctuation">,</span><br>    <span class="token property">"stylelint"</span><span class="token operator">:</span> <span class="token string">"^7.8.0"</span><span class="token punctuation">,</span><br>    <span class="token property">"stylelint-config-css-modules"</span><span class="token operator">:</span> <span class="token string">"^0.1.0"</span><span class="token punctuation">,</span><br>    <span class="token property">"stylelint-config-standard"</span><span class="token operator">:</span> <span class="token string">"^16.0.0"</span><span class="token punctuation">,</span><br>    <span class="token property">"stylelint-order"</span><span class="token operator">:</span> <span class="token string">"^0.2.2"</span><span class="token punctuation">,</span><br>    <span class="token property">"stylelint-processor-styled-components"</span><span class="token operator">:</span> <span class="token string">"^1.6.0"</span><span class="token punctuation">,</span></code></pre>
 <h3>Stylelint on my laptop 💻</h3>
 <p>Same as with ESLint, I don’t understand the workflow for using these tools as dependencies in a container world. When I don’t have node_modules on my machine, how can I lint locally while coding?</p>
 <hr>

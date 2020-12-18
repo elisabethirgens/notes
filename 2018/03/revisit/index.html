@@ -66,23 +66,12 @@
 <p>This is my safety valve that will keep me out of trouble. Add an <code>else</code> on every <code>if-statement</code> first, but delete if it turns out to be pointless. Most of the time though, it is justified.</p>
 <hr>
 <h2>Hello lists and loops 👋</h2>
-<pre><code class="language-python"># Basic list and for-loop example
-beers = ['an ipa', 'a stout', 'a porter']
-
-for beer in beers:
-    print(&quot;I’ll have&quot;, beer, &quot;plz.&quot;)
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Basic list and for-loop example</span><br>beers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'an ipa'</span><span class="token punctuation">,</span> <span class="token string">'a stout'</span><span class="token punctuation">,</span> <span class="token string">'a porter'</span><span class="token punctuation">]</span><br><br><span class="token keyword">for</span> beer <span class="token keyword">in</span> beers<span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I’ll have"</span><span class="token punctuation">,</span> beer<span class="token punctuation">,</span> <span class="token string">"plz."</span><span class="token punctuation">)</span></code></pre>
 <p>| <code>beers[1]</code> | The second beer is a stout, because 0 based indexing. |
 | <code>beers[2]</code> | But if we say the beer <em>“at 2”</em> that would be the porter and a <a href="https://en.wikipedia.org/wiki/Cardinal_number">cardinal number</a>. |
 | <code>beers[1:]</code> | Slicing away the IPA, and getting the stout and the porter. |
 | <code>beers[-1]</code> | Negative indexing like this would serve up the last item. |</p>
-<pre><code class="language-python"># How to copy a list
-beers = ['an ipa', 'a stout', 'a porter']
-morebeers = beers[:]
-
-for secondbeer in morebeers:
-    print(&quot;I’ll have one more&quot;, secondbeer, 'thanks.')
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># How to copy a list</span><br>beers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'an ipa'</span><span class="token punctuation">,</span> <span class="token string">'a stout'</span><span class="token punctuation">,</span> <span class="token string">'a porter'</span><span class="token punctuation">]</span><br>morebeers <span class="token operator">=</span> beers<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><br><br><span class="token keyword">for</span> secondbeer <span class="token keyword">in</span> morebeers<span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I’ll have one more"</span><span class="token punctuation">,</span> secondbeer<span class="token punctuation">,</span> <span class="token string">'thanks.'</span><span class="token punctuation">)</span></code></pre>
 <ul>
 <li>Using <code>i</code> as a variable is a convention. (Now I know this. But I still remember how often I got confused by that when I first started reading JavaScript.)</li>
 <li><code>range()</code> is a <a href="https://docs.python.org/3.6/library/functions.html">built-in function</a> (or actually an <a href="https://docs.python.org/3.6/library/stdtypes.html#range">immutable sequence type</a>).</li>
@@ -94,27 +83,10 @@ for secondbeer in morebeers:
 <li>while-loops are not, and with <strong>unbounded looping</strong> we need to be very sure that a boolean test becomes False at some point or the block of code will keep going forever.</li>
 </ul>
 <p>I should use while-loops sparingly. They are easy to grasp, basically an if-statement with a jump back to the beginning. But they are tricky to get right in my scripts.</p>
-<pre><code class="language-python">i = 0
-mylist = []
-
-while i &lt; 5:
-    i += 1 # an incrementer is often needed in while-loops
-    mylist.append(i)
-
-# will make this list [1, 2, 3, 4, 5] using a while-loop
-</code></pre>
-<pre><code class="language-python">i = 0
-anotherlist = []
-
-for i in range(1,6):
-    anotherlist.append(i)
-
-# also make the same list [1, 2, 3, 4, 5] with a for-loop 🥇
-</code></pre>
+<pre class="language-python"><code class="language-python">i <span class="token operator">=</span> <span class="token number">0</span><br>mylist <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br><br><span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span><br>    i <span class="token operator">+=</span> <span class="token number">1</span> <span class="token comment"># an incrementer is often needed in while-loops</span><br>    mylist<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span><br><br><span class="token comment"># will make this list [1, 2, 3, 4, 5] using a while-loop</span></code></pre>
+<pre class="language-python"><code class="language-python">i <span class="token operator">=</span> <span class="token number">0</span><br>anotherlist <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br><br><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    anotherlist<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span><br><br><span class="token comment"># also make the same list [1, 2, 3, 4, 5] with a for-loop 🥇</span></code></pre>
 <p>When I find myself using a while-loop, I should <em>probably</em> try to figure out how to make it a for-loop. But this is a good expection:</p>
-<pre><code class="language-python">while True:
-    # this is one way that I probably do want to use a while-loop
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span><br>    <span class="token comment"># this is one way that I probably do want to use a while-loop</span></code></pre>
 <hr>
 <h2>Need some guidelines? 🤷‍♀️</h2>
 <p>Exercise 36 has some rules and tips for designing and debugging. These can be helpful for me to  revisit when I’m coding something I can’t get to work.</p>
@@ -124,8 +96,7 @@ for i in range(1,6):
 <li>Make simple boolean tests. (Do calculations in variables earlier in the function!)</li>
 </ul>
 <h2>Debug with printing 🐛</h2>
-<pre><code class="language-python">print(&quot;&gt;&gt;&gt;&gt; show me something=&quot;, something)
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">">>>> show me something="</span><span class="token punctuation">,</span> something<span class="token punctuation">)</span></code></pre>
 <hr>
 <p><strong>Misc keywords</strong> that I want to make a note of now:</p>
 <p>| assert | ensure that something is true |

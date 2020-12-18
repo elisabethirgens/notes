@@ -33,126 +33,18 @@
 <p>Since I just started <a href="/notes/2017/12/python/">learning Python</a>, this also became an interesting way of tracking my progress. How far into <a href="https://learncodethehardway.org/python/">Learn Python The Hard Way</a> would I be before having enough to write the recipe using just what I’d directly learnt from the exercies…?! <a href="#conclusion">Jump to conclusion!</a></p>
 <p>So just for fun, I kept attempting to start coding the cheesecake recipe. Before I had learnt enough to actually write the script, just to make this lovely collection of:</p>
 <h2>Awful ways of not properly baking</h2>
-<pre><code class="language-python"># A store-bought small piece of hard coded cheesecake?
-
-print(1,2,'cheese',4,'cake','cheese',7,8,'cheese','cake',
-11, 'cheese', 13, 14, 'cheesecake')
-</code></pre>
-<pre><code class="language-python"># Oh hey, a variable! And output on individual lines.
-
-cheesecake = '1\n2\n3\n4\n5\n6\n7\n8\n9\n10'
-print(cheesecake)
-</code></pre>
-<pre><code class="language-python"># Possibly the least useful way ever of printing out numbers
-
-print(1, 1 + 1, 1 + 1 + 1, 1 + 1 + 1 + 1, 1 + 1 + 1 + 1 + 1, 1 + 1 + 1
-+ 1 + 1 + 1, 1 + 1 + 1 + 1 + 1 + 1 + 1, 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1,
-1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1, 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1)
-</code></pre>
-<pre><code class="language-python"># f-string and wanting to increment but not knowing how
-
-a = 1
-b = a + 1
-c = b + 1
-d = c + 1
-e = d + 1
-f = e + 1
-g = f + 1
-h = g + 1
-i = h + 1
-j = i + 1
-
-c = 'cheese'
-e = 'cake'
-f = 'cheese'
-i = 'cheese'
-j = 'cake'
-
-print(f&quot;{a}\n{b}\n{c}\n{d}\n{e}\n{f}\n{g}\n{h}\n{i}\n{j}&quot;)
-</code></pre>
-<pre><code class="language-python"># Just learnt one moar built-in function!
-
-print(&quot;1, 2, {}, 4, {}, {}, 7, 8, {}, {}, 11, {}, 13, 14, {}&quot;
-.format('cheese','cake','cheese','cheese','cake','cheese','cheese' + 'cake'))
-</code></pre>
-<pre><code class="language-python"># Another way to use variables.
-
-three = 'cheese'
-five = 'cake'
-print(f&quot;1, 2, {three}, 4, {five}, {three}, 7, 8, {three}, {five},
-11, {three}, 13, 14, {three+five}&quot;)
-</code></pre>
-<pre><code class="language-python"># Hello &quot;increment by&quot; operator and if statements!
-
-three = &quot;cheese&quot;
-five = &quot;cake&quot;
-
-x = 1
-print(x)
-x += 1
-print(x)
-x += 1
-if x == 3:
-    print(three)
-x += 1
-print(x)
-x += 1
-if x == 5:
-    print(five)
-x += 1
-if x == 6:
-    print(three)
-x += 1
-print(x)
-x += 1
-print(x)
-x += 1
-if x == 9:
-    print(three)
-x += 1
-if x == 10:
-    print(five)
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># A store-bought small piece of hard coded cheesecake?</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'cheese'</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token string">'cake'</span><span class="token punctuation">,</span><span class="token string">'cheese'</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token string">'cheese'</span><span class="token punctuation">,</span><span class="token string">'cake'</span><span class="token punctuation">,</span><br><span class="token number">11</span><span class="token punctuation">,</span> <span class="token string">'cheese'</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token string">'cheesecake'</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Oh hey, a variable! And output on individual lines.</span><br><br>cheesecake <span class="token operator">=</span> <span class="token string">'1\n2\n3\n4\n5\n6\n7\n8\n9\n10'</span><br><span class="token keyword">print</span><span class="token punctuation">(</span>cheesecake<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Possibly the least useful way ever of printing out numbers</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><br><span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span><br><span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># f-string and wanting to increment but not knowing how</span><br><br>a <span class="token operator">=</span> <span class="token number">1</span><br>b <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">1</span><br>c <span class="token operator">=</span> b <span class="token operator">+</span> <span class="token number">1</span><br>d <span class="token operator">=</span> c <span class="token operator">+</span> <span class="token number">1</span><br>e <span class="token operator">=</span> d <span class="token operator">+</span> <span class="token number">1</span><br>f <span class="token operator">=</span> e <span class="token operator">+</span> <span class="token number">1</span><br>g <span class="token operator">=</span> f <span class="token operator">+</span> <span class="token number">1</span><br>h <span class="token operator">=</span> g <span class="token operator">+</span> <span class="token number">1</span><br>i <span class="token operator">=</span> h <span class="token operator">+</span> <span class="token number">1</span><br>j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span><br><br>c <span class="token operator">=</span> <span class="token string">'cheese'</span><br>e <span class="token operator">=</span> <span class="token string">'cake'</span><br>f <span class="token operator">=</span> <span class="token string">'cheese'</span><br>i <span class="token operator">=</span> <span class="token string">'cheese'</span><br>j <span class="token operator">=</span> <span class="token string">'cake'</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>c<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>d<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>e<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>f<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>g<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>h<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span><span class="token string">\n</span><span class="token interpolation"><span class="token punctuation">{</span>j<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Just learnt one moar built-in function!</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"1, 2, {}, 4, {}, {}, 7, 8, {}, {}, 11, {}, 13, 14, {}"</span><br><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'cheese'</span><span class="token punctuation">,</span><span class="token string">'cake'</span><span class="token punctuation">,</span><span class="token string">'cheese'</span><span class="token punctuation">,</span><span class="token string">'cheese'</span><span class="token punctuation">,</span><span class="token string">'cake'</span><span class="token punctuation">,</span><span class="token string">'cheese'</span><span class="token punctuation">,</span><span class="token string">'cheese'</span> <span class="token operator">+</span> <span class="token string">'cake'</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Another way to use variables.</span><br><br>three <span class="token operator">=</span> <span class="token string">'cheese'</span><br>five <span class="token operator">=</span> <span class="token string">'cake'</span><br><span class="token keyword">print</span><span class="token punctuation">(</span>f"<span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>three<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>five<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>three<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>three<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>five<span class="token punctuation">}</span><span class="token punctuation">,</span><br><span class="token number">11</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>three<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>three<span class="token operator">+</span>five<span class="token punctuation">}</span>"<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Hello "increment by" operator and if statements!</span><br><br>three <span class="token operator">=</span> <span class="token string">"cheese"</span><br>five <span class="token operator">=</span> <span class="token string">"cake"</span><br><br>x <span class="token operator">=</span> <span class="token number">1</span><br><span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span>three<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">5</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span>five<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">6</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span>three<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span>three<span class="token punctuation">)</span><br>x <span class="token operator">+=</span> <span class="token number">1</span><br><span class="token keyword">if</span> x <span class="token operator">==</span> <span class="token number">10</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span>five<span class="token punctuation">)</span></code></pre>
 <h2>Getting closer…</h2>
-<pre><code class="language-python"># YES! for-loops! Now we’re getting somewhere.
-
-divisiblebythree = &quot;cheese&quot;
-divisiblebyfive = &quot;cake&quot;
-
-stuff = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-for number in stuff:
-    if number == 3 or number == 6 or number == 9 or number == 12:
-        print(divisiblebythree)
-    elif number == 5 or number == 10:
-        print(divisiblebyfive)
-    elif number == 15:
-        print(divisiblebythree + divisiblebyfive)
-    else:
-        print(number)
-</code></pre>
-<pre><code class="language-python"># Ooo. Now I know how to print the numbers from 1 to 100
-
-for i in range(1, 101):
-    print(i)
-</code></pre>
-<pre><code class="language-python"># A-ha. Steps in range will get numbers divisible by 3 and 5.
-
-list(range(0, 101, 3))
-list(range(0, 101, 5))
-</code></pre>
-<pre><code class="language-python"># So close I can smell the baked result…
-
-divbythree = list(range(0, 101, 3))
-divbyfive = list(range(0, 101, 5))
-
-for i in range(1, 101):
-    if i in divbythree:
-        print('cheese')
-    elif i in divbyfive:
-        print('cake')
-    else:
-        print(i)
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># YES! for-loops! Now we’re getting somewhere.</span><br><br>divisiblebythree <span class="token operator">=</span> <span class="token string">"cheese"</span><br>divisiblebyfive <span class="token operator">=</span> <span class="token string">"cake"</span><br><br>stuff <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><br><span class="token keyword">for</span> number <span class="token keyword">in</span> stuff<span class="token punctuation">:</span><br>    <span class="token keyword">if</span> number <span class="token operator">==</span> <span class="token number">3</span> <span class="token keyword">or</span> number <span class="token operator">==</span> <span class="token number">6</span> <span class="token keyword">or</span> number <span class="token operator">==</span> <span class="token number">9</span> <span class="token keyword">or</span> number <span class="token operator">==</span> <span class="token number">12</span><span class="token punctuation">:</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span>divisiblebythree<span class="token punctuation">)</span><br>    <span class="token keyword">elif</span> number <span class="token operator">==</span> <span class="token number">5</span> <span class="token keyword">or</span> number <span class="token operator">==</span> <span class="token number">10</span><span class="token punctuation">:</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span>divisiblebyfive<span class="token punctuation">)</span><br>    <span class="token keyword">elif</span> number <span class="token operator">==</span> <span class="token number">15</span><span class="token punctuation">:</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span>divisiblebythree <span class="token operator">+</span> divisiblebyfive<span class="token punctuation">)</span><br>    <span class="token keyword">else</span><span class="token punctuation">:</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Ooo. Now I know how to print the numbers from 1 to 100</span><br><br><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># A-ha. Steps in range will get numbers divisible by 3 and 5.</span><br><br><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># So close I can smell the baked result…</span><br><br>divbythree <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br>divbyfive <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><br><br><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">if</span> i <span class="token keyword">in</span> divbythree<span class="token punctuation">:</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'cheese'</span><span class="token punctuation">)</span><br>    <span class="token keyword">elif</span> i <span class="token keyword">in</span> divbyfive<span class="token punctuation">:</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'cake'</span><span class="token punctuation">)</span><br>    <span class="token keyword">else</span><span class="token punctuation">:</span><br>        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span></code></pre>
 <p>…and turns out I just needed to sleep on it to figure out the rest from there.</p>
 <p>Wo-hooo. 🎉</p>
 <hr>

@@ -33,9 +33,7 @@
 <p><a href="https://developer.mozilla.org">MDN web docs</a> has the learning module <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript first steps</a> that I’ve been procrastinating on doing. But now I stepped even further back and did the <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">basic JavaScript intro</a> under “Getting started with the Web”. It was great, I needed a soft start and the win of feeling smart because they explain so many things I already understand. But I did force myself to type every line of example code, play around with it, read other pages too, and to write up these notes 👇 in my own words to be sure I actually understood.</p>
 <hr>
 <h2>Hello 🌎</h2>
-<pre><code class="language-js">var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">var</span> myHeading <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>myHeading<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">'Hello world!'</span><span class="token punctuation">;</span></code></pre>
 <p>Yay, that was fun. So what’s happening here?</p>
 <ul>
 <li>Use a function called <code>querySelector()</code> to grab the element.</li>
@@ -46,9 +44,7 @@ myHeading.textContent = 'Hello world!';
 <p>✅ Played around in the console. <em>(And let’s be honest, I haven’t really done that much before now. I guess it’s easier for a website than <a href="/notes/2017/07/javascript/">a paper book</a> to encourage diving in there.)</em></p>
 <hr>
 <h2>Variables to store values 👜</h2>
-<pre><code class="language-js">var myBeverage = 'coffee';
-myBeverage = 'ginger daiquiri';
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">var</span> myBeverage <span class="token operator">=</span> <span class="token string">'coffee'</span><span class="token punctuation">;</span><br>myBeverage <span class="token operator">=</span> <span class="token string">'ginger daiquiri'</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>Declare a variable, name it and give it a value.</li>
 <li>Change the value of the variable in the next statement.</li>
@@ -77,8 +73,7 @@ myBeverage = 'ginger daiquiri';
 </ul>
 <hr>
 <h2>Events to notify what’s happening 📅</h2>
-<pre><code class="language-js">document.querySelector('html').onclick = function() {};
-</code></pre>
+<pre class="language-js"><code class="language-js">document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'html'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function-variable function">onclick</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>The click event listens for a mouse click in the browser. Other examples:</p>
 <ul>
 <li><strong>Resource Events</strong>  —  cached, error, abort, load</li>

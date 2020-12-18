@@ -73,25 +73,9 @@ repeat until i = 100
 <p>Both those versions seemed to warrant improvements — but exactly how wasn't obvious to me. I kept moving around the blocks to a script I expected to work, only for the output to contain different forms of duplication. Why was this more elaborate than for example a Python implementation?</p>
 <p>A-ha. Scratch 3.0 doesn't have an <code>elseif</code>. I was trying to check for multiple conditions without nesting, when that is just not available in this language. The <a href="https://en.scratch-wiki.info/wiki/If_()_Then,_Else_(block)">If () Then, Else (block)</a> is a control that can check for one condition, there's no way I check for two conditions simultaneously.</p>
 <p>JS doesn't have an <code>elseif</code> keyword either, but <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">examples from MDN</a> show this chaining:</p>
-<pre><code class="language-js">if (condition1)
-  statement1
-else if (condition2)
-  statement2
-else if (condition3)
-  statement3
-else
-  statementN
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span><br>  statement1<br><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span><br>  statement2<br><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>condition3<span class="token punctuation">)</span><br>  statement3<br><span class="token keyword">else</span><br>  statementN</code></pre>
 <p>But when that same nesting is indented properly, it looks like this:</p>
-<pre><code class="language-js">if (condition1)
-  statement1
-else
-  if (condition2)
-    statement2
-  else
-    if (condition3)
-// and so on
-</code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition1<span class="token punctuation">)</span><br>  statement1<br><span class="token keyword">else</span><br>  <span class="token keyword">if</span> <span class="token punctuation">(</span>condition2<span class="token punctuation">)</span><br>    statement2<br>  <span class="token keyword">else</span><br>    <span class="token keyword">if</span> <span class="token punctuation">(</span>condition3<span class="token punctuation">)</span><br><span class="token comment">// and so on</span></code></pre>
 <h2>🤯</h2>
 <p>When my brain understood properly that <code>if else</code> was all I had in this language — and that the blocks basically makes it <strong>look different</strong> than it does the way it might in JavaScript — it was easier to stop trying to reach for something not there, and instead figure out how to optimize what I had.</p>
 <h3>Third and improving:</h3>

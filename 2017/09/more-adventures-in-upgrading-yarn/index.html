@@ -42,21 +42,12 @@
 <p>Poked around in the <code>package.json</code>, read some <a href="https://yarnpkg.com/en/docs">docs</a> (they’re pretty nice!) and more about the <code>yarn.lock</code> file. It’s auto-generated, includes everything needed to lock versions of all packages in the dependency tree — not just the top-level. We have it checked in to GitHub. I don’t think I’ve needed Yarn locally to do anything with this file, but I’m assuming that if/when I do add, upgrade or remove any dependencies, I would also then need Yarn installed locally.</p>
 <hr>
 <p>Let’s check the current status of all the things.</p>
-<pre><code class="language-bash">$ yarn --version
-0.27.5
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">yarn</span> --version<br><span class="token number">0.27</span>.5</code></pre>
 <p>I know now that Yarn was installed with Homebrew, but how would I check that if I didn’t remember? And I’m not quite clear on where Yarn is/should be installed on my machine.</p>
-<pre><code class="language-bash">$ which yarn
-/usr/local/bin/yarn
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">which</span> <span class="token function">yarn</span><br>/usr/local/bin/yarn</code></pre>
 <p>I think this is the Yarn I want to upgrade. (Do I have others? I remember there was something with multiple Python installations. Maybe that’s competely different? IDK. Moving on…)</p>
-<pre><code class="language-bash">$ brew doctor
-Your system is ready to brew.
-</code></pre>
-<pre><code class="language-bash">$ brew update
-Permission denied (publickey).
-fatal: Could not read from remote repository.
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ brew doctor<br>Your system is ready to brew.</code></pre>
+<pre class="language-bash"><code class="language-bash">$ brew update<br>Permission denied <span class="token punctuation">(</span>publickey<span class="token punctuation">)</span>.<br>fatal: Could not <span class="token builtin class-name">read</span> from remote repository.</code></pre>
 <h2>😢</h2>
 <p>There are apparently lots of different issues you can get with brew and permissions. But after reading about lots of them, I kinda suspected it was SSH causing problems for me now.</p>
 <p>I’m not entirely sure what I did with my SSH config file. I know I had added something to it ages ago to fix the <a href="https://blog.elao.com/en/tech/ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain/">not loading passphrase on Sierra keychain</a> problem. But looks like I didn’t have the same option as I found suggested both here and there now. (Did I have a different fix, that worked for a while but then gave up a couple of weeks ago? I have been bugged a lot for the passphrase lately, but ignored looking into it before now.) Anyway…</p>
@@ -65,9 +56,7 @@ fatal: Could not read from remote repository.
 <li>Learnt how to <a href="https://help.github.com/articles/testing-your-ssh-connection/">test my SSH connection</a>!</li>
 <li>…and yay, now brew happily upgraded and updated everything I asked it to.</li>
 </ul>
-<pre><code class="language-bash">$ yarn --version
-1.1.0
-</code></pre>
+<pre class="language-bash"><code class="language-bash">$ <span class="token function">yarn</span> --version<br><span class="token number">1.1</span>.0</code></pre>
 <h2>🎉</h2>
 
   </div>

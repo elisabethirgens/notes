@@ -34,22 +34,15 @@
 <hr>
 <h2>The annoyance I want to improve</h2>
 <p>The project I’m working on uses OpenShift, and apparently I need to ramp up the system-wide resources for Minishift to run happily. Specifically: increase the number of open files per process. I’ve set a thing in my <code>.bashrc</code> and run some commands and it’s all working fine. But after every restart, I get an error in a new shell and need to repeat the process. This is in my <code>.bashrc</code> file:</p>
-<pre><code class="language-bash">ulimit -n 500000
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">ulimit</span> -n <span class="token number">500000</span></code></pre>
 <p>But after a reboot, the terminal will complain that:</p>
-<pre><code class="language-bash">-bash: ulimit: open files: cannot modify limit: Invalid argument
-</code></pre>
+<pre class="language-bash"><code class="language-bash">-bash: ulimit: <span class="token function">open</span> files: cannot modify limit: Invalid argument</code></pre>
 <p>When I check, I can see that the number has returned to 256:</p>
-<pre><code class="language-bash">launchctl limit maxfiles
-maxfiles    256            unlimited
-</code></pre>
+<pre class="language-bash"><code class="language-bash">launchctl limit maxfiles<br>maxfiles    <span class="token number">256</span>            unlimited</code></pre>
 <p>Then I can run this command to increase it:</p>
-<pre><code class="language-bash">sudo launchctl limit maxfiles 5000000 5000000
-</code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> launchctl limit maxfiles <span class="token number">5000000</span> <span class="token number">5000000</span></code></pre>
 <p>And check that it increased:</p>
-<pre><code class="language-bash">launchctl limit maxfiles
-maxfiles    5000000        5000000
-</code></pre>
+<pre class="language-bash"><code class="language-bash">launchctl limit maxfiles<br>maxfiles    <span class="token number">5000000</span>        <span class="token number">5000000</span></code></pre>
 <p>But after the next reboot, I need to repeat the command. So let’s dig into what all this stuff is, so I can try to improve the set up and learn what’s actually going on.</p>
 <h3><code>launchctl</code></h3>
 <blockquote>

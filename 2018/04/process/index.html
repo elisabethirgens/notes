@@ -46,20 +46,12 @@
 </ul>
 <p>This is of course not a straight path directly to an end result, but it’s feels like a great move in that general direction. Then: <strong>create a class hierarchy and object map</strong>. The hierarchy part makes sense, but I’m confused by the word map, because there is a <code>map</code> object. Are we talking about “mapping out the objects”? Or something specific to this code? 🤔 (Moving on for now, next up is… 👇)</p>
 <h3>Start coding a skeleton</h3>
-<pre><code class="language-python">class Mountain(object): # explicit, but not needed in python3
-    def climb(self):
-    pass  # useful placeholder when making a skeleton
-          # this pass statement is a null operation
-          # function climb does nothing (yet) but the script can continue
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Mountain</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># explicit, but not needed in python3</span><br>    <span class="token keyword">def</span> <span class="token function">climb</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">pass</span>  <span class="token comment"># useful placeholder when making a skeleton</span><br>          <span class="token comment"># this pass statement is a null operation</span><br>          <span class="token comment"># function climb does nothing (yet) but the script can continue</span></code></pre>
 <p>That <code>pass</code> thingy is apparently a <a href="https://docs.python.org/3/reference/simple_stmts.html">simple statement</a>.<br>
 And the ones I’ve met before are <code>return</code>, <code>break</code> and <code>import</code>.</p>
 <hr>
 <h3>More notes from the code in this exercise</h3>
-<pre><code class="language-python">from sys import exit              # from module import function
-from random import randint
-from textwrap import dedent
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> sys <span class="token keyword">import</span> exit              <span class="token comment"># from module import function</span><br><span class="token keyword">from</span> random <span class="token keyword">import</span> randint<br><span class="token keyword">from</span> textwrap <span class="token keyword">import</span> dedent</code></pre>
 <p><code>sys</code></p>
 <blockquote>
 <p>This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available.</p>

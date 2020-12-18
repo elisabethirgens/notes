@@ -45,10 +45,7 @@
 </ul>
 <h3>Get a thing from another thing</h3>
 <p>There’s a pattern to recognize here on how to get things from other things.</p>
-<pre><code class="language-python">fromthis['wantthis'] # dictionary key=value
-modulewhatever.somethingelse() # module key=value
-blueprint.anotherthing # also a key=value when I have a class
-</code></pre>
+<pre class="language-python"><code class="language-python">fromthis<span class="token punctuation">[</span><span class="token string">'wantthis'</span><span class="token punctuation">]</span> <span class="token comment"># dictionary key=value</span><br>modulewhatever<span class="token punctuation">.</span>somethingelse<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># module key=value</span><br>blueprint<span class="token punctuation">.</span>anotherthing <span class="token comment"># also a key=value when I have a class</span></code></pre>
 <h3>OOP and FP</h3>
 <p>I found an article on <a href="https://www.codenewbie.org/blogs/object-oriented-programming-vs-functional-programming">CodeNewbie</a> with helpful explanations like:</p>
 <blockquote>
@@ -60,26 +57,12 @@ blueprint.anotherthing # also a key=value when I have a class
 <hr>
 <h2>Phrase drills</h2>
 <p>Exercise 41 has a script to help drill these phrases. You run it in the terminal to repeat either from code to English, or the other way around. With different random words from a list each time.</p>
-<pre><code class="language-python"># Make a class named Dinosaur that is-a Cactus
-class Dinosaur(Cactus)
-</code></pre>
-<pre><code class="language-python"># class Brick has-a __init__ that takes self and cherry params
-class Brick(object):
-    def __init__(self, cherry)
-</code></pre>
-<pre><code class="language-python"># class Cabbage has-a function named Book that takes self and drum params
-class Cabbage(object):
-    def Book(self, drum)
-</code></pre>
-<pre><code class="language-python"># Set actor to an instance of class Celery
-actor = Celery()
-</code></pre>
-<pre><code class="language-python"># From dust, get the crayon function, and call it with params self, detail
-dust.crayon(detail)
-</code></pre>
-<pre><code class="language-python"># From approval, get the brain attribute, and set it to Coal
-approval.brain = Coal
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Make a class named Dinosaur that is-a Cactus</span><br><span class="token keyword">class</span> <span class="token class-name">Dinosaur</span><span class="token punctuation">(</span>Cactus<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># class Brick has-a __init__ that takes self and cherry params</span><br><span class="token keyword">class</span> <span class="token class-name">Brick</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> cherry<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># class Cabbage has-a function named Book that takes self and drum params</span><br><span class="token keyword">class</span> <span class="token class-name">Cabbage</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">def</span> <span class="token function">Book</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> drum<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># Set actor to an instance of class Celery</span><br>actor <span class="token operator">=</span> Celery<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># From dust, get the crayon function, and call it with params self, detail</span><br>dust<span class="token punctuation">.</span>crayon<span class="token punctuation">(</span>detail<span class="token punctuation">)</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># From approval, get the brain attribute, and set it to Coal</span><br>approval<span class="token punctuation">.</span>brain <span class="token operator">=</span> Coal</code></pre>
 <p>Random nonsense words in this script was super helpful. I’ve seen this a lot from both learning and teaching — that as a beginner, you get tripped up on which words are from the language, and which are just something we name as we code. So when teaching non-coders their very first HTML/CSS, I now use obviously random silly words to take the focus away from class naming.</p>
 <hr>
 <p>Exercise 42 starts to introduce these concepts:</p>

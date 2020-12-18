@@ -47,20 +47,11 @@
 </ul>
 <p>Except… hm. It seems that “only seeks relative to the beginning of the file are allowed” for text files. Which explains why I couldn’t get the end of the file reference to work when playing around in the console with this.</p>
 <p>Python doesn’t need to separatly unpack arguments when I write a function. Which is what I did in the last exercise — but apparently it confused me again now, so let’s repeat:</p>
-<pre><code class="language-python">def whatever_function(anything_argument):
-# and the argument is now ready to be used as a variable
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">whatever_function</span><span class="token punctuation">(</span>anything_argument<span class="token punctuation">)</span><span class="token punctuation">:</span><br><span class="token comment"># and the argument is now ready to be used as a variable</span></code></pre>
 <p>✅ “rewrite the script to use the shorthand notation <code>+=</code>” <strong>Yes. Did that. It’s working! \o/</strong></p>
 <hr>
 <h2>21: Functions Can Return Something</h2>
-<pre><code class="language-python">def add(a, b):
-    print(f&quot;ADDING {a} + {b}&quot;) # this is just print
-    return a + b # this is where the math actually happens
-
-# define a variable and run the function with two arguments
-# the variable then gets a value returned from the function
-age = add(30, 10)
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"ADDING </span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string"> + </span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span> <span class="token comment"># this is just print</span><br>    <span class="token keyword">return</span> a <span class="token operator">+</span> b <span class="token comment"># this is where the math actually happens</span><br><br><span class="token comment"># define a variable and run the function with two arguments</span><br><span class="token comment"># the variable then gets a value returned from the function</span><br>age <span class="token operator">=</span> add<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></code></pre>
 <p>Wohooo! Had to sleep on it, but nailed the tricky extra credit puzzle.</p>
 <h4>Math (and Python) operation order repetition 🎓</h4>
 <blockquote>
@@ -105,17 +96,9 @@ age = add(30, 10)
 💁‍♀️ <code>return</code> return a value from the function</p>
 <p>(Very pleased with these emoji!)</p>
 <h3>More stuff</h3>
-<pre><code class="language-python">f&quot;here are some words and a {variable}&quot; # this is an f-string
-</code></pre>
-<pre><code class="language-python"># from the sys module, import a function for taking arguments
-from sys import argv
-# add one more argument in addition to the script itself
-script, filename = argv
-</code></pre>
-<pre><code class="language-python">open(filename)      # without the optional string for mode
-open(filename, 'r') # r for read mode (which is default)
-open(filename, 'w') # w for write mode (careful! can delete)
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token string-interpolation"><span class="token string">f"here are some words and a </span><span class="token interpolation"><span class="token punctuation">{</span>variable<span class="token punctuation">}</span></span><span class="token string">"</span></span> <span class="token comment"># this is an f-string</span></code></pre>
+<pre class="language-python"><code class="language-python"><span class="token comment"># from the sys module, import a function for taking arguments</span><br><span class="token keyword">from</span> sys <span class="token keyword">import</span> argv<br><span class="token comment"># add one more argument in addition to the script itself</span><br>script<span class="token punctuation">,</span> filename <span class="token operator">=</span> argv</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span>      <span class="token comment"># without the optional string for mode</span><br><span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token comment"># r for read mode (which is default)</span><br><span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token comment"># w for write mode (careful! can delete)</span></code></pre>
 <hr>
 <h3>Some observations…</h3>
 <p>…after this week of working on the <a href="https://learncodethehardway.org/python/">Learn Python The Hard Way</a> exercises. 💪</p>

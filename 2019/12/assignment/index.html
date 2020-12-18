@@ -38,74 +38,25 @@
 <li>Create a function component (unless I need to manage state, then consider class component)</li>
 <li>Remember naming conventions with camelCase</li>
 </ul>
-<pre><code class="language-javascript">// Enable my JSX to be converted to React elements
-import React from 'react';
-
-// Create the component itself as a function
-const myComponent = () =&gt; { ... }
-
-// Make it possible to access this component from another file
-export default myComponent;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Enable my JSX to be converted to React elements</span><br><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span><br><br><span class="token comment">// Create the component itself as a function</span><br><span class="token keyword">const</span> <span class="token function-variable function">myComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><br><br><span class="token comment">// Make it possible to access this component from another file</span><br><span class="token keyword">export</span> <span class="token keyword">default</span> myComponent<span class="token punctuation">;</span></code></pre>
 <h2>Use new component inside <code>App.js</code> ⛽️</h2>
-<pre><code class="language-javascript">// Make it possible to add the new component in this container
-import MyComponent from './MyComponent/MyComponent.js';
-</code></pre>
-<pre><code class="language-javascript">  return (
-    // Add my new component as a self-closing tag
-    &lt;MyComponent /&gt;
-  );
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Make it possible to add the new component in this container</span><br><span class="token keyword">import</span> MyComponent <span class="token keyword">from</span> <span class="token string">'./MyComponent/MyComponent.js'</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">  <span class="token keyword">return</span> <span class="token punctuation">(</span><br>    <span class="token comment">// Add my new component as a self-closing tag</span><br>    <span class="token operator">&lt;</span>MyComponent <span class="token operator">/</span><span class="token operator">></span><br>  <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h2>Set up some props 🎭</h2>
-<pre><code class="language-javascript">    // Pass a prop (string for now, but something else later)
-    &lt;MyComponent myDynamicContent=&quot;will come here later&quot;/&gt;
-</code></pre>
-<pre><code class="language-javascript">// Accept a props argument in the function
-const myComponent = (props) =&gt; {
-  // Output the prop to display it in the browser
-  return &lt;div&gt; {props.myDynamicContent} &lt;/div&gt;;
-};
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript">    <span class="token comment">// Pass a prop (string for now, but something else later)</span><br>    <span class="token operator">&lt;</span>MyComponent myDynamicContent<span class="token operator">=</span><span class="token string">"will come here later"</span><span class="token operator">/</span><span class="token operator">></span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Accept a props argument in the function</span><br><span class="token keyword">const</span> <span class="token function-variable function">myComponent</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token comment">// Output the prop to display it in the browser</span><br>  <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span> <span class="token punctuation">{</span>props<span class="token punctuation">.</span>myDynamicContent<span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <h2>Manage state in the container ♻️</h2>
 <ul>
 <li>Add state inside the <code>App.js</code> class component</li>
 </ul>
-<pre><code class="language-javascript">// Add state property to the class with a new username property
-state = { developer: 'Elisabeth' }
-// Add a method to be able to manipulate the state
-changeDeveloperHandler = (event) =&gt; {
-  this.setState({ developer: event.target.value });
-}
-</code></pre>
-<pre><code class="language-javascript">    // Pass something dynamic from the state to the component
-    &lt;MyComponent myDynamicContent={this.state.developer}/&gt;
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Add state property to the class with a new username property</span><br>state <span class="token operator">=</span> <span class="token punctuation">{</span> developer<span class="token operator">:</span> <span class="token string">'Elisabeth'</span> <span class="token punctuation">}</span><br><span class="token comment">// Add a method to be able to manipulate the state</span><br><span class="token function-variable function">changeDeveloperHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> developer<span class="token operator">:</span> event<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<pre class="language-javascript"><code class="language-javascript">    <span class="token comment">// Pass something dynamic from the state to the component</span><br>    <span class="token operator">&lt;</span>MyComponent myDynamicContent<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>developer<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span></code></pre>
 <h2>Pass event handler and bind it to event 🤹🏼‍♀️</h2>
-<pre><code class="language-javascript">&lt;UserInput
-  // Pass a reference to the event handler method
-  changed={this.changeDeveloperHandler}
-  // Enable the two-way binding by passing a reference
-  currentDeveloper={this.state.developer} /&gt;
-</code></pre>
-<pre><code class="language-javascript">const userInput = (props) =&gt; {
-    return &lt;input type=&quot;text&quot;
-        // Bind my event handler to the change event
-        onChange={props.changed}
-        // Add two-way binding
-        value={props.currentDeveloper} /&gt;;
-};
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>UserInput<br>  <span class="token comment">// Pass a reference to the event handler method</span><br>  changed<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>changeDeveloperHandler<span class="token punctuation">}</span><br>  <span class="token comment">// Enable the two-way binding by passing a reference</span><br>  currentDeveloper<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>developer<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">userInput</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br>    <span class="token keyword">return</span> <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span><br>        <span class="token comment">// Bind my event handler to the change event</span><br>        onChange<span class="token operator">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>changed<span class="token punctuation">}</span><br>        <span class="token comment">// Add two-way binding</span><br>        value<span class="token operator">=</span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>currentDeveloper<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>While I follow all this technically and made it work in my actual app code, I don’t get how it’s a great idea to pass references back and forth between small files like this. Wouldn’t it then be easier to read if more code was gathered in slightly larger files?!</p>
 <h2>Add styles 🎨</h2>
-<pre><code class="language-javascript">const mySpecialInputStyle = {
-  padding: '0.5rem 1rem',
-  border: '3px solid teal',
-  fontSize: '1.25rem',
-  fontFamily: 'Monaco, sans-serif',
-  color: 'slategray',
-  marginBottom: '1rem',
-};
-</code></pre>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> mySpecialInputStyle <span class="token operator">=</span> <span class="token punctuation">{</span><br>  padding<span class="token operator">:</span> <span class="token string">'0.5rem 1rem'</span><span class="token punctuation">,</span><br>  border<span class="token operator">:</span> <span class="token string">'3px solid teal'</span><span class="token punctuation">,</span><br>  fontSize<span class="token operator">:</span> <span class="token string">'1.25rem'</span><span class="token punctuation">,</span><br>  fontFamily<span class="token operator">:</span> <span class="token string">'Monaco, sans-serif'</span><span class="token punctuation">,</span><br>  color<span class="token operator">:</span> <span class="token string">'slategray'</span><span class="token punctuation">,</span><br>  marginBottom<span class="token operator">:</span> <span class="token string">'1rem'</span><span class="token punctuation">,</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <pre><code>    // Add the style attribute to the element
     &lt;input style={mySpecialInputStyle} /&gt;
 </code></pre>

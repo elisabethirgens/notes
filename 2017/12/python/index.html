@@ -107,11 +107,7 @@
 <p>typically you'll use single-quotes for any short strings</p>
 </blockquote>
 <p><code>\n</code> is a new line character (that I recognize from InDesign!😆)</p>
-<pre><code class="language-python">print(&quot;&quot;&quot;
-Hey, this is kinda like a fenced code block in markdown.
-But with quotes (either single or double) not backticks.
-&quot;&quot;&quot;)
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token triple-quoted-string string">"""<br>Hey, this is kinda like a fenced code block in markdown.<br>But with quotes (either single or double) not backticks.<br>"""</span><span class="token punctuation">)</span></code></pre>
 <p>Examples of escape sequences supported by Python:</p>
 <p><code>\\</code> one backslash<br>
 <code>\&quot;</code> a double-quote<br>
@@ -124,9 +120,7 @@ But with quotes (either single or double) not backticks.
 <p><code>input(&quot;Where are you? &quot;)</code> is a built-in function and can contain a prompt like this question.</p>
 <h3>Hello pydoc! 👋</h3>
 <p><code>/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.py</code> Does this mean I‘ve got an older version of pydoc? 🤔</p>
-<pre><code class="language-bash">python -V
-Python 2.7.10
-</code></pre>
+<pre class="language-bash"><code class="language-bash">python -V<br>Python <span class="token number">2.7</span>.10</code></pre>
 <p>Yes. I have two versions of Python installed, since I’m now using <code>python3.6</code> to run scripts. Not digging deeper into this now, just making a note of it and moving on.</p>
 <p><strong>Arguments!</strong> I know what you are. ✌️</p>
 <p><code>import</code> just what you plan to use, this is neat! I can see how this makes longer scripts more readable for humans.</p>
@@ -182,16 +176,7 @@ Python 2.7.10
 <p>…and then run/call/use the function with<br>
 <code>my_function_name(values, anything, something)</code></p>
 <p>Study drill: Wrote my very own <code>palermo</code> function! 😆</p>
-<pre><code class="language-python">def palermo(pasta_count, wine_count, step_count):
-    print(f&quot;You’ve probably had pasta {pasta_count} times…&quot;)
-    print(f&quot;…and {wine_count} glasses of nero d'avola. 🍷&quot;)
-    print(f&quot;Also walked {step_count} steps in total.\n&quot;)
-
-dayz = input(&quot;\n&gt; How many days have you been in Palermo now? &quot;)
-
-print(f&quot;🇮🇹  You’ve been here {dayz} days! Lucky you.&quot;)
-palermo(int(dayz) * 1.5, int(dayz) * 3, int(dayz) * 12000 )
-</code></pre>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">palermo</span><span class="token punctuation">(</span>pasta_count<span class="token punctuation">,</span> wine_count<span class="token punctuation">,</span> step_count<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"You’ve probably had pasta </span><span class="token interpolation"><span class="token punctuation">{</span>pasta_count<span class="token punctuation">}</span></span><span class="token string"> times…"</span></span><span class="token punctuation">)</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"…and </span><span class="token interpolation"><span class="token punctuation">{</span>wine_count<span class="token punctuation">}</span></span><span class="token string"> glasses of nero d'avola. 🍷"</span></span><span class="token punctuation">)</span><br>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Also walked </span><span class="token interpolation"><span class="token punctuation">{</span>step_count<span class="token punctuation">}</span></span><span class="token string"> steps in total.\n"</span></span><span class="token punctuation">)</span><br><br>dayz <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"\n> How many days have you been in Palermo now? "</span><span class="token punctuation">)</span><br><br><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"🇮🇹  You’ve been here </span><span class="token interpolation"><span class="token punctuation">{</span>dayz<span class="token punctuation">}</span></span><span class="token string"> days! Lucky you."</span></span><span class="token punctuation">)</span><br>palermo<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>dayz<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">1.5</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>dayz<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>dayz<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">12000</span> <span class="token punctuation">)</span></code></pre>
 <h2>✌️</h2>
 <p>Yay. This is super fun and it feels like I’m making substantial progress.</p>
 
