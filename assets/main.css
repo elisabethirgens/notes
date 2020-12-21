@@ -39,14 +39,10 @@ a:hover {
   color: #444;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
-}
-
 hr {
   border: 0;
-  border-top: 2px solid #ccc;
-  margin: 2rem 0;
+  border-top: 4px solid #1779cf;
+  margin: 2.5rem 0 2rem 0;
 }
 
 blockquote {
@@ -108,7 +104,7 @@ body {
 }
 
 .page-content {
-  padding: 3rem 1rem;
+  margin-bottom: 2rem;
   flex: 1;
 }
 
@@ -116,6 +112,7 @@ body {
   max-width: 48rem;
   margin-right: auto;
   margin-left: auto;
+  padding: 0 1rem;
 }
 
 .post-content a {
@@ -123,41 +120,43 @@ body {
 }
 
 .post-content h2 {
-  font-size: 32px;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 1.25rem;
 }
 
 .post-content h3 {
-  font-size: 24px;
+  font-size: 1.35rem;
+}
+
+.post-date {
+  display: inline-block;
+  border-top: 3px solid #ddd;
+  padding: 4px 2px;
 }
 
 .post-header {
   margin-bottom: 2rem;
 }
 
-.site-title {
-  font-size: 20px;
-  font-weight: 300;
-}
-
 .post-list .post-meta {
   text-transform: uppercase;
-  color: #999;
+  color: #aaa;
   float: right;
-  margin-top: 0.75rem;
-  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .post-title {
   font-size: 2.625rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1;
 }
 
 .post-list {
-  border-top: 2px solid #eee;
-  margin-left: 0;
+  border-top: 2px solid #ddd;
+  margin-left: -1rem;
+  margin-right: -1rem;
   list-style: none;
 }
 
@@ -166,15 +165,16 @@ body {
 }
 
 .post-list h2 {
+  font-size: 1.5rem;
+  font-weight: 750;
   margin-bottom: 0;
-  line-height: 1.2;
-  border-bottom: 2px solid #eee;
+  line-height: 1;
+  border-bottom: 2px solid #ddd;
 }
 
 .post-link {
   display: block;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.4rem 1rem;
 }
 
 .post-link:hover {
@@ -182,7 +182,10 @@ body {
 }
 
 .site-header {
-  background-color: #ddd;
+  background-color: #0867ba;
+  color: #fff;
+  padding: 0.2rem 0 0.15rem 0;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 40em) {
@@ -193,21 +196,22 @@ body {
 }
 
 .top__title {
+  font-size: 2rem;
+  font-weight: 650;
   margin-bottom: 0;
-  font-size: 2.5rem;
 }
 
 .top__title a {
-  color: #666;
+  color: #fff;
 }
 
 .top__descr {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .site-footer {
-  padding: 2rem 0;
+  padding: 1rem 0;
   background-color: #eee;
 }
 
