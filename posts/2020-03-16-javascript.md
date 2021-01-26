@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Something (Not Nothing) About JavaScript"
+title: "Something (Not Nothing) About JavaScript"
 date: 2020-03-16
 ---
 
@@ -20,41 +20,41 @@ Once upon a time, web pages on the internet displayed mostly static text for us 
 
 ## Variables
 
-* `var` was the original old school variable, that I probably don’t need these days
-* `let` is the recommended variable declaration in modern web development
-* `const` is the one I probably want to use most of the time because it’s constant
+- `var` was the original old school variable, that I probably don’t need these days
+- `let` is the recommended variable declaration in modern web development
+- `const` is the one I probably want to use most of the time because it’s constant
 
 ## Data types
 
-* number — `123`
-* string — `'All kinds of text!'`
-* boolean — a statement that resolves to `true` or `false`
-* arrays — `['some item', 'another item', 'even more stuff']`
-* objects — `{ id: 100, topic: 'learning' }`
-* undefined — a variable without an assigned value
-* null — points to nothing, often on purpose
+- number — `123`
+- string — `'All kinds of text!'`
+- boolean — a statement that resolves to `true` or `false`
+- arrays — `['some item', 'another item', 'even more stuff']`
+- objects — `{ id: 100, topic: 'learning' }`
+- undefined — a variable without an assigned value
+- null — points to nothing, often on purpose
 
 ## Operators
 
-* Arithmetic: `+` `-` `*` `/` `%`
-* Increment `++` and decrement `--`
-* Assignment `=` (and I know there are more of ’em)
-* Comparison operators like `<` `>` `<=` `>=` and also these are important to fully understand:
+- Arithmetic: `+` `-` `*` `/` `%`
+- Increment `++` and decrement `--`
+- Assignment `=` (and I know there are more of ’em)
+- Comparison operators like `<` `>` `<=` `>=` and also these are important to fully understand:
 
-| | |
-| --- | --- |
-| `===` | equal (strict! recommended!) ✅ |
-| `!==` | non-equal (strict! recommended!) ❌ |
-| `==` | these things are the same, but perhaps not the same datatype 🤷🏻‍ |
-| `!=` | nope, not equal 🙅🏻‍ |
+|       |                                                                  |
+| ----- | ---------------------------------------------------------------- |
+| `===` | equal (strict! recommended!) ✅                                  |
+| `!==` | non-equal (strict! recommended!) ❌                              |
+| `==`  | these things are the same, but perhaps not the same datatype 🤷🏻‍ |
+| `!=`  | nope, not equal 🙅🏻‍                                              |
 
 Logical operators: AND `&&`, OR `||`, NOT `!`
 
 ## Conditionals
 
-* `if...else` is something I’m used to reading in code
-* `else if` also
-* `condition ? true : false` is a ternary operator that I learnt more recently
+- `if...else` is something I’m used to reading in code
+- `else if` also
+- `condition ? true : false` is a ternary operator that I learnt more recently
 
 ## Loops
 
@@ -73,11 +73,10 @@ function whateverName() {
 ```js
 const anotherName = () => {
   // this comment is inside an arrow function
-}
+};
 ```
 
 Let’s see… there’s also anonymous functions, return values, local vs global scope.
-
 
 ## Events and more
 

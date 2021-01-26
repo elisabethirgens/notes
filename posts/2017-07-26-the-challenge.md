@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "“Code is never the challenge”"
+title: "“Code is never the challenge”"
 date: 2017-07-26
 ---
 

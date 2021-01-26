@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DIY UI Tips for Backend Developers"
+title: "DIY UI Tips for Backend Developers"
 date: 2019-09-24
 ---
 
@@ -53,7 +53,6 @@ Find a friend from a different team who has not seen what you are working on and
 You need to figure out which tools to use when and in what order. You do not need all of them all the time. For a very large project, perhaps most of them come in handy — but often just a few will do. Experiment! Sometimes you try using a hammer, but later understand that it doesn’t quite cut it and you should pick up an axe.
 
 This list is not a step by step progress, but a dance where you hop back and forth as needed. User test reveal new problems? Jump back to paper doodles or a whiteboard discussion. Complete clarity after a codepen? Fast forward and dive into the codebase.
-
 
 ---
 

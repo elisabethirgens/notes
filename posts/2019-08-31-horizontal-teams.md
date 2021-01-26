@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Horizontal Teams To Strengthen Vertical Structures"
+title: "Horizontal Teams To Strengthen Vertical Structures"
 date: 2019-08-31
 ---
 
@@ -22,7 +22,6 @@ Vertical teams are experts on user functionality in their area. They are investe
 
 Horizontal teams are generalists with a big picture perspective. In our case, we strive to know the main features across all neighbouring web applications. We want to understand the most common needs of our typical users. We have a mandate to establish shared patterns, and to implement that standardisation to improve user experience.
 
-
 ## Organisation Core 🤸‍♂️
 
 **Product teams perform the heaviest lifting in the code base — while we aim for acrobatic transformations.**
@@ -35,12 +34,12 @@ Horizontal teams are tools for radical change. In our case, we have redefined ho
 
 Teams can be organised in many ways, other organisations will use these words to mean something else. But as a smart reader, you understand we are describing _our context_ and what our experience has taught us works here for us.
 
-| | |
-| --- | --- |
-| **Vertical teams** | **Horizontal teams** |
+|                           |                           |
+| ------------------------- | ------------------------- |
+| **Vertical teams**        | **Horizontal teams**      |
 | Technology Generalists 🐟 | Technology Specialists 🏊‍♀️ |
-| Domain Specialists 🕵️‍♀️ | Domain Generalist 🤹‍♀️ |
-| Unit Strength 🏋️‍♀️ | Organisation Core 🤸‍♀️ |
+| Domain Specialists 🕵️‍♀️     | Domain Generalist 🤹‍♀️      |
+| Unit Strength 🏋️‍♀️          | Organisation Core 🤸‍♀️      |
 
 ---
 

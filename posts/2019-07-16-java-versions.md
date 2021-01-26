@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Detour Into Homebrew and Java Versions"
+title: "Detour Into Homebrew and Java Versions"
 date: 2019-07-16
 ---
 
@@ -10,10 +10,10 @@ The app I’m working on won’t build, but I know it was recently updated to Ja
 /usr/libexec/java_home -V
 ```
 
-* OpenJDK 11.0.2
-* Java SE 10.0.1
-* Java SE 8
-* Java SE 7
+- OpenJDK 11.0.2
+- Java SE 10.0.1
+- Java SE 8
+- Java SE 7
 
 The onboarding guide we’ve got at work suggests (without explaining much):
 
@@ -22,8 +22,9 @@ brew tap caskroom/homebrew-versions
 ```
 
 I remember that I can install different older versions either:
-* manually by downloading from oracle.com
-* or by running brew commands
+
+- manually by downloading from oracle.com
+- or by running brew commands
 
 But why choose one over the other? And how can I tell which way I installed the previous versions? Does it matter? (Yes! I learnt a boatload and more about all this below 👇)
 
@@ -50,15 +51,14 @@ weikengchen/caskformula
 
 There are two named caskformula that are shortcuts for: [caskformula/homebrew-caskformula](https://github.com/caskformula/homebrew-caskformula) and&nbsp;the fork [weikengchen/homebrew-caskformula](https://github.com/weikengchen/homebrew-caskformula). Apparently from installing Inkscape some time back, which I do vaguely remember now that I see [this issue on GitHub](https://github.com/caskformula/homebrew-caskformula/issues/51). All right then.
 
-
 The other four taps refer to these projects, all on the Homebrew org:
 
-| Repo | and their GitHub descriptions |
-| --- | --- |
-| [homebrew-cask](https://github.com/Homebrew/homebrew-cask) | 🍻 A CLI workflow for the administration of macOS applications distributed as binaries |
-| [homebrew&#8209;cask&#8209;versions](https://github.com/Homebrew/homebrew-cask-versions) | 🔢 Alternate versions of Casks |
-| [homebrew-core](https://github.com/Homebrew/homebrew-core) | 🍻 Default formulae for the missing package manager for macOS |
-| [homebrew-services](https://github.com/Homebrew/homebrew-services) | 🚀 Manage background services with macOS' launchctl daemon manager |
+| Repo                                                                                     | and their GitHub descriptions                                                          |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [homebrew-cask](https://github.com/Homebrew/homebrew-cask)                               | 🍻 A CLI workflow for the administration of macOS applications distributed as binaries |
+| [homebrew&#8209;cask&#8209;versions](https://github.com/Homebrew/homebrew-cask-versions) | 🔢 Alternate versions of Casks                                                         |
+| [homebrew-core](https://github.com/Homebrew/homebrew-core)                               | 🍻 Default formulae for the missing package manager for macOS                          |
+| [homebrew-services](https://github.com/Homebrew/homebrew-services)                       | 🚀 Manage background services with macOS' launchctl daemon manager                     |
 
 Ok, so the way I understand it now, is that these are different parts of Homebrew. But I wonder about the description that taps are third-party?! Anyway, the one called cask-versions is what supports the installation of alternate versions (of Java in this case, but could be any others). The “default homebrew behaviour” is to install the current newest version. The readme says:
 
@@ -68,7 +68,7 @@ Hm. I’m confused about the content in the [homebrew-cask-versions/Casks/](http
 
 [The announcement of Homebrew 1.2.0](https://brew.sh/2017/05/01/homebrew-1.2.0/#post) says that:
 
->  Homebrew/homebrew-versions has been moved into Homebrew/homebrew-core <br> Homebrew provides better, official support for different versions.
+> Homebrew/homebrew-versions has been moved into Homebrew/homebrew-core <br> Homebrew provides better, official support for different versions.
 
 Is the suggestion from the onboarding guide still valid — or now outdated? 🤔 Not sure.
 
@@ -83,10 +83,10 @@ Yeah… that doesn’t help at all. But searching for `homebrew cask vs formula`
 > The difference isn’t between binary and app, but between downloaded as source code that will be compiled, or as an already compiled package. The distinction is important because the result is different. brew install macvim takes (possibly way) longer to install then brew cask install macvim. The former provides flexibility, while the later provides speed.
 
 ## 🤯😱🥳
+
 ## Whoa! That explains why…
 
 There’s no java listed when I run `brew list`. Because those are what I’ve installed as source code to be complied, not packages ready to go. Very enlightening.
-
 
 ## But back to the java version…
 
@@ -137,9 +137,9 @@ What _is_ the command I used to find which Java versions I had? [explainshell.co
 /usr/libexec/java_home -V
 ```
 
-* Can I get back Java10 again without creating an Oracle account?
-* Or can I use OpenJDK10 to run the not-updated-yet app locally?
-* And how do I get rid of Java7?
+- Can I get back Java10 again without creating an Oracle account?
+- Or can I use OpenJDK10 to run the not-updated-yet app locally?
+- And how do I get rid of Java7?
 
 ```bash
 brew cask uninstall java7

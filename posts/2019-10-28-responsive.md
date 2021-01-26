@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Responsify A Logistic System"
+title: "Responsify A Logistic System"
 date: 2019-10-28
 ---
-
 
 Once upon a time, computer screens had a standard resolution of exactly 1024×768&nbsp;pixels. Designers used a photo editing tool to make pretty pictures of websites that were exactly 960&nbsp;pixels wide. They would divide that up in 12 columns, a time-honoured tradition from the world of graphic design on paper. The pixel perfect designs were then tossed over the fence to developers, who were tasked to implement pixel perfect results in a browser.
 
 ## A short history of complicated responsive web design
+
 Then smart phones happened, while laptop screens and external monitors kept getting bigger. The community scrambled to figure out how to make our websites work in different viewports. We had learnt how to make fluid grids by coding pixel perfect columns with percentages. We had a formula! Our style sheets were full of calculation comments for every % with 7 decimals. Brave souls even had a brief spell of using JavaScript to change which CSS classes were added to the HTML.
 
 Thank W3C the `@media` at-rule came along and let us write media queries to conditionally apply CSS rules depending on viewport width. Ethan Marcotte coined the [RWD](https://alistapart.com/article/responsive-web-design/) term, and we all tried to understand what John Allsopp wrote in [A Dao of Web Design](https://alistapart.com/article/dao/) to “accept the ebb and flow of things”.
@@ -32,8 +32,8 @@ The technical UI debt included a header with a complex navigation that had grown
 
 After most applications used the new version of the header, it was possible to change the navigation and the 1000 px straitjacket could be lifted. The newer UIs were magically full width over night (because we had focused on creating responsive layouts also within the 1000px limit). The design system I built had [Tachyons](https://tachyons.io/) style utility classes, but even way more simplified. No screen width modifiers for spacing classes, just one additional modifier for the percent widths. It was visually crude, but also efficient in making it easy for newbie coding UXers and backend developers alike to create layouts that were responsive enough.
 
-
 ## What was left behind 🚫
+
 - Kilometres of CSS attempting to brand the UI (styled checkboxes, webfonts +++)
 - The 62.5% technique as a base atomic unit or all the other sizes
 - Spacing units originating from Photoshop (5px, 10px, 20px)
@@ -41,6 +41,7 @@ After most applications used the new version of the header, it was possible to c
 - The idea that design can done, completed and perfect
 
 ## What was embraced ✅
+
 - Writing as little CSS as we can get away with (so much cheaper!!)
 - Default browser font size 100% as a base atomic unit for all the other sizes
 - Spacing units originating from the browser (0.25rem, 0.5rem, 1rem)
@@ -59,8 +60,8 @@ Some apps are top notch responsive, others half way there. One of the largest fr
 
 Jen Simmons has introduced a new era of design for the web, and I’m starting to think it has less to do with CSS Grid specifically than I’ve thought before. Comparing my previous notes [Say Hello to Intrinsic Web Design]({{ '/2018/06/intrinsic_web_design/' | url }}) with the strategy I defined for the logistics system, perhaps the most important aspect is:
 
-* media queries only if and when needed
-* design a flexibility model for the content
+- media queries only if and when needed
+- design a flexibility model for the content
 
 ---
 

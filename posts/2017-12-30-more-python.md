@@ -1,23 +1,24 @@
 ---
 layout: post
-title:  "Learn Python the Hard Way (cont.)"
+title: "Learn Python the Hard Way (cont.)"
 date: 2017-12-30
 ---
 
-More notes from [Learn Python The Hard Way](https://learncodethehardway.org/python/) (continued after [exercises 1–19]({{ '/2017/12/python/' | url }})). And again; *These are my notes. You can read them if you want — but I make no attempt at this being useful for anyone else.*
+More notes from [Learn Python The Hard Way](https://learncodethehardway.org/python/) (continued after [exercises 1–19]({{ '/2017/12/python/' | url }})). And again; _These are my notes. You can read them if you want — but I make no attempt at this being useful for anyone else._
 
 ---
 
 ## 20: Functions and Files
 
 `seek()` is built-in function that:
-* can change the file object’s position
-* will complain if it doesn’t get at least one argument
-* 1st arg is `offset` (number of characters from a reference point)
-* 2nd arg is `from_what` that works like this:
-    * `0` is the beginning of the file (this is the default if omitted)
-    * `1` is the current file position
-    * `2` is the end of the file
+
+- can change the file object’s position
+- will complain if it doesn’t get at least one argument
+- 1st arg is `offset` (number of characters from a reference point)
+- 2nd arg is `from_what` that works like this:
+  - `0` is the beginning of the file (this is the default if omitted)
+  - `1` is the current file position
+  - `2` is the end of the file
 
 Except… hm. It seems that “only seeks relative to the beginning of the file are allowed” for text files. Which explains why I couldn’t get the end of the file reference to work when playing around in the console with this.
 
@@ -34,7 +35,6 @@ def whatever_function(anything_argument):
 
 ## 21: Functions Can Return Something
 
-
 ```python
 def add(a, b):
     print(f"ADDING {a} + {b}") # this is just print
@@ -48,6 +48,7 @@ age = add(30, 10)
 Wohooo! Had to sleep on it, but nailed the tricky extra credit puzzle.
 
 #### Math (and Python) operation order repetition 🎓
+
 > (parentheses first, then) do the multiplication and division in one step, from left to right, then do the addition and subtraction in one step from left to right
 
 ---
@@ -86,7 +87,7 @@ This is a memorization exercise. I’ve got a lot of the symbols down fine, so I
 
 ### Methods of file objects
 
-Also built-in, but not always available. I can use them *after* a file object has been created.
+Also built-in, but not always available. I can use them _after_ a file object has been created.
 
 👀 `read()` read content from the file <br>
 🧐 `readline()` read just a single line from the file <br>
@@ -100,7 +101,6 @@ Hmmmmm… It seems that in writing up these lists with proper headings, I also s
 
 🙋‍♀️ `def` define my own function and give it a useful name <br>
 💁‍♀️ `return` return a value from the function
-
 
 (Very pleased with these emoji!)
 
@@ -129,12 +129,13 @@ open(filename, 'w') # w for write mode (careful! can delete)
 
 …after this week of working on the [Learn Python The Hard Way](https://learncodethehardway.org/python/) exercises. 💪
 
-* I’ve picked up a lot after just some hours each day for seven days.
-* Learning thoroughly like this *different* from how I’ve often learnt before. And I’m really enjoying it! This book is encouraging me to be patient and to *practice intentionally*.
-* I am building a language to describe what I’m learning, and this is different from how I (even now after all these years) can talk about HTML/CSS. This is useful in all sorts of ways!!
+- I’ve picked up a lot after just some hours each day for seven days.
+- Learning thoroughly like this _different_ from how I’ve often learnt before. And I’m really enjoying it! This book is encouraging me to be patient and to _practice intentionally_.
+- I am building a language to describe what I’m learning, and this is different from how I (even now after all these years) can talk about HTML/CSS. This is useful in all sorts of ways!!
 
 Difference explained, with my current cocktail as an example:
-  * 🙃 “I’m having a red-ish drink with a cool name I spotted in the menu. It’s got ice!”
-  * 🤓 “This is a **negroni**. It’s an apértif, and served in a short tumbler. The ingredients are equal parts Campari, Vermouth (rosso) and gin. The first one had orange peel, but the other bartender forgot that from this second one. (It’s still pretty good.)”
+
+- 🙃 “I’m having a red-ish drink with a cool name I spotted in the menu. It’s got ice!”
+- 🤓 “This is a **negroni**. It’s an apértif, and served in a short tumbler. The ingredients are equal parts Campari, Vermouth (rosso) and gin. The first one had orange peel, but the other bartender forgot that from this second one. (It’s still pretty good.)”
 
 ## 🍸

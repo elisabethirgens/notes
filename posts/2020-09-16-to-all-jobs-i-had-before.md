@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "To All The Jobs I Had Before"
+title: "To All The Jobs I Had Before"
 date: 2020-09-16
 ---
 

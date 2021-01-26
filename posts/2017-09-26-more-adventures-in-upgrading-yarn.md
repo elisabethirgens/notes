@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "More adventures in upgrading Yarn"
+title: "More adventures in upgrading Yarn"
 date: 2017-09-26
 ---
 
@@ -12,9 +12,10 @@ That’s me. I know I have Yarn locally, because I had [fun times upgrading Yarn
 
 ## 🤔 📖 🔍
 
-Right. A project I work on frequently, is set up with Yarn to handle it’s npm packages. Does that *necessarily* mean that I need it installed locally?! Maybe no? But in this case yes, because:
-* Yarn handles PostCSS with plugins for this project.
-* To run it locally, I need Yarn to build the CSS on my machine.
+Right. A project I work on frequently, is set up with Yarn to handle it’s npm packages. Does that _necessarily_ mean that I need it installed locally?! Maybe no? But in this case yes, because:
+
+- Yarn handles PostCSS with plugins for this project.
+- To run it locally, I need Yarn to build the CSS on my machine.
 
 ## 🎓
 
@@ -55,9 +56,9 @@ There are apparently lots of different issues you can get with brew and permissi
 
 I’m not entirely sure what I did with my SSH config file. I know I had added something to it ages ago to fix the [not loading passphrase on Sierra keychain](https://blog.elao.com/en/tech/ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain/) problem. But looks like I didn’t have the same option as I found suggested both here and there now. (Did I have a different fix, that worked for a while but then gave up a couple of weeks ago? I have been bugged a lot for the passphrase lately, but ignored looking into it before now.) Anyway…
 
-* I updated my `.ssh/config` with [this suggested workaround](https://blog.elao.com/en/tech/ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain/).
-* Learnt how to [test my SSH connection](https://help.github.com/articles/testing-your-ssh-connection/)!
-* …and yay, now brew happily upgraded and updated everything I asked it to.
+- I updated my `.ssh/config` with [this suggested workaround](https://blog.elao.com/en/tech/ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain/).
+- Learnt how to [test my SSH connection](https://help.github.com/articles/testing-your-ssh-connection/)!
+- …and yay, now brew happily upgraded and updated everything I asked it to.
 
 ```bash
 $ yarn --version

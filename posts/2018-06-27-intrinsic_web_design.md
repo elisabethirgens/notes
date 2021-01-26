@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Say Hello to Intrinsic Web Design"
+title: "Say Hello to Intrinsic Web Design"
 date: 2018-06-27
 ---
 
@@ -16,27 +16,28 @@ Defined as “not part of the essential nature of someone or something; coming o
 
 > Everything about web design just changed.
 
-* [Slides](https://speakerdeck.com/jensimmons/everything-about-web-design-just-changed) from Jen Simmons talk at An Event Apart, Seattle 2018
-* [Notes](https://adactio.com/journal/13671) from the talk, by Jeremy Keith
-* [labs.jensimmons.com](https://labs.jensimmons.com/) has a lot of examples
-* [youtube.com/layoutland](https://www.youtube.com/layoutland) 📺🤓👌
+- [Slides](https://speakerdeck.com/jensimmons/everything-about-web-design-just-changed) from Jen Simmons talk at An Event Apart, Seattle 2018
+- [Notes](https://adactio.com/journal/13671) from the talk, by Jeremy Keith
+- [labs.jensimmons.com](https://labs.jensimmons.com/) has a lot of examples
+- [youtube.com/layoutland](https://www.youtube.com/layoutland) 📺🤓👌
 
-| Responsive Web Design | Intrinsic Web Design |
-|---|---|
-| flexible images | flexible images **or** fixed images (your choice!) |
-| fluid columns | fluid columns **and** rows (you can have rows!!) |
-| media queries | media queries only if and when needed |
-| set of layouts for different screens | design a flexibility model for your content |
+| Responsive Web Design                | Intrinsic Web Design                               |
+| ------------------------------------ | -------------------------------------------------- |
+| flexible images                      | flexible images **or** fixed images (your choice!) |
+| fluid columns                        | fluid columns **and** rows (you can have rows!!)   |
+| media queries                        | media queries only if and when needed              |
+| set of layouts for different screens | design a flexibility model for your content        |
 
 ### Four stages of squishiness
 
 Jeremy writes about these that they are…
+
 > a powerful set of tools that may take us years to explore.
 
-* fixed
-* fr units (fluid)
-* minmax()(fluid until fixed)
-* auto (a return to flow)
+- fixed
+- fr units (fluid)
+- minmax()(fluid until fixed)
+- auto (a return to flow)
 
 ---
 

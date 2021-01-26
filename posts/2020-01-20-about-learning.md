@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Learn About Learning"
+title: "Learn About Learning"
 date: 2020-01-20
 ---
 
@@ -12,8 +12,8 @@ I want to learn more about learning. These are articles I’ve had on my reading
 
 Nicky Case has read 4 papers about emotion in learning, so I don’t have to.
 
-* Beginner? I will probably learn best by following step-by-step instructions.
-* Advanced? Then learning by exploring will be more effective.
+- Beginner? I will probably learn best by following step-by-step instructions.
+- Advanced? Then learning by exploring will be more effective.
 
 This is interesting, because I feel like my whole career as a developer, people have talked about how it’s best to learn by doing. That seems to make so much sense, but maybe that is only true _after_ you have first created a foundation. Like learning your 3rd or 4th programming language might be most effective by building something, because then you are not a beginner anymore.
 
@@ -25,8 +25,8 @@ Perhaps I would benefit from embrace that my programming skills are still at a b
 
 What does this mean for me?
 
-* Cognition: aim for a load that is just above my comfort zone
-* Motivation: look for medium sized gaps in what I know
+- Cognition: aim for a load that is just above my comfort zone
+- Motivation: look for medium sized gaps in what I know
 
 > The original Cognitive Load Theory taught me to strip the chocolate off my broccoli. But finding out that emotion directly improves learning? That taught me I need to season & roast those veggies, to bring out the natural tastiness that's already in the broccoli.
 
@@ -36,9 +36,9 @@ What does this mean for me?
 
 Cal Newport has written a lot about deliberate practice, I remember having read some of it before. This particular post is with advice from a piano player:
 
-* playing != practicing
-* drill the difficult parts (more than the whole)
-* know your weaknesses (and work to eliminate them)
+- playing != practicing
+- drill the difficult parts (more than the whole)
+- know your weaknesses (and work to eliminate them)
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Write My Own Cheesecake Recipe"
+title: "Write My Own Cheesecake Recipe"
 date: 2018-01-22
 ---
 
@@ -164,7 +164,8 @@ Wo-hooo. 🎉
 ## Conclusion
 
 If you do all the exercises and study drills properly, you have learnt enough to write your own cheesecake recipe after **exercise 32 in Learn Python the Hard Way**. There are 52 all together, so this is pretty far into the book. But it’s intended for complete beginners and makes you practice a lot of stuff before introducing logic. For example:
-* `if-statement` is first introduced in exercise 29
-* `for-loops` come along in exercise 32
+
+- `if-statement` is first introduced in exercise 29
+- `for-loops` come along in exercise 32
 
 But it works. I didn’t find any part of this on stackoverflow, it’s all concepts I’ve actually learnt.

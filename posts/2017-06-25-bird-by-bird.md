@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  "“You don’t have that kind of time”"
+title: "“You don’t have that kind of time”"
 date: 2017-06-25
 ---
 
-## 📚 Bird by Bird — Some Instructions on Writing and Life, *by&nbsp;Anne&nbsp;Lamott*
+## 📚 Bird by Bird — Some Instructions on Writing and Life, _by&nbsp;Anne&nbsp;Lamott_
 
 I gave this book a try after hearing it recommended by several people who were not writers either. And the “instructions on life” part of the title sounded like something I needed more of. First time I read this was 2014, and it helped me make some much welcome changes in life.
 
 ---
 
 ## A fix for broken workdays
+
 I was self-employed and working alone at the time. Reading these three chapters helped greatly improve how I approached projects, and changed the way I thought about my work.
 
 **Short Assignments** — Splitting up tasks is something I struggle with badly, but Anne Lamott started to hammer it in. She shares the story behind the title “Bird by Bird” and it’s lovely. 🐦

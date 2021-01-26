@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "Create React App"
+title: "Create React App"
 date: 2019-12-23
 ---
 
 I’m continuing with section 3 of [React - The Complete Guide (incl Hooks, React Router, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 
-##  About Build Workflow
+## About Build Workflow
 
-* **Why?** Optimize code, use next-gen js, linters +++
-* **How?** Manage deps (npm), bundler (webpack), compiler (babel), dev server
+- **Why?** Optimize code, use next-gen js, linters +++
+- **How?** Manage deps (npm), bundler (webpack), compiler (babel), dev server
 
 This concise explanation of a build workflow was super nice. Would have been useful to see this 3 year ago, feels like I’ve had to learn this the hard backwards way. Anyway…
 
@@ -31,8 +31,8 @@ Puh. That’s a lot. And pretty amazing.
 
 ### I get a PWA out of the box with
 
-* `public/manifest.json`
-* `src/registerServiceWorker.js`
+- `public/manifest.json`
+- `src/registerServiceWorker.js`
 
 ---
 

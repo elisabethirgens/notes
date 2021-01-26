@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Persist ulimit Settings in macOS Catalina"
+title: "Persist ulimit Settings in macOS Catalina"
 date: 2019-12-21
 ---
 
@@ -50,12 +50,10 @@ But after the next reboot, I need to repeat the command. So let’s dig into wha
 
 > launchctl interfaces with launchd to manage and inspect daemons, agents and XPC services. launchctl allows for detailed examination of launchd endpoints. <br> —&nbsp;BSD General Commands Manual
 
-
 ### `launchd`
 
 > launchd manages processes, both for the system as a whole and for individual users.
 > The primary and preferred interface to launchd is via the launchctl(1) tool which (among other options) allows the user or administrator to load and unload jobs. Where possible, it is preferable for jobs to launch on demand based on criteria specified in their respective configuration files. —&nbsp;BSD General Commands Manual
-
 
 ### `ulimit` and `limit`
 
@@ -65,7 +63,7 @@ A-ha. These are shell `builtin` commands. Just like `cd`, `echo` and `pwd`. 🤩
 
 In the man page for `launchctl` I can find this description about `limit`👇<br> but do I wonder why it’s listed under Legacy Subcommands 🤔
 
-> With no arguments, this command prints all the resource limits of launchd as found via getrlimit.  When a given resource is specified, it prints the limits for that resource. With a third argument, it sets both the hard and soft limits to that value. With four arguments, the third and forth argument represent the soft and hard limits respectively.
+> With no arguments, this command prints all the resource limits of launchd as found via getrlimit. When a given resource is specified, it prints the limits for that resource. With a third argument, it sets both the hard and soft limits to that value. With four arguments, the third and forth argument represent the soft and hard limits respectively.
 
 But description makes sense, this is what the sudo command above does.
 
@@ -76,10 +74,11 @@ But description makes sense, this is what the sudo command above does.
 `init` is the first process started during booting of the computer system. Read more: [wiki/Init](https://en.wikipedia.org/wiki/Init)
 
 [Operating system service management](https://en.wikipedia.org/wiki/Operating_system_service_management) examples:
-* launchd - Used by Apple macOS
-* systemd - Used by many Linux distributions
 
-`daemon` is a computer program that runs as a background process, rather than being under the direct control of an interactive user. Read more: [wiki/Daemon](https://en.wikipedia.org/wiki/Daemon_(computing))
+- launchd - Used by Apple macOS
+- systemd - Used by many Linux distributions
+
+`daemon` is a computer program that runs as a background process, rather than being under the direct control of an interactive user. Read more: [wiki/Daemon](<https://en.wikipedia.org/wiki/Daemon_(computing)>)
 
 > Traditionally, the process names of a daemon end with the letter d, for clarification that the process is in fact a daemon
 
@@ -92,8 +91,8 @@ But description makes sense, this is what the sudo command above does.
 Now I understand way more what those commands up there do. It works, just not permanently.<br>
 Reading: [Increase the maximum number of open file descriptors in Snow Leopard?](https://config9.com/linux/macosx/increase-the-maximum-number-of-open-file-descriptors-in-snow-leopard/)
 
-* Previously you could set the limits in a `/etc/launchd.conf` but this is not longer supported
-* You can still use `launchd.plist` but is it recommended? 🧐
+- Previously you could set the limits in a `/etc/launchd.conf` but this is not longer supported
+- You can still use `launchd.plist` but is it recommended? 🧐
 
 ```
 sysctl -a | grep ^kern.max
@@ -119,7 +118,6 @@ Reading: [How to persistently control maximum system resource consumption on Mac
 > In general, rather than tuning individual parameters on the system and throwing the system out of balance (and potentially letting a single program crash the system by taking up all the resources), if the default system limits are insufficient for your needs, I recommend turning on "Server Performance Mode", or at least giving it a try.
 
 Official Apple advice how to: [Turn on performance mode for macOS Server](https://support.apple.com/en-us/HT202528)
-
 
 > performance mode can be enabled even without macOS Server being installed to achieve similar benifits for other high-performance services<br> –&nbsp;[Enable macOS Server Performance Mode](https://gist.github.com/davidalger/a3afa2410a40ce6ae59d4e6a3b18e5c7)
 

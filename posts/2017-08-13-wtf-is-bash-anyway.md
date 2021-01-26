@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "wtf is bash anyway?!"
+title: "wtf is bash anyway?!"
 date: 2017-08-13
 ---
 
@@ -18,12 +18,12 @@ Are you kidding, Wikipedia? How was that a helpful first line to introduce what 
 
 > Users direct the operation of the computer by entering commands as text for a command line interpreter to execute, or by creating text scripts…
 
-A-ha. The general article on [shell](https://en.wikipedia.org/wiki/Shell_(computing)) is a lot friendlier, and it explains nicely that it’s a user interface for access to the operating system by either:
-* a command-line interface (CLI)
-* or graphical user interface (GUI)
+A-ha. The general article on [shell](<https://en.wikipedia.org/wiki/Shell_(computing)>) is a lot friendlier, and it explains nicely that it’s a user interface for access to the operating system by either:
 
-Makes sense! 👌 And I’m reading how it’s called a shell because it is a layer around the kernel. Cool. Back to [the article on bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)). The history is interesting, but the rest quickly becomes more specific than I’m interested in now. I search for *bash introduction* and find an abundance of sites created by people who seem to be very afraid of CSS. They are also obviously written as introductions for *other people* than me, because they make me want to **not** learn about bash.
+- a command-line interface (CLI)
+- or graphical user interface (GUI)
 
+Makes sense! 👌 And I’m reading how it’s called a shell because it is a layer around the kernel. Cool. Back to [the article on bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>). The history is interesting, but the rest quickly becomes more specific than I’m interested in now. I search for _bash introduction_ and find an abundance of sites created by people who seem to be very afraid of CSS. They are also obviously written as introductions for _other people_ than me, because they make me want to **not** learn about bash.
 
 But oh wait-a-minute… 👉 [The Bash Guide’s inception](http://guide.bash.academy/inception/) looks perfect for me:
 
@@ -38,12 +38,15 @@ This is great. It assumes nothing and explains everything. And I’m already fee
 I know I have some dotfiles for bash, but I have little clue what we’ve put in them or why there are several different files. Let’s see…
 
 ## `.bashrc `
+
 This file is a script that runs every time I start a a new terminal session. Something something “when ever bash is started interactively” …hm, okay?! Not quite sure what that means, but it sounds like this is the file that’s most relevant for me to use for configuration most of the time.
 
 ## `.bash_profile`
+
 This runs only at the start of a new login. Apparently it’s mostly historical reasons why there is a difference?! It doesn’t sound like I need to spend too much time on learning about that.
 
 ## `.bash_aliases`
+
 Hey, this file is easy enough to understand — because I use several of these aliases all the time. I&nbsp;just didn’t realize before now, that this is where they are defined. 😆
 
 ---

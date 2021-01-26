@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "“Become more comfortable with uncertainty!”"
+title: "“Become more comfortable with uncertainty!”"
 date: 2017-06-07
 ---
 
-## 📚 The Antidote: Happiness for People Who Can't Stand Positive Thinking, *by Oliver Burkeman*
+## 📚 The Antidote: Happiness for People Who Can't Stand Positive Thinking, _by Oliver Burkeman_
 
 I first spotted this book in a Bergen café. It had this beautiful blue cover, with lettering that caught my eye — and a subtitle that made me absolutely certain I wanted to read it. I bought it for my Kindle just before a trip, and read it while hanging out in various coffee shops while traveling.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understand React JSX and Components"
+title: "Understand React JSX and Components"
 date: 2019-12-27
 ---
 
@@ -12,7 +12,6 @@ Why have I seen both filenames `.js` and `.jsx` in React?<br>
 Both work fine, but `.js` is convention these days.
 
 ### Not technically HTML, it’s JSX
-
 
 ```
 return (
@@ -36,9 +35,9 @@ This gave me a lot of context for the concept of [syntactic sugar](https://en.wi
 
 > syntactic sugar is syntax within a programming language that is designed to make things easier to read or to express. It makes the language "sweeter" for human use: things can be expressed more clearly, more concisely, or in an alternative style that some may prefer.
 
-* JSX is syntactic sugar for JavaScript
-* It allows me to write HTML-ish code
-* …without having to grapple with nested React.createElement(...) calls
+- JSX is syntactic sugar for JavaScript
+- It allows me to write HTML-ish code
+- …without having to grapple with nested React.createElement(...) calls
 
 🤯 Soooo… _this_ is in fact why a front-of-the-frontend developer like me has been able to be productive in React applications without actually knowing a lot of neither js or react. I think I’m writing HTML, but React is converting it behind the scenes.
 
@@ -46,14 +45,14 @@ This gave me a lot of context for the concept of [syntactic sugar](https://en.wi
 
 Here is some of the stuff that has annoyed me about React in the past, and understanding properly _why_ helps to accept different syntax. It’s not just because library authors “opted to be weird”, there are technical restrictions with reasons that I can now learn.
 
-* `className` because `class` is a reserved name in JS
-* one root element, because the JSX expression requires it
+- `className` because `class` is a reserved name in JS
+- one root element, because the JSX expression requires it
 
 ## Capitalize name of custom components
 
-* Uncapitalized components are reserved for native HTML elements
-* Uppercase first letter in my own components, like `<Person>`
-* React will then identify it as a custom component
+- Uncapitalized components are reserved for native HTML elements
+- Uppercase first letter in my own components, like `<Person>`
+- React will then identify it as a custom component
 
 ## Two ways of creating components
 

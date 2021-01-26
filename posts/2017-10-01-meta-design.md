@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Knuth, Metafont and meta-design"
+title: "Knuth, Metafont and meta-design"
 date: 2017-10-01
 ---
 
@@ -20,10 +20,10 @@ This sounds fun! Can I do that? Have I already done that at some level? How can 
 
 ## …more about Metafont
 
-* [Metafont](https://en.wikipedia.org/wiki/Metafont) is a language to define vector fonts.
-* Knuth developed it to accompany his TeX typesetting system.
-* It uses a stroke-based font format, drawing glyphs along a path.
-* (Huh, vertices…? Oh, that is the plural of vertex. 🎓 )
+- [Metafont](https://en.wikipedia.org/wiki/Metafont) is a language to define vector fonts.
+- Knuth developed it to accompany his TeX typesetting system.
+- It uses a stroke-based font format, drawing glyphs along a path.
+- (Huh, vertices…? Oh, that is the plural of vertex. 🎓 )
 
 This is different from outline font formats like TrueType and OpenType. And this is cool, because I feel like I instinctively understand the potential of stroke-based. It’s probably like refraining from outlining paths in Illustrator, to maintain the actual description of them. The moment you outline paths, you loose information and are stuck with a very precise — but inflexible object.
 
@@ -32,8 +32,9 @@ MyFonts introduces nicely [what Knuth has to do with typography](https://www.myf
 > Meta-design is much more difficult than design; it’s easier to draw something than to explain how to draw it. One of the problems is that different sets of potential specifications can’t easily be envisioned all at once. Another is that a computer has to be told absolutely everything. However, once we have successfully explained how to draw something in a sufficiently general manner, the same explanation will work for related shapes, in different circumstances; so the time spent in formulating a precise explanation turns out to be worth it.
 
 The main parts of a metafont are:
-* administrative details (like numbering the glyphs and positioning them in a box)
-* details to draw the basic stroke characteristics (like serifs or bowls)
-* high-level descriptions for each character (without specific stroke details)
+
+- administrative details (like numbering the glyphs and positioning them in a box)
+- details to draw the basic stroke characteristics (like serifs or bowls)
+- high-level descriptions for each character (without specific stroke details)
 
 I like how he thanks his wife especially for her support “during the eight years that I have been working intensively on mathematical typography.” 😂 It reads like a warning. Get out of this rabbit hole while you can. And I think I will. (But I did enjoy reading the preface and first chapter!)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Introduce Props and State in React"
+title: "Introduce Props and State in React"
 date: 2019-12-29
 ---
 
@@ -10,8 +10,8 @@ Continuing [React - The Complete Guide](https://www.udemy.com/course/react-the-c
 
 Wrap multiple lines of JSX in parentheses, because there is a thing that sounds like it trips up people often: [automatic semicolon insertion (ASI)](https://stackoverflow.com/questions/2846283/what-are-the-rules-for-javascripts-automatic-semicolon-insertion-asi).
 
-* Use quotes for string values as attributes
-* Use curly braces for expressions in an in an attribute
+- Use quotes for string values as attributes
+- Use curly braces for expressions in an in an attribute
 
 ### “JSX Represents Objects”
 
@@ -23,8 +23,8 @@ Wrap multiple lines of JSX in parentheses, because there is a thing that sounds 
 
 The instructor does a great job of explaining the difference between function and class components, and also that the course will focus mostly on components extended from class. Reading the official [Function and Class Components](https://reactjs.org/docs/components-and-props.html#function-and-class-components) was a nice supplement:
 
-* Function components are JavaScript functions
-* Class components use [ES6 class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) "special functions"
+- Function components are JavaScript functions
+- Class components use [ES6 class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) "special functions"
 
 > if a part of your UI is used several times (Button, Panel, Avatar), or is complex enough on its own (App, FeedStory, Comment), it is a good candidate to be a reusable component.
 
@@ -51,9 +51,9 @@ The example with [Converting a Function to a Class ](https://reactjs.org/docs/st
 > The render method will be called each time an update happens…
 > This lets us use additional features such as local state and lifecycle methods.
 
-* Use `setState()` instead of modifying state directly
-* React may batch `setState()` calls so updates could be asynchronous
-* Calling `setState()` will merge the object into current state
+- Use `setState()` instead of modifying state directly
+- React may batch `setState()` calls so updates could be asynchronous
+- Calling `setState()` will merge the object into current state
 
 ### Free up resources with lifecycle methods
 
@@ -63,9 +63,9 @@ Common ones include: `render()` `constructor()` `componentDidMount()` `component
 
 [A function's `this` keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) is a primary expression in JS, and MDN says that “the value is determined by how a function is called (runtime binding)”.
 
-* `this.props` is set up by React
-* `this.state` has special meaning
-* But I can also add additional fields to store something else
+- `this.props` is set up by React
+- `this.state` has special meaning
+- But I can also add additional fields to store something else
 
 ---
 

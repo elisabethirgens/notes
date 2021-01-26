@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Company, Competence, Community & Conference"
+title: "Company, Competence, Community & Conference"
 date: 2019-09-16
 ---
 
-I wrote this to explain to higher-ups why it’s beneficial for a company to have developers  participate in their communities and attend conferences.
+I wrote this to explain to higher-ups why it’s beneficial for a company to have developers participate in their communities and attend conferences.
 
 My request for reimbursement for JSConf&nbsp;EU was rejected this year… 😞 But even though it didn’t work, I am really pleased with this text anyway. Only in Norwegian 🇳🇴 but I want to share it so others can use the arguments in making a case for their employer to invest in competence building, to have a budget, and to establish guidelines for attending conferences that actively encourage participation. Maybe even this company here will come around and improve their guidelines in the future?! 🤷‍♀️
 

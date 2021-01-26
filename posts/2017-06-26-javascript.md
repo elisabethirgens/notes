@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Why I want to learn JavaScript"
+title: "Why I want to learn JavaScript"
 date: 2017-06-26
 ---
 
-I want to learn JavaScript. (Don’t I…?) I’ve been saying this for over two years, and it hasn’t really happened yet. So why not? Maybe I need to figure out *why* I want to learn. Let’s go:
+I want to learn JavaScript. (Don’t I…?) I’ve been saying this for over two years, and it hasn’t really happened yet. So why not? Maybe I need to figure out _why_ I want to learn. Let’s go:
 
 ## For the conferences, obviously
 

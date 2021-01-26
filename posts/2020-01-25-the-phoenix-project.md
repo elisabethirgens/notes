@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Phoenix Project"
+title: "The Phoenix Project"
 date: 2020-01-25
 ---
 
@@ -22,8 +22,7 @@ A consistent priority on distributing knowledge over individual heroics is a sup
 
 > They also knew that until code is in production, no value is actually being generated, because it’s merely wip stuck in the system.
 
- Coming from a traditional design background, it’s easy to have a tendency for generating a gazillion ideas and exploring all the alternatives and starting so much work in parallel. Collaborating with people who pushed me to **resist queuing up too much wip** has helped me prioritize code in production over grand plans that never happen, and to develop a strong knack for iterating.
-
+Coming from a traditional design background, it’s easy to have a tendency for generating a gazillion ideas and exploring all the alternatives and starting so much work in parallel. Collaborating with people who pushed me to **resist queuing up too much wip** has helped me prioritize code in production over grand plans that never happen, and to develop a strong knack for iterating.
 
 ### Improve the flow of work
 

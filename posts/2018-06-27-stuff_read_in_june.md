@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Write moar notes from what I’m reading"
+title: "Write moar notes from what I’m reading"
 date: 2018-06-27
 ---
 
@@ -12,9 +12,9 @@ This is an experiment. Will publishing a post like this help me stop hoarding ar
 
 Yesyesyes. Cannot contain my excitement about this one. I’ve probably had it open in a tab for 2&nbsp;weeks and I’m so happy I didn’t accidentally close it unread. It sums up many of _my_ problems very eloquently, and I need to revisit it later to produce some additional thoughts of my own — and figure out something actionable. But some problems with patterns can be that;
 
-* The design process is undervalued 👎
-* Patterns don’t start with user needs 🙈
-* User needs are conflated with one another 🤪
+- The design process is undervalued 👎
+- Patterns don’t start with user needs 🙈
+- User needs are conflated with one another 🤪
 
 > Having a library of design components can sometimes give the impression that all the design work has been completed.
 
@@ -52,14 +52,13 @@ I wonder how many of these articles I read as they were published?
 
 CSS-Tricks covering relevant HTML and CSS:
 
-
-* sledgehammer `word-break: break-all;`
-* subtle `overflow-wrap: break-word;`
-* sometimes `hyphens: auto;`
-* `<br>`
-* `<wbr>`
-* `&shy;`
-* pseudo `::before { content: "\A"; }`
+- sledgehammer `word-break: break-all;`
+- subtle `overflow-wrap: break-word;`
+- sometimes `hyphens: auto;`
+- `<br>`
+- `<wbr>`
+- `&shy;`
+- pseudo `::before { content: "\A"; }`
 
 ---
 
@@ -69,7 +68,7 @@ I saw Philip speak at CSSconf EU about Container Queries, so I wanted to wrap my
 
 > This article describes a strategy for using modern web technologies to build responsive components: DOM elements that can update their style and layout in response to changes in the size of their container
 
-* [Responsive Components](https://philipwalton.github.io/responsive-components/) demo site 🙌
+- [Responsive Components](https://philipwalton.github.io/responsive-components/) demo site 🙌
 
 ---
 

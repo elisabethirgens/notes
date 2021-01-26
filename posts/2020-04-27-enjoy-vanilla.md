@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Enjoy Vanilla JS, Not Chocolate Broccoli"
+title: "Enjoy Vanilla JS, Not Chocolate Broccoli"
 date: 2020-04-27
 ---
 
 I’m on a mission to figure out how to **enjoy learning JavaScript**. I have [learnt about learning]({{ '/2020/01/about-learning/' | url }}) that I need to get the cognition to motivation loop working _with_ me instead of against me.
 
 > You'll learn poorly if you're not motivated, and you'll be demotivated if you're learning poorly. But, from vicious to virtuous cycle: you'll learn well if you're motivated, and you'll be more motivated if you're learning well!<br>
-—  [Curse of the Chocolate-Covered Broccoli (or: Emotion in Learning)](https://blog.ncase.me/curse-of-the-chocolate-covered-broccoli-or-emotion-in-learning/)
+> — [Curse of the Chocolate-Covered Broccoli (or: Emotion in Learning)](https://blog.ncase.me/curse-of-the-chocolate-covered-broccoli-or-emotion-in-learning/)
 
 This in-depth article by Nicky Case is fabulous, and reading it has helped me think a lot about _how_ I am trying to learn. What do I need to put in place to improve both sides of that loop? How can I find resources that work for me? Learning is incredibly individual, and what might be a perfect approach for other people won’t necessarily do the trick for me.
 
@@ -27,9 +27,9 @@ No! Because that doesn’t work, random bells and whistles are distractions when
 
 I have had new & exciting success lately with this approach:
 
-* Watch video and do exercise from [beginnerjavascript.com](https://beginnerjavascript.com/) 🏀
-* Refactor that exercise with my content and my design ♻️
-* Study MDN docs and write a bunch of code comments explaining syntax 🤓
+- Watch video and do exercise from [beginnerjavascript.com](https://beginnerjavascript.com/) 🏀
+- Refactor that exercise with my content and my design ♻️
+- Study MDN docs and write a bunch of code comments explaining syntax 🤓
 
 The first step gets me curious, pushes me onto the stage, and let’s me believe that this thing I am working on is not impossible. The next fuels motivation further because I code something fun for me. For example: we code a practical pop-up modal in the course, I refactor that into flash cards for practicing Chinese numerals. And the third step is what improves cognition in a way that works more for me that the “just code” approach that is often advocated. I repeat and dig deeper into understanding properly what I just learnt. The code comments become excellent notes I can easily find again. I worry a lot less that I’ll forget or didn’t understand a concept properly.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Celebrate Small Wins"
+title: "Celebrate Small Wins"
 date: 2018-07-02
 ---
 
@@ -10,13 +10,13 @@ Since then I’ve tested multiple ways of recording positive activities. I have 
 
 ## A sustainable way of recording wins
 
-* I sit down once a week with my `2018_wins.md` file
-* Add up to 10 wins from the previous weeks
-* I don’t remember many initially, so I need to go find them
-* Very small wins also count, they don’t have to be “important”
-* If there’s no positive angle, it doesn’t belong on this list
-* Don’t try to explain, just use words to jog my own memory later
-* Max 60 characters and prefix with an emoji
+- I sit down once a week with my `2018_wins.md` file
+- Add up to 10 wins from the previous weeks
+- I don’t remember many initially, so I need to go find them
+- Very small wins also count, they don’t have to be “important”
+- If there’s no positive angle, it doesn’t belong on this list
+- Don’t try to explain, just use words to jog my own memory later
+- Max 60 characters and prefix with an emoji
 
 Maintaining this file is a weekly activity I look forward to. It focuses on reflecting without frantically trying to collect _everything_. I’m always surprised with what I find when I actively search.
 

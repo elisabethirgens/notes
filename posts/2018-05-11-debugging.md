@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Debug the Missing CSS Analysis (Hey Jenkins!)"
+title: "Debug the Missing CSS Analysis (Hey Jenkins!)"
 date: 2018-05-11
 ---
 
@@ -32,9 +32,9 @@ Cool! I can now see Parker in `node_modules` and have understood this part of th
 
 Hey, hi! Oh yes, we run into each other in the hallway and nod all the time, but I don’t _really_ know you very well. Let us sit down and get better acquainted: [jenkins.io/doc](https://jenkins.io/doc/)
 
-* Open source automation server written in Java 🌎
-* Can automate tasks related to building, testing, and deploying software 🚀
-* The main feature is Jenkins Pipeline 🔧
+- Open source automation server written in Java 🌎
+- Can automate tasks related to building, testing, and deploying software 🚀
+- The main feature is Jenkins Pipeline 🔧
 
 > A continuous delivery pipeline is an automated expression of your process for getting software from version control right through to your users and customers.
 
@@ -62,17 +62,16 @@ Thanks to co-workers’ useful PR descriptions, and figuring out _when_ the Park
 script: 'git log --grep="[release]" -1 --format="%H"'
 ```
 
-
 ## grep and regex 🔍
 
 Regular expressions was one of those things I knew existed thanks to [xkcd](https://xkcd.com/208/). Now I know a bit more than just how it’s “apparently something awesome”, but let’s make note of a definition and links:
 
 > grep is a command-line utility for searching plain-text data sets for lines that match a regular expression
 
-* [wikipedia.org/wiki/Regular_expression](https://en.wikipedia.org/wiki/Regular_expression)
-* [Regex Accelerated Course and Cheat Sheet](http://www.rexegg.com/regex-quickstart.html#ref)
+- [wikipedia.org/wiki/Regular_expression](https://en.wikipedia.org/wiki/Regular_expression)
+- [Regex Accelerated Course and Cheat Sheet](http://www.rexegg.com/regex-quickstart.html#ref)
 
-##  The fix and the commit message 🐛
+## The fix and the commit message 🐛
 
 ```
                           👇          👇
@@ -89,9 +88,9 @@ intended, and oh yeah: we need escaping for both groovy and regex.
 
 I got a lot of help from a co-worker to figure that out, and learnt how to:
 
-* Comment out parts of the Python script so we could run it locally and test the output.
-* Read the script and understand what it does, including a deep dive into git and [detached head](https://www.atlassian.com/git/tutorials/using-branches/git-checkout).
-* Replay! This will let me modify the Jenkinsfile and run the pipeline again to test the change.
+- Comment out parts of the Python script so we could run it locally and test the output.
+- Read the script and understand what it does, including a deep dive into git and [detached head](https://www.atlassian.com/git/tutorials/using-branches/git-checkout).
+- Replay! This will let me modify the Jenkinsfile and run the pipeline again to test the change.
 
 ---
 

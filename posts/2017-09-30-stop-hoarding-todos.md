@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Stop hoarding to-do’s as if my life depends on it"
+title: "Stop hoarding to-do’s as if my life depends on it"
 date: 2017-09-30
 ---
 
@@ -12,9 +12,9 @@ My recent 3 week holiday 🌴 was 23 consecutive days of actively blocking out e
 
 I think the break reset my brain; gaining some **distance and perspective**.
 
-* “This is a good idea. It would be great to get it done. But nope. Not a priority.”
-* “Someone had a suggestion. Would be excellent if I did it. But it’s also fine that I don’t.”
-* “This hasn’t happened yet. It’s not going to happen… It’s okay to let it go.”
+- “This is a good idea. It would be great to get it done. But nope. Not a priority.”
+- “Someone had a suggestion. Would be excellent if I did it. But it’s also fine that I don’t.”
+- “This hasn’t happened yet. It’s not going to happen… It’s okay to let it go.”
 
 ---
 

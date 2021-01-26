@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Post-travel blues"
+title: "Post-travel blues"
 date: 2017-09-24
 ---
 

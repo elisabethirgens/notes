@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Go back to the beginning"
+title: "Go back to the beginning"
 date: 2017-10-07
 ---
 
@@ -12,32 +12,32 @@ When you are stuck, it can be a good idea to go start over. I did that today. �
 
 ## Hello 🌎
 
-``` js
-var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
+```js
+var myHeading = document.querySelector("h1");
+myHeading.textContent = "Hello world!";
 ```
 
 Yay, that was fun. So what’s happening here?
 
-* Use a function called `querySelector()` to grab the element.
-* Store that in a variable and name it `myHeading`.
-* Set a value to the variable’s `textContent` property.
-* These two features are both part of the DOM API.
+- Use a function called `querySelector()` to grab the element.
+- Store that in a variable and name it `myHeading`.
+- Set a value to the variable’s `textContent` property.
+- These two features are both part of the DOM API.
 
-✅ Played around in the console. *(And let’s be honest, I haven’t really done that much before now. I guess it’s easier for a website than [a paper book]({{ '/2017/07/javascript/' | url }}) to encourage diving in there.)*
+✅ Played around in the console. _(And let’s be honest, I haven’t really done that much before now. I guess it’s easier for a website than [a paper book]({{ '/2017/07/javascript/' | url }}) to encourage diving in there.)_
 
 ---
 
 ## Variables to store values 👜
 
 ```js
-var myBeverage = 'coffee';
-myBeverage = 'ginger daiquiri';
+var myBeverage = "coffee";
+myBeverage = "ginger daiquiri";
 ```
 
-* Declare a variable, name it and give it a value.
-* Change the value of the variable in the next statement.
-* Variables can have different datatypes; string, number, boolean, array, object.
+- Declare a variable, name it and give it a value.
+- Change the value of the variable in the next statement.
+- Variables can have different datatypes; string, number, boolean, array, object.
 
 (I enjoyed a very nice ☕️ with 🥐, and then a 🍸, while going through this tutorial.)
 
@@ -45,14 +45,14 @@ myBeverage = 'ginger daiquiri';
 
 ## Operators to produce a result 🔨
 
-| | |
-| --- | --- |
-| `+` | Add numbers or concatenate strings. |
-| `-` `*` `/` | Subtract, multiply, divide to do basic math with numbers. |
-| `=` | Assigns a value to a variable. |
-| `===`| Are these two things equal? Yay or nay. |
-| `!` | A logical NOT operator that returns the opposite boolean. |
-| `!=` | An inequality operator that can test if two values are *not* equal. |
+|             |                                                                     |
+| ----------- | ------------------------------------------------------------------- |
+| `+`         | Add numbers or concatenate strings.                                 |
+| `-` `*` `/` | Subtract, multiply, divide to do basic math with numbers.           |
+| `=`         | Assigns a value to a variable.                                      |
+| `===`       | Are these two things equal? Yay or nay.                             |
+| `!`         | A logical NOT operator that returns the opposite boolean.           |
+| `!=`        | An inequality operator that can test if two values are _not_ equal. |
 
 ---
 
@@ -64,26 +64,27 @@ This is a code structure that will test if an expression is true. Or else… it 
 
 ## Functions to wrap up functionality for reuse 📦
 
-* Some are built into the browser, like `document.querySelector()` and `alert()`.
-* I can also declare my own functions \o/.
-* They can take arguments in parentheses to do their job.
-* A variable defined within a function is local (not global).
-* Functions can be either named or anonymous (without a name).
+- Some are built into the browser, like `document.querySelector()` and `alert()`.
+- I can also declare my own functions \o/.
+- They can take arguments in parentheses to do their job.
+- A variable defined within a function is local (not global).
+- Functions can be either named or anonymous (without a name).
 
 ---
 
 ## Events to notify what’s happening 📅
 
 ```js
-document.querySelector('html').onclick = function() {};
+document.querySelector("html").onclick = function () {};
 ```
+
 The click event listens for a mouse click in the browser. Other examples:
 
-* **Resource Events**  —  cached, error, abort, load
-* **Focus Events** — focus, blur
-* **Form Events** — reset, submit
-* **View Events** — resize, scroll
-* **Mouse Events** — mouseover, click, select
+- **Resource Events** — cached, error, abort, load
+- **Focus Events** — focus, blur
+- **Form Events** — reset, submit
+- **View Events** — resize, scroll
+- **Mouse Events** — mouseover, click, select
 
 ---
 

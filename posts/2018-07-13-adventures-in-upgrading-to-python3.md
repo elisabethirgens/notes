@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Adventures in Upgrading to Python3"
+title: "Adventures in Upgrading to Python3"
 date: 2018-07-13
 ---
 
@@ -31,13 +31,15 @@ python --version
 Python 2.7.13
 ```
 
-(I thought this was the version that comes with Mac OS, but realise later that it’s not.)  Mac OS installs an older Python with the system, which is why [LPTHW]({{ '/2017/12/python/' | url }}) got me to install Python3. (But that my not-work machine.) The book recommended installing from python.org directly. I’m always confused when getting different recommentations like this. What are the pros and cons of installing like that vs using Homebrew? One thing I can think of, is that the usage and target groups are very different.
-* The book needs to not complicate the setup for its users.
-* But developers in our dept need to deal with brew anyway.
+(I thought this was the version that comes with Mac OS, but realise later that it’s not.) Mac OS installs an older Python with the system, which is why [LPTHW]({{ '/2017/12/python/' | url }}) got me to install Python3. (But that my not-work machine.) The book recommended installing from python.org directly. I’m always confused when getting different recommentations like this. What are the pros and cons of installing like that vs using Homebrew? One thing I can think of, is that the usage and target groups are very different.
+
+- The book needs to not complicate the setup for its users.
+- But developers in our dept need to deal with brew anyway.
 
 Also versions and upgrading later:
-* The books would want to make sure readers use the exact same version all the time.
-* But at work we’re maybe going to need minor upgrades all the time?
+
+- The books would want to make sure readers use the exact same version all the time.
+- But at work we’re maybe going to need minor upgrades all the time?
 
 And where will brew install Python? Do I need to know?<br>
 Reading more about [docs.brew.sh/Homebrew-and-Python](https://docs.brew.sh/Homebrew-and-Python)
@@ -97,9 +99,9 @@ This must be system python and brew python. I got the impression that I probably
 
 I often find the brew docs confusing, but this page is quite helpful: [docs.brew.sh/FAQ](https://docs.brew.sh/FAQ)
 
-* `brew doctor` shows that all is fine
-* `brew update` found a couple of things to update
-* `brew outdated` ah, this was useful and super informative
+- `brew doctor` shows that all is fine
+- `brew update` found a couple of things to update
+- `brew outdated` ah, this was useful and super informative
 
 ```
 postgresql (9.5.1, 10.1) < 10.4 [pinned at 10.1]
@@ -108,7 +110,7 @@ python (2.7.10_2, 2.7.13_1) < 3.7.0
 
 This also answered a question I got about if I had pinned my python. Nope, mysql and postgresql are pinned, but nothing else.
 
-* `brew upgrade` happily upgraded all the things 🎉
+- `brew upgrade` happily upgraded all the things 🎉
 
 Might have been a while since I did that. I get a bit wary of upgrading, should probably just upgrade more. (Recently had problems with running an older `node 9.5.0` instead of `v10.6.0`)
 

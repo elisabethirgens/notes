@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Play Twister with Dependencies"
+title: "Play Twister with Dependencies"
 date: 2020-01-06
 ---
 
 Last week I was figuring out more on how to [work with Yarn]({{ '/2020/01/dependencies/' | url }}) and dependencies in my new project. Main differences from the apps I knew from previous gig, is that there are a whole lot more dependencies here — and this application runs on [containers in OpenShift]({{ '/2019/12/containers/' | url }}).
 
-* `yarn audit` shows a good handful of vulnerabilities, but apart from the problem with noise, I don’t need to worry too much about the ones related to devDependencies
-* `yarn check` is not happy at all with 66 warnings and 110 errors, and here I’m not sure if I should be worried or not
-* `yarn outdated` shows that a couple of months have passed since a frontender worked on this application and time moves fast in the world of javascript packages…
+- `yarn audit` shows a good handful of vulnerabilities, but apart from the problem with noise, I don’t need to worry too much about the ones related to devDependencies
+- `yarn check` is not happy at all with 66 warnings and 110 errors, and here I’m not sure if I should be worried or not
+- `yarn outdated` shows that a couple of months have passed since a frontender worked on this application and time moves fast in the world of javascript packages…
 
 > Let me just do a quick basic version bump of react-scripts
 
@@ -41,17 +41,17 @@ node -v
 v13.5.0
 ```
 
-* When I run OKD locally with Minishift, I find `v12.10.0`
-* but then there’s `v10.12.0` in the actual OpenShift project
+- When I run OKD locally with Minishift, I find `v12.10.0`
+- but then there’s `v10.12.0` in the actual OpenShift project
 
 In addition to that default project getting built from the `develop` branch, I have a personal version of the project in the same environment, and there I see that it’s `v12.10.0`.
 
 ## How did we end up with different node versions?
 
-| Environment | node -v | |
-|--|--|--|
-| Locally via Minishift | `12.10.0` because that is currently the :latest of Nodeshift’s nodejs image | `DEV_MODE=true` `NODE_ENV=development` |
-| My project on OKD | `12.10.0` because that is currently the :latest of Nodeshift’s nodejs image |  `DEV_MODE=true` `NODE_ENV=development` |
+| Environment            | node -v                                                                                                   |                                        |
+| ---------------------- | --------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| Locally via Minishift  | `12.10.0` because that is currently the :latest of Nodeshift’s nodejs image                               | `DEV_MODE=true` `NODE_ENV=development` |
+| My project on OKD      | `12.10.0` because that is currently the :latest of Nodeshift’s nodejs image                               | `DEV_MODE=true` `NODE_ENV=development` |
 | Default project on OKD | `10.12.0` is a version included in our current cluster image stream and selected in an openshift template | `DEV_MODE=false` `NODE_ENV=production` |
 
 ## Can I upgrade to 12 everywhere?

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Finish The JS First Steps Modules on MDN"
+title: "Finish The JS First Steps Modules on MDN"
 date: 2018-08-14
 ---
 
@@ -17,29 +17,28 @@ Module: [Storing the information you need — Variables](https://developer.mozil
 var bestColor;
 
 // initialize the variable
-bestColor = 'darkcyan';
+bestColor = "darkcyan";
 
 // declare and initialize at the same time
-var prettyColor = 'cadetblue';
+var prettyColor = "cadetblue";
 ```
 
-[var hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
-) is the behaviour that means I can declare variables up front, because JavaScript handles variable before the script is run.
+[var hoisting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) is the behaviour that means I can declare variables up front, because JavaScript handles variable before the script is run.
 
 > it is recommended to always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are function scoped (local) and which are resolved on the scope chain.
 
 ### Naming
 
-* Safe variable naming convention: lowerCamelCase
-* Numbers and underscore but not first
-* Case sensitive
-* …and remember no JS reserved words!
+- Safe variable naming convention: lowerCamelCase
+- Numbers and underscore but not first
+- Case sensitive
+- …and remember no JS reserved words!
 
 ### Data types
 
-* Numbers, strings, booleans, arrays, and objects
-* JS is a **dynamically typed language** because I don’t need to specify a data type for variables
-* `typeof` is an operator I can use to return the data type of the variable I pass into it
+- Numbers, strings, booleans, arrays, and objects
+- JS is a **dynamically typed language** because I don’t need to specify a data type for variables
+- `typeof` is an operator I can use to return the data type of the variable I pass into it
 
 ---
 
@@ -95,9 +94,9 @@ Module: [Handling text — strings in JavaScript](https://developer.mozilla.org/
 
 Not much new in this section, but console exercises are good practice for me. These MDN tutorials get you to type a lot in the console. Also stuff that doesn’t work, so when you do get errors later, you’ve seen the syntax errors before.
 
-* Escape notation
-* Concatenate is joining together
-* String literal
+- Escape notation
+- Concatenate is joining together
+- String literal
 
 When I want to convert a string to a number, I can pass the string into the [`number` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) and it will return a string if it can. `Number('666')`
 
@@ -112,17 +111,17 @@ Module: [Useful string methods](https://developer.mozilla.org/en-US/docs/Learn/J
 They keep saying that everything in JavaScript is an object. 🤔
 
 ```javascript
-var chocolateCake = 'That variable will become a string object instance';
+var chocolateCake = "That variable will become a string object instance";
 ```
 
-* How long is that string? Use the `length` attribute.
-* Retrieve a specific character? Use square bracket notation `chocolateCake[5]`
-* Need to grab a substring? Use this method `chocolateCake.indexOf('become')`
-* Want to extract it? Use the `slice()` method with character positions.
-* Change words? Sure! Use the `replace()` method 👇
+- How long is that string? Use the `length` attribute.
+- Retrieve a specific character? Use square bracket notation `chocolateCake[5]`
+- Need to grab a substring? Use this method `chocolateCake.indexOf('become')`
+- Want to extract it? Use the `slice()` method with character positions.
+- Change words? Sure! Use the `replace()` method 👇
 
 ```javascript
-chocolateCake = chocolateCake.replace('string object instance', 'cake');
+chocolateCake = chocolateCake.replace("string object instance", "cake");
 ```
 
 ✅ Finished the active learning examples. Had to peak just a tiny bit for hints in the solutions for the first two, but flew through the last one. Yay!
@@ -134,9 +133,9 @@ chocolateCake = chocolateCake.replace('string object instance', 'cake');
 Module: [Arrays](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays)
 
 ```javascript
-var beer = ['stout', 'brown ale', ['ipa', 'neipa', 'black ipa']];
+var beer = ["stout", "brown ale", ["ipa", "neipa", "black ipa"]];
 // modify an item with bracket notation
-beer[1] = 'porter';
+beer[1] = "porter";
 // beer now returns [ "stout", "porter", (3) […] ]
 beer[2][0];
 // returns "ipa" within the multidimentional array
@@ -147,7 +146,7 @@ beer[2][0];
 ```javascript
 beer[2].length;
 // returns the number of IPAs as 3
-beer[2][beer.length-1];
+beer[2][beer.length - 1];
 // returns the last item of the IPAs: "black ipa"
 ```
 
@@ -156,25 +155,25 @@ beer[2][beer.length-1];
 ### Split data in a string to an array
 
 ```javascript
-var ourRawData = 'Oslo,Bergen,Trondheim,Stavanger,Tromsø';
-var ourAwesomeArray = ourRawData.split(',');
+var ourRawData = "Oslo,Bergen,Trondheim,Stavanger,Tromsø";
+var ourAwesomeArray = ourRawData.split(",");
 ourAwesomeArray;
 // returns [ "Oslo", "Bergen", "Trondheim", "Stavanger", "Tromsø" ]
-var lastCity = ourAwesomeArray[ourAwesomeArray.length-1];
+var lastCity = ourAwesomeArray[ourAwesomeArray.length - 1];
 lastCity; // returns "Tromsø"
 ```
 
 ### Join items in an array to a string
 
 ```javascript
-var myNewString = ourAwesomeArray.join('/');
+var myNewString = ourAwesomeArray.join("/");
 myNewString; //returns "Oslo/Bergen/Trondheim/Stavanger/Tromsø"
 ```
 
 ### Add or remove array items
 
-* `push()` and `pop()` at the end of the array
-* `unshift()` and `shift()` items at the beginning
+- `push()` and `pop()` at the end of the array
+- `unshift()` and `shift()` items at the beginning
 
 > The new length of the array is returned when the method call completes
 
@@ -185,6 +184,7 @@ var currentCity = ourAwesomeArray.shift();
 // returns [ "Bergen", "Trondheim", "Stavanger", "Tromsø" ]
 currentCity; // returns "Oslo"
 ```
+
 ---
 
 ## 🎉

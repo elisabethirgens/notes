@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Cull and surrender"
+title: "Cull and surrender"
 date: 2017-06-23
 ---
 
@@ -14,10 +14,10 @@ I think about this a lot. Well… I try to.
 
 Linda Holmes writes about these two as a balance. How we should accept there is so much that could be worth our time — it’s not just about dividing all the things into interesting or not.
 
-* books, music, films, television and art
-* activities and travel destinations
-* potential tasks at work
-* stuff to learn
-* people
+- books, music, films, television and art
+- activities and travel destinations
+- potential tasks at work
+- stuff to learn
+- people
 
 I will miss almost everything. And that is fine.

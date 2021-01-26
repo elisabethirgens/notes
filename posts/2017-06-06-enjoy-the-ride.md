@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "“Let go and enjoy the ride”"
+title: "“Let go and enjoy the ride”"
 date: 2017-06-06
 ---
 

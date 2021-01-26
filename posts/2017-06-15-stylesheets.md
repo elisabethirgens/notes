@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Be fearless with old stylesheets"
+title: "Be fearless with old stylesheets"
 date: 2017-06-15
 ---
 
 The community talks a lot about writing CSS, and less about dealing with old stylesheets that no-one knows what do anymore. But I’ve had interesting discussions with friends working elsewhere, that have helped me think more about how to approach old CSS.
 
-It’s easy to have too much respect for old CSS. *“Look at all this, that someone put a lot of work into meticulously naming and painstakingly structuring.”* But browsers change, teams change, best practices change, and what might have been spiff back then — is now just rusty and dusty.
+It’s easy to have too much respect for old CSS. _“Look at all this, that someone put a lot of work into meticulously naming and painstakingly structuring.”_ But browsers change, teams change, best practices change, and what might have been spiff back then — is now just rusty and dusty.
 
 There are basically two paths — and being fearless helps in both.
 

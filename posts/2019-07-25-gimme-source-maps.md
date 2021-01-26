@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Salvage The Sunken Source Maps"
+title: "Salvage The Sunken Source Maps"
 date: 2019-07-25
 ---
 
@@ -32,8 +32,8 @@ There was no console warning in Chrome, and also the source CSS is completely mi
 
 > A source map provides a way of mapping code within a compressed file back to it’s original position in a source file.
 
-* [Treehouse: An Introduction to Source Maps](https://blog.teamtreehouse.com/introduction-source-maps)
-* [CSS-Tricks: Should I Use Source Maps in Production? ](https://css-tricks.com/should-i-use-source-maps-in-production/)
+- [Treehouse: An Introduction to Source Maps](https://blog.teamtreehouse.com/introduction-source-maps)
+- [CSS-Tricks: Should I Use Source Maps in Production? ](https://css-tricks.com/should-i-use-source-maps-in-production/)
 
 ## Check the files in a browser
 
@@ -67,9 +67,9 @@ Ah, Parcel. The “zero configuration web application bundler”. I’m sure tha
 
 But I started to get the hang of how [Parcel CLI](https://parceljs.org/cli.html) worked.
 
-* `build` is the main command in `package.json` for Parcel to do it’s thing in this app
-* `--log-level 5` is nice for debugging
-* `--no-source-maps` works as expected when I tried adding the option
+- `build` is the main command in `package.json` for Parcel to do it’s thing in this app
+- `--log-level 5` is nice for debugging
+- `--no-source-maps` works as expected when I tried adding the option
 
 But I want the source maps dammit and Parcel is still adding an extra `/` to the URL, like so:<br>
 `/*# sourceMappingURL=/awesome-styles.css.map */`
@@ -81,8 +81,8 @@ When I remove the extra slash in Chrome dev tools, the map and source files appe
 
 So many. 👀👀👀 But especially these two:
 
-* [parcel-bundler/parcel/issues/2209](https://github.com/parcel-bundler/parcel/issues/2209)
-* [parcel-bundler/parcel/issues/1753](https://github.com/parcel-bundler/parcel/issues/1753)
+- [parcel-bundler/parcel/issues/2209](https://github.com/parcel-bundler/parcel/issues/2209)
+- [parcel-bundler/parcel/issues/1753](https://github.com/parcel-bundler/parcel/issues/1753)
 
 My huge debugging mistake, was that I was trying this fix before I had fixed the serving and before I had understood how/where/what/when Parcel was doing anything at all. So I _thought_ that nothing worked with using the option to [Set the public URL to serve on](https://parceljs.org/cli.html#set-the-public-url-to-serve-on).
 
@@ -94,7 +94,7 @@ And tada! We now have functioning source maps that provide developers with easie
 
 ## What I learnt
 
-* The basics of how Parcel works and how to actually understand the docs
-* More about source maps and dev tools 🔨
-* Remember to test some explicit changes first to learn what gets generated and built when, so that I’m not trying a bunch of fixes without actually implementing them
-* Before searching the internet for fixes, spend time to understand how different parts are glued together, because it makes it so much easier to know if the fixes I find work or not
+- The basics of how Parcel works and how to actually understand the docs
+- More about source maps and dev tools 🔨
+- Remember to test some explicit changes first to learn what gets generated and built when, so that I’m not trying a bunch of fixes without actually implementing them
+- Before searching the internet for fixes, spend time to understand how different parts are glued together, because it makes it so much easier to know if the fixes I find work or not

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tic-Tac-Tooooomg It’s Working!!"
+title: "Tic-Tac-Tooooomg It’s Working!!"
 date: 2018-04-07
 ---
 

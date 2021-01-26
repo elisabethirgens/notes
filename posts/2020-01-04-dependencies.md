@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Work with Yarn in a Containerized App"
+title: "Work with Yarn in a Containerized App"
 date: 2020-01-04
 ---
 
@@ -10,7 +10,7 @@ Before the holidays, I was fighting with [linters, prettier & pre-commit]({{ '/2
 
 January is now, so… \*rolling up sleeves\* I shall learn more though working with the dependencies.
 
--------------------------------------
+---
 
 ## Vulnerabilities and react-scripts
 
@@ -25,11 +25,11 @@ But how to update? The [release notes](https://github.com/facebook/create-react-
 
 > Migrating from 3.2.0 to 3.3.0
 > Inside any created project that has not been ejected, run:
-`yarn add --exact react-scripts@3.3.0`
+> `yarn add --exact react-scripts@3.3.0`
 
-* How can I find out if this project has ejected or not?
-* What if I’m updating from an older version than 3.2.0?
-* Is _migrating_ different from _bumping the version_ in package.json?
+- How can I find out if this project has ejected or not?
+- What if I’m updating from an older version than 3.2.0?
+- Is _migrating_ different from _bumping the version_ in package.json?
 
 Read a bit on [Migrate react-scripts v2.x to v3.0.0](https://medium.com/@TechMagic/migrate-react-scripts-v2-x-to-v3-0-0-17134a7ecc66) but also found the official [create-react-app.dev/docs/updating-to-new-releases](https://create-react-app.dev/docs/updating-to-new-releases) stating that:
 
@@ -66,13 +66,13 @@ Did more searching, and read among other things a thread where [Dan Abramov disc
 
 > I know npm vulnerability advisories are meant to help security. But I can’t shake the feeling the way it’s rolled out is creating confusion and FUD. I can’t count how many times I’ve seen build-time tools getting panic in issues because of “prototype pollution” or “regex ddos”.
 
-> I want to make this clear. Those kinds of audit warnings are useless false positives for *build tools*. These false positives are a waste of everyone’s time. Users can’t upgrade, maintainers chase upstream patches — and all for an imaginary problem. I don’t know how to fix this.
+> I want to make this clear. Those kinds of audit warnings are useless false positives for _build tools_. These false positives are a waste of everyone’s time. Users can’t upgrade, maintainers chase upstream patches — and all for an imaginary problem. I don’t know how to fix this.
 
 > The vulnerabilities assume that your server processes some user generated input. But builds in e.g. Create React App don’t do that. So that doesn’t make real sense.
 
 Interesting! I guess this is the price to pay for using something like `create-react-app`, that tools like `yarn audit` become cluttered — and in return, **I need to learn** how to separate what is important to handle and what is noise.
 
-----------------------------------------------------------------------------------------
+---
 
 ## Unmet Peer Dependency?
 
@@ -94,12 +94,12 @@ But also:
 
 Where do I sign up?
 
-----------------------------------------------------------------------------------------
+---
 
 ## Noooo… wat? The build broke 😭🤨🤔
 
-* Updating react-scripts worked when running locally in Minishift
-* I committed the change, thinking all was fine in the world
-* But the build broke in the dev environment on OpenShift
+- Updating react-scripts worked when running locally in Minishift
+- I committed the change, thinking all was fine in the world
+- But the build broke in the dev environment on OpenShift
 
 Well… I did set out to learn more about dependencies in containers… _something something different versions of node running in the environments… Got more work to do next week then!_
