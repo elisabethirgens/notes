@@ -6,6 +6,8 @@ date: 2019-12-10
 
 Quotes and notes from reading up the new tech stack I’m working with. I often find Wikipedia useful for starting to build a mental modal of what stuff is.
 
+| | |
+| --- | --- |
 | [Docker](https://en.wikipedia.org/wiki/Docker_(software)) | is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in containers |
 | [Kubernetes](https://en.wikipedia.org/wiki/Kubernetes)<br>k8s | is an open-source container-orchestration system for automating application deployment, scaling, and management |
 | [OpenShift](https://en.wikipedia.org/wiki/OpenShift) | is a family of containerization software developed by Red Hat |

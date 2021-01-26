@@ -35,6 +35,8 @@ Horizontal teams are tools for radical change. In our case, we have redefined ho
 
 Teams can be organised in many ways, other organisations will use these words to mean something else. But as a smart reader, you understand we are describing _our context_ and what our experience has taught us works here for us.
 
+| | |
+| --- | --- |
 | **Vertical teams** | **Horizontal teams** |
 | Technology Generalists 🐟 | Technology Specialists 🏊‍♀️ |
 | Domain Specialists 🕵️‍♀️ | Domain Generalist 🤹‍♀️ |

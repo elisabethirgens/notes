@@ -41,6 +41,8 @@ Once upon a time, web pages on the internet displayed mostly static text for us 
 * Assignment `=` (and I know there are more of ’em)
 * Comparison operators like `<` `>` `<=` `>=` and also these are important to fully understand:
 
+| | |
+| --- | --- |
 | `===` | equal (strict! recommended!) ✅ |
 | `!==` | non-equal (strict! recommended!) ❌ |
 | `==` | these things are the same, but perhaps not the same datatype 🤷🏻‍ |

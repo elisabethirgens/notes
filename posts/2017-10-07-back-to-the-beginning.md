@@ -45,6 +45,8 @@ myBeverage = 'ginger daiquiri';
 
 ## Operators to produce a result 🔨
 
+| | |
+| --- | --- |
 | `+` | Add numbers or concatenate strings. |
 | `-` `*` `/` | Subtract, multiply, divide to do basic math with numbers. |
 | `=` | Assigns a value to a variable. |

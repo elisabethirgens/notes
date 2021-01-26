@@ -10,6 +10,8 @@ This month I have left logistics behind for a new job in the financial sector. T
 
 There are different marketplaces with separate sets of requirements.
 
+| | |
+| --- | --- |
 | Oslo Børs | A full stock exchange listing for large companies with a track record |
 | Oslo Axess | A regulated market for companies with less than 3 years history |
 | Merkur Market | Multilateral trading facility with less strict requirements and reporting |
@@ -28,6 +30,8 @@ This is way more complex, but learning the difference roughly for a handful will
 
 ---
 
+| | |
+| --- | --- |
 | [Ticker](https://en.wikipedia.org/wiki/Ticker_symbol) | The abbreviation to identify companies (or more precisely publicly traded shares) |
 | [Security](https://en.wikipedia.org/wiki/Security_(finance)) | Oooh, that is English for the Norwegian term “verdipapir” |
 | [Indices](https://en.wikipedia.org/wiki/Stock_market_index) | A-ha, plural of index! And a measurement of a section of the stock market |
