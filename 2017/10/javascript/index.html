@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/notes/assets/main.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/notes/assets/main.css" />
+  </head>
 
   <body>
-
     <header class="site-header">
-
       <div class="wrapper">
         <div class="top">
           <h1 class="top__title"><a href="/notes/">Notes</a></h1>
@@ -19,17 +17,16 @@
 
     <main class="page-content">
       <div class="wrapper">
-        <article class="post">
-
+<article class="post">
   <header class="post-header">
     <h1 class="post-title">Rainy Sunday JavaScript learning notes</h1>
     <p class="post-date">
       <time datetime="Sun Oct 15 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
         15 October 2017
       </time>
+    </p>
   </header>
-  <div class="post-content">
-    <p>Earlier this month, I went <a href="/notes/2017/10/back-to-the-beginning/">back to the beginning</a> in my stagnant stab at learning JavaScript. Today I completed these two excellent guides under MDN web docs, JavaScript first steps:</p>
+  <div class="post-content"><p>Earlier this month, I went <a href="/notes/2017/10/back-to-the-beginning/">back to the beginning</a> in my stagnant stab at learning JavaScript. Today I completed these two excellent guides under MDN web docs, JavaScript first steps:</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
@@ -74,7 +71,7 @@
 <li><strong>Event listeners</strong> are constructs that listen for these events.</li>
 <li><strong>Event handlers</strong> are the blocks of code run as a response.</li>
 </ul>
-<pre class="language-js"><code class="language-js">guessSubmit<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> checkGuess<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-js"><code class="language-js">guessSubmit<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> checkGuess<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>This is a method that we’ve given two arguments:</p>
 <ul>
 <li>The event we’re listening for — user clicking the <code>guessSubmit</code> input.</li>
@@ -83,7 +80,7 @@
 <hr>
 <h2>Loops ♻️</h2>
 <p>Repeat a part of code over and over — until a specific condition is met. (I recognise this concept from my WordPress days, and the different types of loops you could have for posts.)</p>
-<pre class="language-js"><code class="language-js">  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">21</span> <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">}</span></code></pre>
+<pre class="language-js"><code class="language-js"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">21</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
 <p>This is a <code>for</code> loop with three arguments:</p>
 <p>| <strong>A starting value</strong> | <code>i</code> is 1 |
 | <strong>An exit condition</strong> | when <code>i</code> no longer is less than 21 |
@@ -97,7 +94,7 @@
 <p>I can create my own! But for now we’re learning about the ones that already exist in the browser.</p>
 <pre class="language-js"><code class="language-js">guessField<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p><code>guessField</code> is an <code>&lt;input&gt;</code>, so it has access to the <code>focus()</code> method and we can use it to focus the user’s text input.</p>
-<pre class="language-js"><code class="language-js">guesses<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">'yellow'</span><span class="token punctuation">;</span><br>guesses<span class="token punctuation">.</span>style<span class="token punctuation">.</span>padding <span class="token operator">=</span> <span class="token string">'10px'</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-js"><code class="language-js">guesses<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">"yellow"</span><span class="token punctuation">;</span><br>guesses<span class="token punctuation">.</span>style<span class="token punctuation">.</span>padding <span class="token operator">=</span> <span class="token string">"10px"</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>Elements have a style property that contains an object.</li>
 <li>This object contains inline styles applied to that element.</li>
@@ -105,11 +102,11 @@
 <hr>
 <h2>What I’ve been confused about before 🙃</h2>
 <p>One of the things that has derailed me when looking at intro JS examples before, is that there are so many words that are readable — <strong>but wtf are they actually in the script!?</strong></p>
-<pre class="language-js"><code class="language-js">  guessSubmit<span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-js"><code class="language-js">guessSubmit<span class="token punctuation">.</span>disabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span></code></pre>
 <p><em>will disable the input like so</em></p>
-<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>guessSubmit<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>guessSubmit<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p>When you start learning, it’s impossible to understand what is what. When is something a name the coder has come up with? And when are you referencing something that already exists?! Who knows. Another example from this guide:</p>
-<pre class="language-js"><code class="language-js">  resetButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>  resetButton<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">'Start new game'</span><span class="token punctuation">;</span><br>  document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>resetButton<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class="language-js"><code class="language-js">resetButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>resetButton<span class="token punctuation">.</span>textContent <span class="token operator">=</span> <span class="token string">"Start new game"</span><span class="token punctuation">;</span><br>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>resetButton<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>These words are readable. 👆 I can understand what happens: create a new button, put text on it, and say where to place it. But still… what is what? Where do the words come from?</p>
 <h2>What I understand better now 🤓</h2>
 <ul>
@@ -152,40 +149,43 @@
 <p>Hey <code>textContent</code>👋! For some unfathomable reason, I have previously read this as “textContext” which has really <em>not</em> been helpful in understanding what it does.</p>
 <hr>
 <p>Okay, this is it for today. But hm… yay… stuff is actually coming together in my head. ✌️</p>
-
-  </div>
-
+</div>
 </article>
-
-      </div>
+</div>
     </main>
 
     <footer class="site-footer">
-
       <div class="wrapper">
-
-            <ul class="links-list">
-              <li>
-                <a href="https://github.com/elisabethirgens">
-                  <span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg>
-                  </span>
-                  elisabethirgens
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/elisabethirg">
-                  <span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path></svg>
-                  </span>
-                  elisabethirg
-                </a>
-              </li>
-            </ul>
-            <small>with Eleventy and GitHub Actions 🚀</small>
-
+        <ul class="links-list">
+          <li>
+            <a href="https://github.com/elisabethirgens">
+              <span class="icon icon--github"
+                ><svg viewBox="0 0 16 16" width="16px" height="16px">
+                  <path
+                    fill="#828282"
+                    d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"
+                  ></path>
+                </svg>
+              </span>
+              elisabethirgens
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/elisabethirg">
+              <span class="icon icon--twitter"
+                ><svg viewBox="0 0 16 16" width="16px" height="16px">
+                  <path
+                    fill="#828282"
+                    d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"
+                  ></path>
+                </svg>
+              </span>
+              elisabethirg
+            </a>
+          </li>
+        </ul>
+        <small>with Eleventy and GitHub Actions 🚀</small>
       </div>
-
     </footer>
-
   </body>
-
 </html>
