@@ -160,10 +160,6 @@ body {
   list-style: none;
 }
 
-.post-list > li {
-  margin-bottom: 0;
-}
-
 .post-list h2 {
   font-size: 1.5rem;
   font-weight: 750;
