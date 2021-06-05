@@ -54,7 +54,7 @@ And sure enough, they helped me to write my first recursive function.
 
 It was upside down. And only half the pyramid, but how hard could it be to complete?
 
-_Several days later and multiple hours of serious [focused hours]({{ '2021/03/deep-work/' | url }}) have passed._
+_Several days later and multiple hours of serious [focused hours]({{ '/2021/03/deep-work/' | url }}) have passed._
 
 ---
 
