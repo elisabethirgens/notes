@@ -10,7 +10,7 @@ date: 2021-06-22
 
 ## I kinda like PRs 💝
 
-A strong culture of always having two sets of eyes on every change is great. I wrote this list a year ago on [What I Love About Pull Requests](/2020/05/pull-requests/) and how the humble PR can be an opportunity to learn, teach, collaborate, share ownership, praise, communicate, know your team mates.
+A strong culture of always having two sets of eyes on every change is great. I wrote this list a year ago on [What I Love About Pull Requests]({{ '/2020/05/pull-requests/' | url }}) and how the humble PR can be an opportunity to learn, teach, collaborate, share ownership, praise, communicate, know your team mates.
 
 But I also really enjoyed Jessica Joy Kerr’s [Those pesky pull request reviews](https://jessitron.com/2021/03/27/those-pesky-pull-request-reviews/) — an excellent post about _better_ ways to work together. She makes a strong argument for ensemble working, and describes the context switching and queues involved in PR reviews like so:
 
