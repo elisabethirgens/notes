@@ -72,6 +72,8 @@ for (var i = 1; i < 21; i++) {
 
 This is a `for` loop with three arguments:
 
+| | |
+| --- | --- |
 | **A starting value** | `i` is 1 |
 | **An exit condition** | when `i` no longer is less than 21 |
 | **An incrementor** | keep adding 1 to `i` |

@@ -100,6 +100,8 @@ sysctl -a | grep ^kern.max
 
 Cool command! What does it do?
 
+| | |
+| --- | --- |
 | `sysctl` | a software utility of some Unix-like operating systems that reads and modifies the attributes of the system kernel such as its version number, maximum limits, and security settings |
 | `-a` | List all the currently available non-opaque values |
 | `grep ^kern.max` | …but instead of outputting the entire list, run a search and just return results that include `kern.max` |
