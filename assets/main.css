@@ -47,9 +47,9 @@ hr {
 
 blockquote {
   font-style: italic;
-  color: #828282;
+  color: #767676;
   border-left: 10px solid #ddd;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   padding-right: 2rem;
   margin: 0 0 1.5rem 0;
 }
@@ -142,7 +142,7 @@ body {
 
 .post-meta {
   text-transform: uppercase;
-  color: #aaa;
+  color: #767676;
   float: right;
   margin: 0.5rem 0.5rem 0 1rem;
 }
