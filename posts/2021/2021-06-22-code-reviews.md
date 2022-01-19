@@ -22,7 +22,7 @@ And her conclusion in this post, that makes so much sense to me:
 
 ---
 
-## Required reviews makes me sad ☹️
+## Required reviews makes me sad 🙁
 
 The problems I see with required reviews are that:
 
