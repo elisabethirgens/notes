@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Delete All Local Branches"
+title: "Delete Multiple Local Branches"
 date: 2022-09-12
 ---
 
