@@ -20,11 +20,11 @@ When I started looking into approaches, I was surprised to learn the trusty and 
 
 ```html
 <a href="photos/987.jpg" download="beer001.jpg">
-    Download beer 001 as a jpg to your computer
+  Download beer 001 as a jpg to your computer
 </a>
 ```
 
-This only works for [same-origin URLs](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) and that is not case for my needs now in freeing my photos from remote origins down to my computer. Is there a way around that? Yes! Especially since I’m looking for a way for me to download a batch of photos once, and learn something about browsers and JavaScript along the way. I’m not building an app where this is a feature, so note that YMMV.
+This only works for [same-origin URLs](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) and that is not the case for my needs now in freeing my photos from remote origins down to my computer. Is there a way around that? Yes! Especially since I’m looking for a way for me to download a batch of photos once, and learn something about browsers and JavaScript along the way. I’m not building an app where this is a feature, so note that YMMV.
 
 ## Fetch and Blob
 
@@ -45,8 +45,8 @@ function downloadPhotos() {
     fetchWithAnchorElement(item, index);
 
     async function fetchWithAnchorElement() {
-      // each item in myArray has this photo_url key  
-      const img = await fetch(item.photo_url); 
+      // each item in myArray has this photo_url key
+      const img = await fetch(item.photo_url);
       const imgBlob = await img.blob();
       const imgUrl = URL.createObjectURL(imgBlob);
 
