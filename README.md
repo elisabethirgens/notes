@@ -4,11 +4,7 @@ Eleventy and GitHub Pages to write notes
 
 ## Deploy
 
-- https://github.com/peaceiris/actions-gh-pages
-
-### Configure a publishing source
-
-Under Settings for GitHub Pages, use the `publish_branch` named in `.github/workflows/build.yml` as the publishing source.
+Push to main will build and deploy. How to deploy Eleventy to GitHub Pages: https://elisabethirgens.github.io/notes/2023/11/deploy-to-github-pages/
 
 ### Link to a previous post
 
