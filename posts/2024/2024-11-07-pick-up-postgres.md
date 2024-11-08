@@ -57,7 +57,7 @@ ERROR:  value too long for type character varying(50)
 CONTEXT:  COPY checkins, line 209, column brewery_name: "BIRRIFICIO AGRICOLO BALADIN - Baladin Indipendente Italian Farm Brewery"
 ```
 
-I am so curious
+I am so curious and impatient to get this working, that I will just increase the character limit to 100.
 
 ```
 ERROR:  value too long for type character varying(100)

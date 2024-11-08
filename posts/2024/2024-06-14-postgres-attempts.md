@@ -15,7 +15,9 @@ ALTER TABLE checkins
 ADD venue_city VARCHAR(100);
 ```
 
-## Failed attempt
+Excellent, I now have a new column. But can I fill it with data?!
+
+## Failed copy attempt
 
 The raw export from Untappd contains a lot more columns than I am interested in. I made a new `untappd-test-2.csv` that is still limited to 30 rows, but now with all 33 columns of the original data. I&nbsp;only want these 5 columns, here is an extract with random rows and only 5 columns:
 
