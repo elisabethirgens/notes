@@ -4,7 +4,7 @@ title: "Select all the things with SQL"
 date: 2024-11-08
 ---
 
-We have enjoyed a full week devoted to learning at work, and in between teaching Git, I also managed to [pick up Postgres again]({{ '/2024/06/pick-up-postgres/' | url }}) yesterday. I now have a database with the data I want, and the next step is to practice writing queries to explore the data…
+We have enjoyed a full week devoted to learning at work, and in between teaching Git, I also managed to [pick up Postgres again]({{ '/2024/11/pick-up-postgres/' | url }}) yesterday. I now have a database with the data I want, and the next step is to practice writing queries to explore the data…
 
 ```sql
 -- Show me the last 50 rows of checkins from before I quit Untappd
