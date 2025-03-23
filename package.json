@@ -13,8 +13,8 @@
   "author": "elisabethirgens",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "2.0.1",
+    "@11ty/eleventy": "3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
-    "prettier": "3.0.3"
+    "prettier": "3.5.2"
   }
 }
