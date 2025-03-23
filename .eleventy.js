@@ -1,11 +1,11 @@
-const { DateTime } = require("luxon");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+import { DateTime } from "luxon";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("d LLL yyyy");
-  });
+  eleventyConfig.addFilter("readableDate", (dateObj) =>
+    DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("d LLL yyyy"),
+  );
   eleventyConfig.addPlugin(syntaxHighlight);
   return {
     dir: {

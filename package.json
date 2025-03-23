@@ -1,6 +1,7 @@
 {
   "name": "notes-with-eleventy",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf ./_site",
     "build": "npm run clean && eleventy --pathprefix=notes",
