@@ -10,7 +10,7 @@ I want to understand what I am doing, and I suspect a good place to start, is by
 
 ## K8s
 
-Obligatory link to my description of [Numeronyms and Numerical Contractions]({{ '/2026/07/numeronyms/' }})
+Obligatory link to my description of [Numeronyms and Numerical Contractions]({{ '/2026/07/numeronyms/' | url }})
 
 ## Making changes to k8s-objects
 

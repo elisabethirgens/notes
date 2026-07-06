@@ -12,13 +12,13 @@ My branch is a mess of commits. While working on this change, I accidentally del
 
 ## The lazy squash-and-merge 🤷🏻
 
-Any reviewer of the PR will just have to ignore the mess, and I will sweep it under the rug with a squash when I merge. Cause that makes the mess go away, right?! Well… if I am not going to clean up the commits on this branch, the absolute least I can do is to make sure that I select [squash and merge]({{ '/2022/03/merge-button/' }}). The next bare minimum is to [not forget the silent step](https://thoughtbot.com/blog/don-t-forget-the-silent-step-when-you-squash-and-merge) (that will otherwise dump the five commit messages into the squash) before hitting **Confirm squash and merge**. Either way, I hope any reviewer will not care, and hopefully nobody will want to investigate the history of this change in the future.
+Any reviewer of the PR will just have to ignore the mess, and I will sweep it under the rug with a squash when I merge. Cause that makes the mess go away, right?! Well… if I am not going to clean up the commits on this branch, the absolute least I can do is to make sure that I select [squash and merge]({{ '/2022/03/merge-button/'  | url }}). The next bare minimum is to [not forget the silent step](https://thoughtbot.com/blog/don-t-forget-the-silent-step-when-you-squash-and-merge) (that will otherwise dump the five commit messages into the squash) before hitting **Confirm squash and merge**. Either way, I hope any reviewer will not care, and hopefully nobody will want to investigate the history of this change in the future.
 
 However! I have more Git tricks up my sleeve and can do better than a lazy squash-and-merge. I know how to clean up a messy branch and since I’ve gained some practice, these steps have become a natural part of my workflow. Won’t you join me…?
 
 ## Interactive rebase 😎
 
-My strongly recommended prerequisite for this Git operation is to have a Git editor you know how to use. Here’s my guide for how to [Give Yourself A Git Editor To Live With]({{ '/2023/10/git-editor/' }}).
+My strongly recommended prerequisite for this Git operation is to have a Git editor you know how to use. Here’s my guide for how to [Give Yourself A Git Editor To Live With]({{ '/2023/10/git-editor/' | url }}).
 
 ```
 # Check the log, was it five commits I want to clean up?
