@@ -30,7 +30,8 @@ An LLM described it to me like this:
 
 > A Kubernetes object is a record you create describing something you want to exist or happen in your cluster. You write it down as YAML, and Kubernetes' job is to make reality match what you wrote. Think of it like filling out a form: "I want this to exist, with these properties." Kubernetes reads the form and does whatever it takes to make it true — and keeps checking forever that it stays true. Every object generally has the same skeleton:
 
-```
+<!-- prettier-ignore -->
+```yaml
 apiVersion: apps/v1
 kind: Deployment           # What TYPE of object this is
 metadata:
