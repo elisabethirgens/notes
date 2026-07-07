@@ -14,15 +14,15 @@ Obligatory link to my description of [Numeronyms and Numerical Contractions]({{ 
 
 ## Making changes to k8s-objects
 
-We have a shared repo `k8s-objects` where I have opened and merged 84 PRs. Let’s see what type of changes I have been doing in there. The very first PR, was adding myself as a deployer 4½ years ago. Changing log levels on a couple of apps. A handful of PRs cleaning up leftover configuration for apps in test environments where the app wasn’t actually running.
+We have a shared repo `k8s-objects` where I have opened and merged 84 PRs. Let’s see what type of changes I have been doing in there. The very first PR, was adding myself as a deployer 4½ years ago. Changing log levels on a couple of apps. A handful of PRs cleaning up leftover configuration for apps in test environments where an app wasn’t actually running.
 
-Oh hey, I can see the PR which had get around to setting up the GitHub CLI. The `k8s-objects` README.md described that for changes to test environments, I could open PRs that are automatically approved and merged. _Shut up and take my money!_ Luckily, I didn’t understand at the time what triggered that behaviour in this repo, that I could have set the required label by clicking a button on the PR in the GUI. I just read the approach as running an incantation `gh pr create --label automerge` and so this was how I got around to setting up the GitHub CLI and start using that. Never looked back though, now I very much appreciate opening my PRs from the command line.
+Oh hey, I can see the PR which back in the day got me to set up the GitHub CLI. The `k8s-objects` README.md described that for changes to test environments, I could open PRs that are automatically approved and merged. _Shut up and take my money!_ Luckily, I didn’t understand at the time what triggered that behaviour in this repo, that I could have set the required label by clicking a button on the PR in the GUI. I just read the approach as running an incantation `gh pr create --label automerge` and so this was how I got around to setting up the GitHub CLI and start using that. Never looked back though, now I very much appreciate opening my PRs from the command line.
 
 Another PR I remember, where I was increasing CPU and memory limits. In the PR description, I posted the meme photo of golden retriever in a tie who has no idea what he’s doing. We were just back at the office after covid and this PR description led to a friendly plattform developer dropping by my desk to say hi and have a chat about CPU and memory limits.
 
 I’ve been doing a whole bunch of changes to ensure that memory requests are equal to memory limits. This has been based on a policy warning from Kyverno. Then there are the PRs that consist of “adding this thing” because someone has described the app needs this thing now. Also enabling OpenTelemetry tracing, this was an environment variable to set in application kustomize yaml.
 
-Recently, I have been decommissioning a handful of applications. Working on that means I now know the recommended approach is to first delete the file(s) that handle configures the app in ArgoCD. Wait til after ArgoCD has synced, then open a separate PR to delete the app’s files in the kustomize directory.
+Recently, I have been decommissioning a handful of applications. Working on that means I now know the recommended approach is to first delete the file(s) that configures the app in ArgoCD. Wait til after ArgoCD has synced, then open a separate PR to delete the app’s files in the kustomize directory.
 
 ## A Kubernetes object is a persistent record
 
@@ -43,4 +43,4 @@ spec:                      # What I want, my desired state
 
 > Kubernetes also tracks a `status` field (added automatically, not written by you) — that's the actual state. Kubernetes' entire job is constantly comparing `spec` (desired) vs `status` (actual) and reconciling the difference. This loop is the heart of how Kubernetes works.
 
-I think all this means that I do understand quite a bit about what Kubernetes objects actually are. It’s not some mysterious concept beyond my understanding. It was helpful to both read up a bit and revisit the changes I’ve been making in the `k8s-objects` repo over the past 4 years. Working on this migration means I want to understand more than I have before, but this is off to a good start.
+I think all this means that I do know quite a bit about what Kubernetes objects actually are. It’s not some mysterious concept beyond my understanding. It was helpful to both read up a bit and revisit the changes I’ve been making in the `k8s-objects` repo over the past 4 years. Working on this migration means I want to understand more than I have before, but this adventure is off to a good start.
