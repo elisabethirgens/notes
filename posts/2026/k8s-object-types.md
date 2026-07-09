@@ -15,7 +15,7 @@ This is the object type that contain most of the fields I have typically worked 
 apiVersion: apps/v1
 kind: Deployment           # Object type for creating pods
 metadata:
-  name: tivoli             # A name to identify the object in this YAML
+  name: cheesecake         # A name to identify the object in this YAML
 spec:                      # Spec describes desired my state
   replicas: 3              # Create 3 pods and keep them running
 ```
@@ -29,11 +29,11 @@ These files mention the name of my app multiple times, which has been a source o
 apiVersion: v1
 kind: Service              # Object type for networking
 metadata:
-  name: tivoli             # A name to identify the object in this YAML
-  namespace: tivoli        # The partition in the cluster where this object lives
+  name: cheesecake         # A name to identify the object in this YAML
+  namespace: cheesecake    # The partition in the cluster where this object lives
 spec:                      # Spec describes desired my state
   selector:
-    app: tivoli            # Find these pods and send traffic to them
+    app: cheesecake        # Find these pods and send traffic to them
   ports:
     - protocol: TCP        # Default (not required unless other protocol than TCP)
       name: http           # Name optional / cosmetic if only one port

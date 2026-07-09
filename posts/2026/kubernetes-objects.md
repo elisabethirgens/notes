@@ -35,7 +35,7 @@ An LLM described it to me like this:
 apiVersion: apps/v1
 kind: Deployment           # What TYPE of object this is
 metadata:
-  name: tivoli             # A name to identify it
+  name: cheesecake         # A name to identify it
 spec:                      # What I want, my desired state
   replicas: 3              # I'd like 3 pods, plz
 ```
