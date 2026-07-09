@@ -91,7 +91,7 @@ Note the instructions:
 # with '#' will be ignored, and an empty message aborts the commit.
 ```
 
-So what I will do in this specific case, is add `#` in front of the scraps of commit messages for 2,3,4,5 to comment those lines out. This will leave me with `Add awesome feature` and probably I will now make sure to [write some context to that commit message]({{ '/2024/kontekst-i-commit-melding/' }}) (but that is a topic for a different blog post).
+So what I will do in this specific case, is add `#` in front of the scraps of commit messages for 2,3,4,5 to comment those lines out. This will leave me with `Add awesome feature` and probably I will now make sure to [write some context to that commit message](https://amedia.github.io/jotter/2024/kontekst-i-commit-melding/) (but that is a topic for a different blog post).
 
 After saving / writing the commit message, I want to verify that my rebase happened as intended.
 
